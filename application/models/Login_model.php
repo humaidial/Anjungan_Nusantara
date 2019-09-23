@@ -14,6 +14,20 @@ class Login_model extends CI_Model {
 		return false;
 	}
 
+	public function checkid($username)
+	{
+		$this->db->select('username');
+		$this->db->from($table);
+		$this->db->where('username',$username);
+		$query = $this->db->get();
+		if($query){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+
 }
 
 /* End of file Login_model.php */
