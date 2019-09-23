@@ -956,7 +956,7 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/banner_product1.png" alt=""></div>
 											<div class="product_content">
-												<div class="product_price discount">IDR 100K<span>IDR 125K</span></div>
+												<div class="product_price discount">Rp 80.000<span>Rp 100.000</span></div>
 												<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -989,7 +989,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button active">Add to Cart</button>
+													<button class="product_cart_button active">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1014,7 +1014,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1031,7 +1031,7 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/" alt=""></div>
 											<div class="product_content">
-												<div class="product_price discount">IDR 100K<span>IDR 125K</span></div>
+												<div class="product_price discount">Rp 80.000<span>Rp 100.000</span></div>
 												<div class="product_name"><div><a href="product.html">Tas Rajut Batik</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -1039,7 +1039,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1056,7 +1056,7 @@
 										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/" alt=""></div>
 											<div class="product_content">
-												<div class="product_price">IDR 100K</div>
+												<div class="product_price">Rp 80.000</div>
 												<div class="product_name"><div><a href="product.html">Lemari Ukir</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -1064,7 +1064,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1089,7 +1089,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1114,7 +1114,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1139,7 +1139,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1164,7 +1164,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1189,7 +1189,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1214,7 +1214,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1239,7 +1239,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1264,7 +1264,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1289,7 +1289,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1314,7 +1314,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1339,7 +1339,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1365,7 +1365,7 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/banner_product1.png" alt=""></div>
 											<div class="product_content">
-												<div class="product_price discount">IDR 100K<span>IDR 125K</span></div>
+												<div class="product_price discount">Rp 80.000<span>Rp 100.000</span></div>
 												<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -1373,7 +1373,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1398,7 +1398,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button active">Add to Cart</button>
+													<button class="product_cart_button active">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1423,7 +1423,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1440,7 +1440,7 @@
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/" alt=""></div>
 											<div class="product_content">
-												<div class="product_price discount">IDR 100K<span>IDR 125K</span></div>
+												<div class="product_price discount">Rp 80.000<span>Rp 100.000</span></div>
 												<div class="product_name"><div><a href="product.html">Tas Rajut Batik</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -1448,7 +1448,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1465,7 +1465,7 @@
 										<div class="product_item d-flex flex-column align-items-center justify-content-center text-center">
 											<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/" alt=""></div>
 											<div class="product_content">
-												<div class="product_price">IDR 100K</div>
+												<div class="product_price">Rp 80.000</div>
 												<div class="product_name"><div><a href="product.html">Lemari Ukir</a></div></div>
 												<div class="product_extras">
 													<div class="product_color">
@@ -1473,7 +1473,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1498,7 +1498,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1523,7 +1523,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1548,7 +1548,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1573,7 +1573,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1598,7 +1598,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1623,7 +1623,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1648,7 +1648,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1673,7 +1673,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1698,7 +1698,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1723,7 +1723,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -1748,7 +1748,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div>
-													<button class="product_cart_button">Add to Cart</button>
+													<button class="product_cart_button">Tambah Keranjang</button>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2140,7 +2140,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2148,7 +2148,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2165,7 +2165,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2173,7 +2173,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2190,7 +2190,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2198,7 +2198,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2215,7 +2215,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2223,7 +2223,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2240,7 +2240,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2248,7 +2248,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2265,7 +2265,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2273,7 +2273,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2290,7 +2290,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2298,7 +2298,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2315,7 +2315,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2323,7 +2323,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2340,7 +2340,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2348,7 +2348,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2372,7 +2372,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2380,7 +2380,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2397,7 +2397,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2405,7 +2405,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2422,7 +2422,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2430,7 +2430,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2447,7 +2447,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2455,7 +2455,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2472,7 +2472,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2480,7 +2480,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2497,7 +2497,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2505,7 +2505,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2522,7 +2522,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2530,7 +2530,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2547,7 +2547,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2555,7 +2555,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2572,7 +2572,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2580,7 +2580,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2597,7 +2597,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2605,7 +2605,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2622,7 +2622,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2630,7 +2630,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2647,7 +2647,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2655,7 +2655,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2672,7 +2672,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2680,7 +2680,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2697,7 +2697,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2705,7 +2705,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2722,7 +2722,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2730,7 +2730,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2747,7 +2747,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2755,7 +2755,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2779,7 +2779,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2787,7 +2787,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2804,7 +2804,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2812,7 +2812,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2829,7 +2829,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2837,7 +2837,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2854,7 +2854,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2862,7 +2862,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2879,7 +2879,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2887,7 +2887,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2904,7 +2904,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2912,7 +2912,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2929,7 +2929,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2937,7 +2937,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2954,7 +2954,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2962,7 +2962,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -2979,7 +2979,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2987,7 +2987,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -3004,7 +3004,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -3012,7 +3012,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -3029,7 +3029,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -3037,7 +3037,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -3054,7 +3054,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -3062,7 +3062,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -3079,7 +3079,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -3087,7 +3087,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -3104,7 +3104,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -3112,7 +3112,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -3129,7 +3129,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -3137,7 +3137,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -3154,7 +3154,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -3162,7 +3162,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -3186,10 +3186,10 @@
 											<div class="arrivals_single_category"><a href="shop.html">Fashion</a></div>
 											<div class="arrivals_single_name_container clearfix">
 												<div class="arrivals_single_name"><a href="product.html">Tas Rajut</a></div>
-												<div class="arrivals_single_price text-right">IDR 125K</div>
+												<div class="arrivals_single_price text-right">Rp 100.000</div>
 											</div>
 											<div class="rating_r rating_r_4 arrivals_single_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<form action="#"><button class="arrivals_single_button"><a href="product.html">Add to Cart</a></button></form>
+											<form action="#"><button class="arrivals_single_button"><a href="product.html">Tambah Keranjang</a></button></form>
 										</div>
 										<div class="arrivals_single_fav product_fav active"><i class="fas fa-heart"></i></div>
 										<ul class="arrivals_single_marks product_marks">
@@ -3215,7 +3215,7 @@
 				<div class="col">
 					<div class="tabbed_container">
 						<div class="tabs clearfix tabs-right">
-							<div class="new_arrivals_title">Hot Best Sellers</div>
+							<div class="new_arrivals_title">Penjualan Terbaik</div>
 							<ul class="clearfix">
 								<li></li>
 								<li></li>
@@ -3238,7 +3238,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3256,7 +3256,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3274,7 +3274,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3292,115 +3292,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3418,7 +3310,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3436,34 +3328,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-							</div>
-						</div>
-
-						<div class="bestsellers_panel panel">
-
-							<!-- Best Sellers Slider -->
-
-							<div class="bestsellers_slider slider">
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3481,79 +3346,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3571,25 +3364,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3607,7 +3382,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3625,7 +3400,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3643,7 +3418,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3661,7 +3436,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3688,7 +3463,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3706,7 +3481,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3724,7 +3499,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3742,115 +3517,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item discount">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
-										</div>
-									</div>
-									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
-									<ul class="bestsellers_marks">
-										<li class="bestsellers_mark bestsellers_discount">-25%</li>
-										<li class="bestsellers_mark bestsellers_new">new</li>
-									</ul>
-								</div>
-
-								<!-- Best Sellers Item -->
-								<div class="bestsellers_item">
-									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
-										<div class="bestsellers_content">
-											<div class="bestsellers_category">Fashion</a></div>
-											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
-											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
@@ -3868,7 +3535,7 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3886,7 +3553,340 @@
 											<div class="bestsellers_category">Fashion</a></div>
 											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">IDR 100K<span>IDR 125K</span></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="bestsellers_panel panel">
+
+							<!-- Best Sellers Slider -->
+
+							<div class="bestsellers_slider slider">
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item discount">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
+										</div>
+									</div>
+									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
+									<ul class="bestsellers_marks">
+										<li class="bestsellers_mark bestsellers_discount">-25%</li>
+										<li class="bestsellers_mark bestsellers_new">new</li>
+									</ul>
+								</div>
+
+								<!-- Best Sellers Item -->
+								<div class="bestsellers_item">
+									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
+										<div class="bestsellers_image"><a href="product.html"><img src="images/" alt=""></a></div>
+										<div class="bestsellers_content">
+											<div class="bestsellers_category">Fashion</a></div>
+											<div class="bestsellers_name"><a href="product.html">Tas Rajut Handmade</a></div>
+											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
+											<div class="bestsellers_price discount">Rp 80.000<span>Rp 100.000</span></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
@@ -3915,8 +3915,8 @@
 				<div class="col">
 					
 					<div class="reviews_title_container">
-						<h3 class="reviews_title">Latest Reviews</h3>
-						<div class="reviews_all ml-auto"><a href="#">view all <span>reviews</span></a></div>
+						<h3 class="reviews_title">Ulasan Terbaru</h3>
+						<div class="reviews_all ml-auto"><a href="#">lihat semua <span>ulasan</span></a></div>
 					</div>
 
 					<div class="reviews_slider_container">
@@ -3932,7 +3932,7 @@
 										<div class="review_name">Humaidi Al</div>
 										<div class="review_rating_container">
 											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
+											<div class="review_time">2 hari yang lalu</div>
 										</div>
 										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
 									</div>
@@ -3947,7 +3947,7 @@
 										<div class="review_name">Humaidi Al</div>
 										<div class="review_rating_container">
 											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
+											<div class="review_time">2 hari yang lalu</div>
 										</div>
 										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
 									</div>
@@ -3962,7 +3962,7 @@
 										<div class="review_name">Humaidi Al</div>
 										<div class="review_rating_container">
 											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
+											<div class="review_time">2 hari yang lalu</div>
 										</div>
 										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
 									</div>
@@ -3977,7 +3977,7 @@
 										<div class="review_name">Humaidi Al</div>
 										<div class="review_rating_container">
 											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
+											<div class="review_time">2 hari yang lalu</div>
 										</div>
 										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
 									</div>
@@ -3992,7 +3992,7 @@
 										<div class="review_name">Humaidi Al</div>
 										<div class="review_rating_container">
 											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
+											<div class="review_time">2 hari yang lalu</div>
 										</div>
 										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
 									</div>
@@ -4007,7 +4007,7 @@
 										<div class="review_name">Humaidi Al</div>
 										<div class="review_rating_container">
 											<div class="rating_r rating_r_4 review_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="review_time">2 day ago</div>
+											<div class="review_time">2 hari yang lalu</div>
 										</div>
 										<div class="review_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.</p></div>
 									</div>
@@ -4029,7 +4029,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="viewed_title_container">
-						<h3 class="viewed_title">Recently Viewed</h3>
+						<h3 class="viewed_title">Terakhir Dilihat</h3>
 						<div class="viewed_nav_container">
 							<div class="viewed_nav viewed_prev"><i class="fas fa-chevron-left"></i></div>
 							<div class="viewed_nav viewed_next"><i class="fas fa-chevron-right"></i></div>
@@ -4047,7 +4047,7 @@
 								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
 									<div class="viewed_image"><img src="images/banner_product1.png" alt=""></div>
 									<div class="viewed_content text-center">
-										<div class="viewed_price">IDR 100K<span>IDR 125K</span></div>
+										<div class="viewed_price">Rp 80.000<span>Rp 100.000</span></div>
 										<div class="viewed_name"><a href="#">Tas Rajut</a></div>
 									</div>
 									<ul class="item_marks">
@@ -4062,7 +4062,7 @@
 								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
 									<div class="viewed_image"><img src="images/" alt=""></div>
 									<div class="viewed_content text-center">
-										<div class="viewed_price">IDR 125K</div>
+										<div class="viewed_price">Rp 100.000</div>
 										<div class="viewed_name"><a href="#">Kalung Handmade</a></div>
 									</div>
 									<ul class="item_marks">
@@ -4077,7 +4077,7 @@
 								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
 									<div class="viewed_image"><img src="images/" alt=""></div>
 									<div class="viewed_content text-center">
-										<div class="viewed_price">IDR 125K</div>
+										<div class="viewed_price">Rp 100.000</div>
 										<div class="viewed_name"><a href="#">Kalung Handmade</a></div>
 									</div>
 									<ul class="item_marks">
@@ -4092,7 +4092,7 @@
 								<div class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 									<div class="viewed_image"><img src="images/" alt=""></div>
 									<div class="viewed_content text-center">
-										<div class="viewed_price">IDR 125K</div>
+										<div class="viewed_price">Rp 100.000</div>
 										<div class="viewed_name"><a href="#">Kalung Handmade</a></div>
 									</div>
 									<ul class="item_marks">
@@ -4107,7 +4107,7 @@
 								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
 									<div class="viewed_image"><img src="images/" alt=""></div>
 									<div class="viewed_content text-center">
-										<div class="viewed_price">IDR 275K<span>IDR 300K</span></div>
+										<div class="viewed_price">Rp 275.000<span>Rp 300.000</span></div>
 										<div class="viewed_name"><a href="#">Kalung Emas Murni</a></div>
 									</div>
 									<ul class="item_marks">
@@ -4122,7 +4122,7 @@
 								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
 									<div class="viewed_image"><img src="images/" alt=""></div>
 									<div class="viewed_content text-center">
-										<div class="viewed_price">IDR 125K</div>
+										<div class="viewed_price">Rp 100.000</div>
 										<div class="viewed_name"><a href="#">Kalung Handmade</a></div>
 									</div>
 									<ul class="item_marks">
@@ -4207,7 +4207,7 @@
 						<div class="logo_container">
 							<div class="logo"><a href="index.html">Anjungan</a></div>
 						</div>
-						<div class="footer_title">Got Question? Call Us 24/7</div>
+						<div class="footer_title">Punya Pertanyaan? Hubungi Kami 24/7</div>
 						<div class="footer_phone">(031) - 8894850</div>
 						<div class="footer_contact_text">
 							<p>9, Jalan Soekarno Hatta</p>
@@ -4229,17 +4229,17 @@
 					<div class="footer_column">
 						<div class="footer_title">Anjungan<br>Nusantara</div>
 						<ul class="footer_list">
-							<li><a href="shop.html">About Us</a></li>
-							<li><a href="shop.html">Carrier</a></li>
-							<li><a href="shop.html">News</a></li>
-							<li><a href="shop.html">All Brands</a></li>
+							<li><a href="shop.html">Tentang Kami</a></li>
+							<li><a href="shop.html">Karir</a></li>
+							<li><a href="shop.html">Berita</a></li>
+							<li><a href="shop.html">Semua Produk</a></li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="col-lg-2">
 					<div class="footer_column">
-						<div class="footer_title">Buyer<br><br></div>
+						<div class="footer_title">Pembeli<br><br></div>
 						<ul class="footer_list">
 							<li><a href="shop.html">Cara Berbelanja</a></li>
 							<li><a href="shop.html">Metode Pembayaran</a></li>
@@ -4251,7 +4251,7 @@
 
 				<div class="col-lg-2">
 					<div class="footer_column">
-						<div class="footer_title">Seller<br><br></div>
+						<div class="footer_title">Penjual<br><br></div>
 						<ul class="footer_list">
 							<li><a href="#">Berjualan di Anjungan.com</a></li>
 							<li><a href="#">Seller Center</a></li>
@@ -4262,14 +4262,11 @@
 
 				<div class="col-lg-2">
 					<div class="footer_column">
-						<div class="footer_title">Help<br><br></div>
+						<div class="footer_title">Bantuan<br><br></div>
 						<ul class="footer_list">
 							<li><a href="#">Hubungi Kami</a></li>
-							<li><a href="#">Wish List</a></li>
-							<li><a href="#">Customer Services</a></li>
-							<li><a href="#">Returns / Exchange</a></li>
+							<li><a href="#">Layanan Pengguna</a></li>
 							<li><a href="#">FAQs</a></li>
-							<li><a href="#">Product Support</a></li>
 						</ul>
 					</div>
 				</div>	
