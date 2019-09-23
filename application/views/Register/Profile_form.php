@@ -98,8 +98,11 @@
 
      <script>
            var cleave = new Cleave('.cleave-number', {
-                 numeral: true,
-                  numeralThousandsGroupStyle: 'none'
+                 phone: true,
+                 phoneRegionCode: 'ID'
+                 // numeralThousandsGroupStyle: 'none',
+                 // prefix: '08',
+                 // signBeforePrefix: true
         });
     </script>
 

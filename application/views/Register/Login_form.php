@@ -42,11 +42,11 @@
                     <?php echo form_open('Register/new_login'); ?>
                         <div class="input-group">
                             <label style="color: red"><?php echo form_error('username') ?></label>
-                            <input class="input--style-1" type="text" placeholder="Username" name="username">
+                            <input class="input--style-1" type="text" placeholder="Username : minimal 8 karakter" name="username">
                         </div>
                         <div class="input-group">
                             <label style="color: red"><?php echo form_error('password') ?></label>
-                            <input class="input--style-1" type="password" placeholder="Password" name="password">
+                            <input class="input--style-1" type="password" placeholder="Password : minimal 8 karakter" name="password">
                         </div>
                          <div class="input-group">
                             <label style="color: red"><?php echo form_error('confirm_password') ?></label>
