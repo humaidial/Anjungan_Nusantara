@@ -54,7 +54,7 @@
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="index.html">Anjungan<br>Nusantara</a></div>
+							<div class="logo"><a href="#">Anjungan<br>Nusantara</a></div>
 						</div>
 					</div>
 
@@ -235,7 +235,7 @@
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="index.html">Beranda<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="#">Beranda<i class="fas fa-chevron-down"></i></a></li>
 									<li class="hassubs">
 										<a href="#">Promo<i class="fas fa-chevron-down"></i></a>
 										<ul>
