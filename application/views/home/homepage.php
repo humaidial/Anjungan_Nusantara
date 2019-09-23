@@ -31,7 +31,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col d-flex flex-row">
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo site_url()?>assets/homepage_lib/images/phone.png" alt=""></div>(031) - 8894850</div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url('assets/homepage_lib/images/phone.png')?>" alt=""></div>(031) - 8894850</div>
 						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo site_url()?>assets/homepage_lib/images/mail.png" alt=""></div><a href="mailto:humaidialmasmed@gmail.com">humaidialmasmed@gmail.com</a></div>
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_menu">
@@ -100,7 +100,7 @@
 												</ul>
 											</div>
 										</div>
-										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="images/search.png" alt=""></button>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="<?php base_url('assets/homepage_lib/images/search.png')?>" alt=""></button>
 									</form>
 								</div>
 							</div>
@@ -111,7 +111,7 @@
 					<div class="col-lg-4 col-6 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
 							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
-								<div class="wishlist_icon"><img src="images/heart.png" alt=""></div>
+								<div class="wishlist_icon"><img src="<?php base_url('images/heart.png')?>" alt=""></div>
 								<div class="wishlist_content">
 									<div class="wishlist_text"><a href="#">Wishlist</a></div>
 									<div class="wishlist_count">1</div>
