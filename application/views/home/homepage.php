@@ -111,7 +111,7 @@
 					<div class="col-lg-4 col-6 order-lg-3 order-2 text-lg-left text-right">
 						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
 							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
-								<div class="wishlist_icon"><img src="<?php base_url('images/heart.png')?>" alt=""></div>
+								<div class="wishlist_icon"><img src="<?php base_url('assets/homepage_lib/images/heart.png')?>" alt=""></div>
 								<div class="wishlist_content">
 									<div class="wishlist_text"><a href="#">Wishlist</a></div>
 									<div class="wishlist_count">1</div>
