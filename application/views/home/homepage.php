@@ -2115,7 +2115,7 @@
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
 												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="product.html"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">IDR 125K</div>
+													<div class="product_price">Rp 100.000</div>
 													<div class="product_name"><div><a href="product.html">Tas Rajut Handmade</a></div></div>
 													<div class="product_extras">
 														<div class="product_color">
@@ -2123,7 +2123,7 @@
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
 														</div>
-														<button class="product_cart_button"><a href="product.html">Add to Cart</a></button>
+														<button class="product_cart_button"><a href="product.html">Tambah Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
