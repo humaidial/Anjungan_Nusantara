@@ -42,7 +42,7 @@
                     <?php echo form_open('Register/new_login'); ?>
                         <div class="input-group">
                             <label style="color: red"><?php echo form_error('username') ?></label>
-                            <input class="input--style-1" type="text" placeholder="Username : minimal 8 karakter" name="username">
+                            <input class="input--style-1" type="text" placeholder="Username : minimal 8 karakter" name="username" id="username">
                         </div>
                         <div class="input-group">
                             <label style="color: red"><?php echo form_error('password') ?></label>
@@ -75,10 +75,12 @@
     <script src="<?php echo site_url()?>assets/register_lib/js/global.js"></script>
 
      <script>
+
            var cleave = new Cleave('.cleave-number', {
                  numeral: true,
                   numeralThousandsGroupStyle: 'none'
         });
+
     </script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->

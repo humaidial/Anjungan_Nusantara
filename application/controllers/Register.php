@@ -86,12 +86,10 @@ class Register extends CI_Controller {
 		}
 	}
 
-	public function tes()
+	public function checkid()
 	{
-		$data = $this->Profile_model->get_next_id();
-		// $text = $data->AUTO_INCREMENT;
-		// var_dump($text);
-		var_dump($data->AUTO_INCREMENT);
+		$username = $this->input->post('username');
+		
 	}
 
 }
