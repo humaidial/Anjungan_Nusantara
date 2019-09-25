@@ -92,6 +92,12 @@ class Register extends CI_Controller {
 		
 	}
 
+
+	public function daftar()
+	{
+		$this->load->view('Register/register_new');
+	}
+
 }
 
 /* End of file Register.php */
