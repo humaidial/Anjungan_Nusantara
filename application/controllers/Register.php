@@ -12,7 +12,7 @@ class Register extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Register/Profile_form');
+		$this->load->view('Register/register_new');
 	}
 
 	public function new_profile_and_login()
@@ -88,6 +88,9 @@ class Register extends CI_Controller {
 		$username = $this->input->post('username');
 		$ketersediaan = $this->Login_model->checkid($username);
 		echo json_encode($ketersediaan);
+		// echo "<pre>";
+		// echo var_dump($ketersediaan);
+		// echo "</pre>";
 	}
 
 	public function daftar()

@@ -25,26 +25,22 @@
 					<img src="<?php echo base_url('assets/register_new/images/Webp.net-resizeimage.jpg')?>" alt="">
 				</div> 
 				<form action="">
-					<h3>Registration Form</h3>
+					<h3>Form Pendaftaran</h3>
 					<div class="form-wrapper">
+						<label style="color: red"><?php echo form_error('name') ?></label>
 						<input type="text" placeholder="Nama" class="form-control">
-						
-					</div>
-
-					<div class="form-wrapper">
-						<input type="text" placeholder="Nama Pengguna" class="form-control">
-						<i class="zmdi zmdi-account"></i>
 					</div>
 
 					<div class="form-group">
-		
+					<label style="color: red"><?php echo form_error('alamat') ?></label>
 					<textarea class="form-control" id="alamat" rows="3" placeholder="Alamat"></textarea>
 						</div>
 
 
 					<div class="form-wrapper">
 						<select name="" id="" class="form-control">
-							<option value="" disabled selected>Gender</option>
+							<label style="color: red"><?php echo form_error('jenis_kelamin') ?></label>
+							<option value="" disabled selected>Jenis Kelamin</option>
 							<option value="male">Laki - laki</option>
 							<option value="femal">Perempuan</option>
 							
@@ -53,26 +49,30 @@
 					</div>
 						
 					<div class="form-wrapper">
+						 <label style="color: red"><?php echo form_error('no_telp') ?></label>
 						<input type="text" pattern="^\d{10}$" required name="ponsel" placeholder="Kontak" class="form-control cleave-number">
 						<i class="zmdi zmdi-email"></i>
 					</div>	
 
 					<div class="form-wrapper">
+						 <label style="color: red"><?php echo form_error('email') ?></label>
 						<input type="text" placeholder="Alamat Email" class="form-control">
 						<i class="zmdi zmdi-email"></i>
 					</div>					
 
 					<div class="form-wrapper"> 
-					<form action="prosesupload.php" method="POST" enctype="multipart/form-data">
-				<div class="form-group">
-					<label>Gambar</label><br>
+					<label style="color: red"><?php echo form_error('email') ?></label>
+					<label>Foto Profil</label><br>
 					<input type="file" class="form-control" name="foto">
 					<br>
 					<!-- <button class="btn btn-warning" type="submit">Upload</button> -->
 				</div>	
 			
 					</div>
-
+					<div class="form-wrapper">
+						<input type="text" placeholder="Nama Pengguna" class="form-control">
+						<i class="zmdi zmdi-account"></i>
+					</div>
 					<div class="form-wrapper">
 						<input type="password" placeholder="Password" class="form-control">
 						<i class="zmdi zmdi-lock"></i>
