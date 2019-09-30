@@ -20,9 +20,9 @@
 <body>
 
 <div class="super_container">
-	
+
 	<!-- Header -->
-	
+
 	<header class="header">
 
 		<!-- Top Bar -->
@@ -35,14 +35,14 @@
 						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo site_url()?>assets/homepage_lib/images/mail.png" alt=""></div><a href="mailto:humaidialmasmed@gmail.com">humaidialmasmed@gmail.com</a></div>
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_user">
-								<div class="user_icon"><img src="images/user.svg" alt=""></div>
+								<div class="user_icon"><img src="<?php echo base_url('images/user.svg')?>" alt=""></div>
 								<div><a href="<?php echo base_url()?>Register">Daftar</a></div>
 								<div><a href="#">Masuk</a></div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>		
+			</div>
 		</div>
 
 		<!-- Header Main -->
@@ -80,7 +80,7 @@
 												</ul>
 											</div>
 										</div>
-										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="<?php base_url('assets/homepage_lib/images/search.png')?>" alt=""></button>
+										<button type="submit" class="header_search_button trans_300" value="Submit"><img src="<?php echo base_url()?>assets/homepage_lib/images/search.png" alt=""></button>
 									</form>
 								</div>
 							</div>
@@ -109,14 +109,14 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Main Navigation -->
 
 		<nav class="main_nav">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						
+
 						<div class="main_nav_content d-flex flex-row">
 
 							<!-- categories Menu -->
@@ -251,7 +251,7 @@
 											</li>
 										</ul>
 									</li>
-									
+
 									<li class="hassubs">
 										<a href="#">Halaman<i class="fas fa-chevron-down"></i></a>
 										<ul>
@@ -287,16 +287,16 @@
 				</div>
 			</div>
 		</nav>
-		
+
 		<!-- Menu HP-->
 
 		<div class="page_menu">
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						
+
 						<div class="page_menu_content">
-							
+
 							<div class="page_menu_search">
 								<form action="#">
 									<input type="search" required="required" class="page_menu_search_input" placeholder="Pencarian Produk...">
@@ -332,7 +332,7 @@
 									</ul>
 								</li>
 							</ul>
-							
+
 							<div class="menu_contact">
 								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>(031) - 8894850</div>
 								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:fastsales@gmail.com">humaidialmasmed@gmail.com</a></div>
@@ -344,7 +344,7 @@
 		</div>
 
 	</header>
-	
+
 	<!-- Banner -->
 
 	<div class="banner">
@@ -364,7 +364,7 @@
 		</div>
 	</div>
 
-	
+
 
 	<!-- Promo Minggu Ini -->
 
@@ -372,16 +372,16 @@
 		<div class="container">
 			<div class="row">
 				<div class="col d-flex flex-lg-row flex-column align-items-center justify-content-start">
-					
+
 					<!-- Deals -->
 
 					<div class="deals">
 						<div class="deals_title">Promo Minggu Ini</div>
 						<div class="deals_slider_container">
-							
+
 							<!-- Deals Slider -->
 							<div class="owl-carousel owl-theme deals_slider">
-								
+
 								<!-- Deals Item -->
 								<div class="owl-item deals_item">
 									<div class="deals_image"><img src="images/banner_product1.png" alt=""></div>
@@ -523,7 +523,7 @@
 							<div class="deals_slider_next deals_slider_nav"><i class="fas fa-chevron-right ml-auto"></i></div>
 						</div>
 					</div>
-					
+
 					<!-- Featured -->
 					<div class="featured">
 						<div class="tabbed_container">
@@ -1784,7 +1784,7 @@
 						<div class="popular_categories_link"><a href="shop">semua katalog</a></div>
 					</div>
 				</div>
-				
+
 				<!-- Popular categories Slider -->
 
 				<div class="col-lg-9">
@@ -1861,7 +1861,7 @@
 										<div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
 										<div class="button banner_2_button"><a href="shop.html">Lebih Detail</a></div>
 									</div>
-									
+
 								</div>
 								<div class="col-lg-8 col-md-6 fill_height">
 									<div class="banner_2_image_container">
@@ -1869,7 +1869,7 @@
 									</div>
 								</div>
 							</div>
-						</div>			
+						</div>
 					</div>
 				</div>
 
@@ -1886,7 +1886,7 @@
 										<div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
 										<div class="button banner_2_button"><a href="shop.html">Lebih Detail</a></div>
 									</div>
-									
+
 								</div>
 								<div class="col-lg-8 col-md-6 fill_height">
 									<div class="banner_2_image_container">
@@ -1894,7 +1894,7 @@
 									</div>
 								</div>
 							</div>
-						</div>			
+						</div>
 					</div>
 				</div>
 
@@ -1911,7 +1911,7 @@
 										<div class="rating_r rating_r_4 banner_2_rating"><i></i><i></i><i></i><i></i><i></i></div>
 										<div class="button banner_2_button"><a href="shop.html">Lebih Detail</a></div>
 									</div>
-									
+
 								</div>
 								<div class="col-lg-8 col-md-6 fill_height">
 									<div class="banner_2_image_container">
@@ -1919,7 +1919,7 @@
 									</div>
 								</div>
 							</div>
-						</div>			
+						</div>
 					</div>
 				</div>
 
@@ -3191,11 +3191,11 @@
 							</div>
 
 						</div>
-								
+
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>
 
 	<!-- Best Sellers -->
@@ -3890,13 +3890,13 @@
 							</div>
 						</div>
 					</div>
-						
+
 				</div>
 			</div>
 		</div>
 	</div>
 
-	
+
 
 	<!-- Reviews -->
 
@@ -3904,17 +3904,17 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					
+
 					<div class="reviews_title_container">
 						<h3 class="reviews_title">Ulasan Terbaru</h3>
 						<div class="reviews_all ml-auto"><a href="#">lihat semua <span>ulasan</span></a></div>
 					</div>
 
 					<div class="reviews_slider_container">
-						
+
 						<!-- Reviews Slider -->
 						<div class="owl-carousel owl-theme reviews_slider">
-							
+
 							<!-- Reviews Slider Item -->
 							<div class="owl-item">
 								<div class="review d-flex flex-row align-items-start justify-content-start">
@@ -4028,11 +4028,11 @@
 					</div>
 
 					<div class="viewed_slider_container">
-						
+
 						<!-- Recently Viewed Slider -->
 
 						<div class="owl-carousel owl-theme viewed_slider">
-							
+
 							<!-- Recently Viewed Item -->
 							<div class="owl-item">
 								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
@@ -4136,22 +4136,22 @@
 			<div class="row">
 				<div class="col">
 					<div class="brands_slider_container">
-						
+
 						<!-- Brands Slider -->
 
 						<div class="owl-carousel owl-theme brands_slider">
-							
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_1.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_2.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_3.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_4.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_5.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_6.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_7.jpg" alt=""></div></div>
-							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="images/brands_8.jpg" alt=""></div></div>
+
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?php echo base_url()?>assets/homepage_lib/images/brands_1.jpg" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?php echo base_url()?>assets/homepage_lib/images/brands_2.jpg" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?php echo base_url()?>assets/homepage_lib/images/brands_3.jpg" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?php echo base_url()?>assets/homepage_lib/images/brands_4.jpg" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?php echo base_url()?>assets/homepage_lib/images/brands_5.jpg" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?php echo base_url()?>assets/homepage_lib/images/brands_6.jpg" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?php echo base_url()?>assets/homepage_lib/images/brands_7.jpg" alt=""></div></div>
+							<div class="owl-item"><div class="brands_item d-flex flex-column justify-content-center"><img src="<?php echo base_url()?>assets/homepage_lib/images/brands_8.jpg" alt=""></div></div>
 
 						</div>
-						
+
 						<!-- Brands Slider Navigation -->
 						<div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
 						<div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
@@ -4260,7 +4260,7 @@
 							<li><a href="#">FAQs</a></li>
 						</ul>
 					</div>
-				</div>	
+				</div>
 
 			</div>
 		</div>
@@ -4272,7 +4272,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					
+
 					<div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
 						<div class="copyright_content">
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  <i  aria-hidden="true"></i> by <a href="https://instagram.com/masmed__" target="_blank">Masmed</a>
@@ -4280,10 +4280,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 </div>
 						<div class="logos ml-sm-auto">
 							<ul class="logos_list">
-								<li><a href="#"><img src="images/logos_1.png" alt=""></a></li>
-								<li><a href="#"><img src="images/logos_2.png" alt=""></a></li>
-								<li><a href="#"><img src="images/logos_3.png" alt=""></a></li>
-								<li><a href="#"><img src="images/logos_4.png" alt=""></a></li>
+								<li><a href="#"><img src="<?php echo base_url()?>assets/homepage_lib/images/logos_1.png" alt=""></a></li>
+								<li><a href="#"><img src="<?php echo base_url()?>assets/homepage_lib/images/logos_2.png" alt=""></a></li>
+								<li><a href="#"><img src="<?php echo base_url()?>assets/homepage_lib/images/logos_3.png" alt=""></a></li>
+								<li><a href="#"><img src="<?php echo base_url()?>assets/homepage_lib/images/logos_4.png" alt=""></a></li>
 							</ul>
 						</div>
 					</div>
@@ -4293,18 +4293,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</div>
 </div>
 
-<script src="<?php echo site_url()?>assets/homepage_lib/js/jquery-3.3.1.min.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/styles/bootstrap4/popper.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/styles/bootstrap4/bootstrap.min.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/plugins/greensock/TweenMax.min.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/plugins/greensock/TimelineMax.min.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/plugins/greensock/animation.gsap.min.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/plugins/slick-1.8.0/slick.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/plugins/easing/easing.js"></script>
-<script src="<?php echo site_url()?>assets/homepage_lib/js/custom.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/js/jquery-3.3.1.min.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/styles/bootstrap4/popper.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/plugins/greensock/TweenMax.min.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/plugins/greensock/TimelineMax.min.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/plugins/greensock/animation.gsap.min.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/plugins/slick-1.8.0/slick.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/plugins/easing/easing.js"></script>
+<script src="<?php echo base_url()?>assets/homepage_lib/js/custom.js"></script>
 </body>
 
 </html>

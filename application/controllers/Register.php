@@ -94,6 +94,11 @@ class Register extends CI_Controller {
 	{
 		$this->load->view('Register/register_new');
 	}
+
+	public function masuk()
+	{
+		$this->load->view('Register/login_new');
+	}
 }
 
 /* End of file Register.php */

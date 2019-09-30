@@ -25,65 +25,23 @@
 					<img src="<?php echo base_url('assets/register_new/images/Webp.net-resizeimage.jpg')?>" alt="">
 				</div> 
 				<form action="">
-					<h3>Pendaftaran</h3>
-					<div class="form-wrapper">
-						<input type="text" placeholder="Nama" class="form-control">
-						
-					</div>
+					<h3>Masuk</h3>
 
 					<div class="form-wrapper">
 						<input type="text" placeholder="Nama Pengguna" class="form-control">
 						<i class="zmdi zmdi-account"></i>
 					</div>
 
-					<div class="form-group">
-		
-					<textarea class="form-control" id="alamat" rows="3" placeholder="Alamat"></textarea>
-						</div>
-
-
-					<div class="form-wrapper">
-						<select name="" id="" class="form-control">
-							<option value="" disabled selected>Gender</option>
-							<option value="male">Laki - laki</option>
-							<option value="femal">Perempuan</option>
-							
-						</select>
-						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
-					</div>
-						
-					<div class="form-wrapper">
-						<input type="text" pattern="^\d{10}$" required name="ponsel" placeholder="Kontak" class="form-control cleave-number">
-						<i class="zmdi zmdi-email"></i>
-					</div>	
-
-					<div class="form-wrapper">
-						<input type="text" placeholder="Alamat Email" class="form-control">
-						<i class="zmdi zmdi-email"></i>
-					</div>					
-
-					<div class="form-wrapper"> 
-					<form action="prosesupload.php" method="POST" enctype="multipart/form-data">
-				<div class="form-group">
-					<label>Gambar</label><br>
-					<input type="file" class="form-control" name="foto">
-					<br>
-					<!-- <button class="btn btn-warning" type="submit">Upload</button> -->
-				</div>	
-			
-					</div>
-
 					<div class="form-wrapper">
 						<input type="password" placeholder="Password" class="form-control">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
-					<div class="form-wrapper">
-						<input type="password" placeholder="Confirm Password" class="form-control">
-						<i class="zmdi zmdi-lock"></i>
-					</div>
-					<button>Register
+					
+					<button> Masuk
 						<i class="zmdi zmdi-arrow-right"></i>
 					</button>
+					<br>
+					Belum punya akun?, silahkan DAFTAR
 				</form>
 			</div>
 		</div>
