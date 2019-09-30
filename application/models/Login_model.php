@@ -20,7 +20,7 @@ class Login_model extends CI_Model {
 		$this->db->from($this->table);
 		$this->db->where('username',$username);
 		$query = $this->db->get();
-		if($query){
+		if($query->num_rows() == 0){
 			return true;
 		}
 		else{
