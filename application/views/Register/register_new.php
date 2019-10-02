@@ -10,9 +10,9 @@
 
 		<!-- STYLE CSS -->
 		<link rel="stylesheet" href="<?php echo base_url('assets/register_new/css/style.css')?>">
-
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 		<script src="<?php echo base_url()?>assets/cleave/cleave.min.js"></script>
-    <script src="<?php echo base_url()?>assets/cleave/cleave.js"></script>
+    	<script src="<?php echo base_url()?>assets/cleave/cleave.js"></script>
 
 	</head>
 
@@ -24,26 +24,24 @@
 				<div class="image-holder">
 					<img src="<?php echo base_url('assets/register_new/images/Webp.net-resizeimage.jpg')?>" alt="">
 				</div> 
-				<form action="">
+					<?php echo form_open('Register/new_profile_and_login'); ?>
 					<h3>Pendaftaran</h3>
 					<div class="form-wrapper">
+						<label style="color: red"><?php echo form_error('name') ?></label>
 						<input type="text" placeholder="Nama" class="form-control">
-						
-					</div>
-
-					<div class="form-wrapper">
-						<input type="text" placeholder="Nama Pengguna" class="form-control">
-						<i class="zmdi zmdi-account"></i>
 					</div>
 
 					<div class="form-group">
-		
-					<textarea class="form-control" id="alamat" rows="3" placeholder="Alamat"></textarea>
-						</div>
+					<div class="form-wrapper">
+						<label style="color: red"><?php echo form_error('alamat') ?></label>
+					</div>
+					<textarea class="form-control" name="alamat" id="alamat" rows="3" placeholder="Alamat"></textarea>
+					</div>
 
 
 					<div class="form-wrapper">
-						<select name="" id="" class="form-control">
+						<label style="color: red"><?php echo form_error('jenis_kelamin') ?></label>
+						<select name="jenis_kelamin" id="" class="form-control">
 							<option value="" disabled selected>Gender</option>
 							<option value="male">Laki - laki</option>
 							<option value="femal">Perempuan</option>
@@ -53,49 +51,77 @@
 					</div>
 						
 					<div class="form-wrapper">
-						<input type="text" pattern="^\d{10}$" required name="ponsel" placeholder="Kontak" class="form-control cleave-number">
+						<label style="color: red"><?php echo form_error('no_telp') ?></label>
+						<input type="text" name="no_telp" placeholder="Kontak" class="form-control">
 						<i class="zmdi zmdi-email"></i>
 					</div>	
 
 					<div class="form-wrapper">
-						<input type="text" placeholder="Alamat Email" class="form-control">
+						<label style="color: red"><?php echo form_error('email') ?></label>
+						<input type="text" placeholder="Alamat Email" class="form-control" name="email">
 						<i class="zmdi zmdi-email"></i>
 					</div>					
 
 					<div class="form-wrapper"> 
-					<form action="prosesupload.php" method="POST" enctype="multipart/form-data">
+					<label style="color: red"><?php echo $error?></label>
 				<div class="form-group">
 					<label>Gambar</label><br>
-					<input type="file" class="form-control" name="foto">
+					<input type="file" class="form-control" name="user_file">
 					<br>
 					<!-- <button class="btn btn-warning" type="submit">Upload</button> -->
 				</div>	
 			
 					</div>
-
 					<div class="form-wrapper">
-						<input type="password" placeholder="Password" class="form-control">
+						<label style="color: red" id="status"><?php echo form_error('username') ?></label>
+						<input type="text" placeholder="Nama Pengguna" class="form-control" name="username" id="username">
+						<i class="zmdi zmdi-account"></i>
+					</div>
+					<div class="form-wrapper">
+						<label style="color: red"><?php echo form_error('password') ?></label>
+						<input type="password" placeholder="Password" class="form-control" name="password">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
 					<div class="form-wrapper">
-						<input type="password" placeholder="Confirm Password" class="form-control">
+						<label style="color: red"><?php echo form_error('confirm_password') ?></label>
+						<input type="password" placeholder="Confirm Password" class="form-control" name="confirm_password">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
 					<button>Register
 						<i class="zmdi zmdi-arrow-right"></i>
 					</button>
-				</form>
+					<?php echo form_close();?>
 			</div>
 		</div>
-		
-		   <script>
-           var cleave = new Cleave('.cleave-number', {
-                 phone: true,
-                 phoneRegionCode: 'ID'
-                 // numeralThousandsGroupStyle: 'none',
-                 // prefix: '08',
-                 // signBeforePrefix: true
+	<script type="text/javascript">
+	 $(document).ready(function(){
+
+	   $('#username').change(function() { 
+      
+          var x= $('#username').val();
+          var status = document.querySelector("#status");
+          
+      		$.ajax({
+               url : "<?php echo base_url();?>Register/checkid",
+               method : "POST",
+               data : { username: x},
+               async : false,
+               dataType : 'json',
+               success: function(data){
+               if(data == "Username Tersedia"){
+               	  status.style.color = 'black';
+      		   	  $("#status").html(data);
+               }
+               else{
+               	  $("#status").html(data);
+               }
+           }});
         });
-    	</script>
+	 // document.getElementById("status").innerHTML = "You wrote: " + x;
+	});
+	</script>
+	<script src="<?php echo base_url()?>assets/js/vendor.js"></script>
+    <script src="<?php echo base_url()?>assets/js/app.js"></script>
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>

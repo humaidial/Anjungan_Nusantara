@@ -12,7 +12,7 @@ class Register extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Register/register_new');
+		$this->load->view('Register/register_new',array('error' => ' '));
 	}
 
 	public function new_profile_and_login()
@@ -21,12 +21,9 @@ class Register extends CI_Controller {
 		 $next = $this->Profile_model->get_next_id();
 		 $profile_id = $next->AUTO_INCREMENT;
 
-		 $config['upload_path']          = './uploads/';
+		 $config['upload_path']          = './assets/foto_user';
          $config['allowed_types']        = 'gif|jpg|png';
-         $config['max_size']             = 100;
-         $config['max_width']            = 1024;
-         $config['max_height']           = 768;
-         $config['file_name']			 = 'profile_' + $profile_id;
+         $config['file_name']			 = 'profile_' ;
 
          $this->load->library('upload', $config);
 
@@ -43,13 +40,14 @@ class Register extends CI_Controller {
 	        )
 		);
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]',array('required' => '%s tidak boleh kosong.',  'min_length'     => '%s minimal 8 karakter.'));
-		$this->form_validation->set_rules('confirm_password', 'Confirm Password', 'matches[password]', array(
+		$this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]', array(
+				'required' => 'Silahkan ulangi password anda.',
                 'matches'     => 'Harus sama dengan password.'
         ));
 		
 		if($this->form_validation->run() == False)
 		{
-			$this->load->view('Register/Profile_form');
+			$this->load->view('Register/register_new',array('error' => ' '));
 		}
 		else if(!$this->upload->do_upload('userfile')){
 			$error = array('error' => $this->upload->display_errors());
@@ -83,11 +81,17 @@ class Register extends CI_Controller {
 		}
 	}
 
-	public function checkid($username)
+	public function checkid()
 	{
 		$username = $this->input->post('username');
 		$ketersediaan = $this->Login_model->checkid($username);
-		echo json_encode($ketersediaan);
+		if($ketersediaan == true){
+			echo json_encode($status = 'Username Tersedia');
+		}
+		else{
+			echo json_encode($status = 'Username Tidak Tersedia');	
+		}
+		
 		// echo "<pre>";
 		// echo var_dump($ketersediaan);
 		// echo "</pre>";
