@@ -24,36 +24,27 @@
 				<div class="image-holder">
 					<img src="<?php echo base_url('assets/register_new/images/Webp.net-resizeimage.jpg')?>" alt="">
 				</div> 
-				<form action="">
+				<?php echo form_open('Login/cekLogin'); ?>
 					<h3>Masuk</h3>
 
 					<div class="form-wrapper">
-						<input type="text" placeholder="Nama Pengguna" class="form-control">
+						<input type="text" placeholder="Nama Pengguna" class="form-control" name="username">
 						<i class="zmdi zmdi-account"></i>
 					</div>
 
 					<div class="form-wrapper">
-						<input type="password" placeholder="Password" class="form-control">
+						<input type="password" placeholder="Password" class="form-control" name="password">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
-					
+					<font color="Red"><?php echo validation_errors()?></font>
 					<button> Masuk
 						<i class="zmdi zmdi-arrow-right"></i>
 					</button>
 					<br>
-					Belum punya akun?, silahkan DAFTAR
-				</form>
+					<center>Belum punya akun?, silahkan <a href="<?php echo base_url()?>Register">DAFTAR</a></center>
+					<?php echo form_close(); ?>
+				
 			</div>
 		</div>
-		
-		   <script>
-           var cleave = new Cleave('.cleave-number', {
-                 phone: true,
-                 phoneRegionCode: 'ID'
-                 // numeralThousandsGroupStyle: 'none',
-                 // prefix: '08',
-                 // signBeforePrefix: true
-        });
-    	</script>
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

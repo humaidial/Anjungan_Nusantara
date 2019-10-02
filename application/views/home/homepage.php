@@ -37,7 +37,7 @@
 							<div class="top_bar_user">
 								<div class="user_icon"><img src="<?php echo base_url('images/user.svg')?>" alt=""></div>
 								<div><a href="<?php echo base_url()?>Register">Daftar</a></div>
-								<div><a href="#">Masuk</a></div>
+								<div><a href="<?php echo base_url()?>Login">Masuk</a></div>
 							</div>
 						</div>
 					</div>

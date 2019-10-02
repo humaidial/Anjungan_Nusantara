@@ -11,11 +11,75 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('Login/Login_form');
+		$this->load->view('Register/login_new');
 	}
 
-	
+	public function logout()
+    {
+        $session_data=$this->session->userdata('logged_in');
+        // var_dump($session_data);
+        // $this->User->setstatus($session_data["id"],"Offline");
+        $this->session->unset_userdata('logged_in');
+        $this->session->sess_destroy();
+        redirect('Login','refresh');
+    }
 
+    public function cekDb($password)
+    {
+        $username = $this->input->post('username'); 
+        $result = $this->Login_model->login($username,$password);
+        if($result){
+           $session_array = array();
+                foreach ($result as $key) {
+                    $session_array = array(
+                        'id'=>$key->login_id,
+                        'username'=>$key->username,
+                        'level'=>$key->level,
+                        'status' => $key->status,
+                        'logged_in' => true
+                    );
+                    // $this->session->set_userdata($session_array);
+                }
+
+                if($session_array["status"] == "Belum Terverifikasi"){
+                	 $this->form_validation->set_message('cekDb',"Akun Sedang Tahap Verifikasi");
+                	 return false;
+                }
+                else{
+                	$this->session->set_userdata($session_array);
+                	return true;
+                }
+   
+            }
+            else{
+                $this->form_validation->set_message('cekDb',"Login Gagal");
+                return false;
+            }
+    }
+
+        public function cekLogin()
+        {
+            $this->form_validation->set_rules('username', 'Username', 'trim|required');
+            $this->form_validation->set_rules('password', 'Password', 'trim|required|callback_cekDb');
+            if ($this->form_validation->run() == FALSE) {
+                $this->load->view('Register/login_new');
+            } else {
+                $session_data=$this->session->userdata('logged_in');
+                $session_data_level=$this->session->userdata('level');
+
+                if($session_data_level == "Admin"){
+                	redirect('Admin','refresh');
+                }
+                else if($session_data_level == "Penjual"){
+                	redirect('Penjual','refresh');
+                }
+                else{
+                	redirect('Home','refresh');
+                }
+                // var_dump($session_data_level); 
+                
+            }
+        }
 }
 
 /* End of file Login.php */

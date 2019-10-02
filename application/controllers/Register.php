@@ -108,16 +108,6 @@ class Register extends CI_Controller {
 		// echo var_dump($ketersediaan);
 		// echo "</pre>";
 	}
-
-	public function daftar()
-	{
-		$this->load->view('Register/sudah_verifikasi');
-	}
-
-	public function masuk()
-	{
-		$this->load->view('Register/login_new');
-	}
 }
 
 /* End of file Register.php */
