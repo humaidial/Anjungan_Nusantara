@@ -12,7 +12,7 @@ class Halamanadmin extends CI_Controller {
 
 	public function berandaadmin()
 	{
-		$this->load->view('admin/Halamanadmin');
+		$this->load->view('admin/beranda');
 	}
 
 	
