@@ -21,9 +21,9 @@ class Register extends CI_Controller {
 		 $next = $this->Profile_model->get_next_id();
 		 $profile_id = $next->AUTO_INCREMENT;
 
-		 $config['upload_path']          = './assets/foto_user';
+		 $config['upload_path']          = './assets/foto/foto_user';
          $config['allowed_types']        = 'gif|jpg|png';
-         $config['file_name']			 = 'profile_' ;
+         $config['file_name']			 = 'profile_'.$profile_id ;
 
          $this->load->library('upload', $config);
 
@@ -32,6 +32,7 @@ class Register extends CI_Controller {
 		$this->form_validation->set_rules('jenis_kelamin','Jenis Kelamin','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('no_telp','No Telpon','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('email','E-mail','required',array('required' => '%s tidak boleh kosong.'));
+		$this->form_validation->set_rules('level','Level','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules(
 	        'username', 'Username','required|min_length[8]',
 	        array(
@@ -49,10 +50,10 @@ class Register extends CI_Controller {
 		{
 			$this->load->view('Register/register_new',array('error' => ' '));
 		}
-		else if(!$this->upload->do_upload('userfile')){
+		else if(!$this->upload->do_upload('user_file')){
 			$error = array('error' => $this->upload->display_errors());
 
-			$this->load->view('Register/Profile_form', $error);
+			$this->load->view('Register/register_new', $error);
 		}
 		else
 		{
@@ -69,15 +70,26 @@ class Register extends CI_Controller {
 			);
 			$this->Profile_model->insert($dataprofile);
 
+			$level = $this->input->post('level');
+			if($level == "Pembeli"){
+				$status = "Terverifikasi";
+				$succes_page = "Register/sudah_verifikasi";
+			}
+			else{
+				$status = "Belum Terverifikasi";
+				$succes_page = "Register/belum_verifikasi";
+			}
 
 			$datalogin = array(
 				'username' => $this->input->post('username'),
 				'password' => $this->input->post('password'),
+				'level' => $level,
+				'status' => $status,
 				'login_profile_id' => $profile_id
 			);
 			$this->Login_model->insert($datalogin);
 
-			$this->load->view('Register/success');
+			$this->load->view($succes_page);
 		}
 	}
 
@@ -99,7 +111,7 @@ class Register extends CI_Controller {
 
 	public function daftar()
 	{
-		$this->load->view('Register/register_new');
+		$this->load->view('Register/sudah_verifikasi');
 	}
 
 	public function masuk()

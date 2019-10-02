@@ -24,11 +24,11 @@
 				<div class="image-holder">
 					<img src="<?php echo base_url('assets/register_new/images/Webp.net-resizeimage.jpg')?>" alt="">
 				</div> 
-					<?php echo form_open('Register/new_profile_and_login'); ?>
+					<?php echo form_open_multipart('Register/new_profile_and_login'); ?>
 					<h3>Pendaftaran</h3>
 					<div class="form-wrapper">
 						<label style="color: red"><?php echo form_error('name') ?></label>
-						<input type="text" placeholder="Nama" class="form-control">
+						<input type="text" placeholder="Nama" class="form-control" name="name">
 					</div>
 
 					<div class="form-group">
@@ -41,10 +41,10 @@
 
 					<div class="form-wrapper">
 						<label style="color: red"><?php echo form_error('jenis_kelamin') ?></label>
-						<select name="jenis_kelamin" id="" class="form-control">
-							<option value="" disabled selected>Gender</option>
-							<option value="male">Laki - laki</option>
-							<option value="femal">Perempuan</option>
+						<select name="jenis_kelamin" class="form-control">
+							<option value="" disabled selected>Jenis Kelamin</option>
+							<option value="Laki-laki">Laki - laki</option>
+							<option value="Perempuan">Perempuan</option>
 							
 						</select>
 						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
@@ -52,7 +52,7 @@
 						
 					<div class="form-wrapper">
 						<label style="color: red"><?php echo form_error('no_telp') ?></label>
-						<input type="text" name="no_telp" placeholder="Kontak" class="form-control">
+						<input type="number" name="no_telp" placeholder="Kontak" class="form-control">
 						<i class="zmdi zmdi-email"></i>
 					</div>	
 
@@ -64,12 +64,23 @@
 
 					<div class="form-wrapper"> 
 					<label style="color: red"><?php echo $error?></label>
-				<div class="form-group">
-					<label>Gambar</label><br>
+					<div class="form-group">
+					<label>Foto Profil</label><br>
 					<input type="file" class="form-control" name="user_file">
 					<br>
 					<!-- <button class="btn btn-warning" type="submit">Upload</button> -->
-				</div>	
+				</div>
+
+				<div class="form-wrapper">
+						<label style="color: red"><?php echo form_error('level') ?></label>
+						<select name="level" class="form-control">
+							<option value="" disabled selected>Anda adalah..</option>
+							<option value="Pembeli">Pembeli</option>
+							<option value="Penjual">Penjual</option>
+						</select>
+						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
+					</div>
+							
 			
 					</div>
 					<div class="form-wrapper">
@@ -100,8 +111,14 @@
       
           var x= $('#username').val();
           var status = document.querySelector("#status");
-          
-      		$.ajax({
+          var panjang = x.length;
+
+          if(panjang < 8){
+          	 status.style.color = 'red';
+          	 $("#status").html("Username minimal 8 karakter.");
+          }
+          else{
+          	 $.ajax({
                url : "<?php echo base_url();?>Register/checkid",
                method : "POST",
                data : { username: x},
@@ -116,10 +133,20 @@
                	  $("#status").html(data);
                }
            }});
+          }
         });
 	 // document.getElementById("status").innerHTML = "You wrote: " + x;
 	});
 	</script>
+	<!--  <script>
+           var cleave = new Cleave('.cleave-number', {
+                 phone: true,
+                 phoneRegionCode: 'ID'
+                 // numeralThousandsGroupStyle: 'none',
+                 // prefix: '08',
+                 // signBeforePrefix: true
+      });
+    </script> -->
 	<script src="<?php echo base_url()?>assets/js/vendor.js"></script>
     <script src="<?php echo base_url()?>assets/js/app.js"></script>
 	</body><!-- This templates was made by Colorlib (https://colorlib.com) -->

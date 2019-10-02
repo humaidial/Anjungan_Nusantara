@@ -26,19 +26,14 @@
 
 	<body>
 
-
-
-
-
-
-
 		<div class="wrapper" style="background-image: url('<?php echo base_url('assets/register_new/images/610537.jpg');?>');" width="100px" height="200px">
 
 			<div class="inner">
 				<div class="image-holder">
 					<h3>
-					Selamat Anda berhasil mendaftar, tunggu pendaftaran Anda diterima oleh Admin. </h3>
-					<center><a href="<?php echo base_url('Berandauser/homepage')?>"><button type="button" class="btn btn-info"> Kembali ke Beranda</button></a></center>
+					Selamat Datang Pembeli, Anda berhasil mendaftar.</h3>
+					<h3>Silahkan Anda sudah bisa memulai berbelanja.</h3>
+					<center><a href="<?php echo base_url('Welcome')?>"><button type="button" class="btn btn-info"> Kembali ke Beranda</button></a></center>
 				</div>
 
 
