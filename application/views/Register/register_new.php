@@ -18,11 +18,11 @@
 
 	<body>
 
-		<div class="wrapper" style="background-image: url('<?php echo base_url('assets/register_new/images/610537.jpg');?>');">
+		<div class="wrapper" style="background-image: url('<?php echo base_url('assets/register_new/images/kabuabu (1).jpg');?>');">
 			
 			<div class="inner">
 				<div class="image-holder">
-					<img src="<?php echo base_url('assets/register_new/images/Webp.net-resizeimage.jpg')?>" alt="">
+					<img src="<?php echo base_url('assets/register_new/images/login-ui-ux-design-concept-illustration_78200-431_(2).jpg')?>" alt="">
 				</div> 
 					<?php echo form_open_multipart('Register/new_profile_and_login'); ?>
 					<h3>Pendaftaran</h3>
