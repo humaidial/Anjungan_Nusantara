@@ -32,10 +32,10 @@
 				<div class="row">
 					<div class="col d-flex flex-row">
 						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url('assets/homepage_lib/images/phone.png')?>" alt=""></div>(031) - 8894850</div>
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo site_url()?>assets/homepage_lib/images/mail.png" alt=""></div><a href="mailto:humaidialmasmed@gmail.com">humaidialmasmed@gmail.com</a></div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url()?>assets/homepage_lib/images/mail.png" alt=""></div><a href="mailto:humaidialmasmed@gmail.com">humaidialmasmed@gmail.com</a></div>
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_user">
-								<div class="user_icon"><img src="<?php echo base_url('images/user.svg')?>" alt=""></div>
+								<div class="user_icon"><img src="<?php echo base_url('assets/homepage_lib/images/user.svg')?>" alt=""></div>
 								<div><a href="<?php echo base_url()?>Register">Daftar</a></div>
 								<div><a href="<?php echo base_url()?>Login">Masuk</a></div>
 							</div>
@@ -54,7 +54,7 @@
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="index.html">Anjungan<br>Nusantara</a></div>
+							<div class="logo"><a href="<?php echo base_url()?>Welcome">Anjungan<br>Nusantara</a></div>
 						</div>
 					</div>
 
@@ -71,12 +71,12 @@
 												<i class="fas fa-chevron-down"></i>
 												<ul class="custom_list clc">
 													<li><a class="clc" href="#">Semua Kategori</a></li>
-													<li><a class="clc" href="shop.html">Aksesoris</a></li>
-													<li><a class="clc" href="shop.html">Kuliner</a></li>
-													<li><a class="clc" href="shop.html">Fashion</a></li>
-													<li><a class="clc" href="shop.html">Kerajinan Tangan</a></li>
-													<li><a class="clc" href="shop.html">Pernak Pernik</a></li>
-													<li><a class="clc" href="shop.html">Produk Kulit</a></li>
+													<li><a class="clc" href="<?php echo base_url()?>Semua_Produk">Aksesoris</a></li>
+													<li><a class="clc" href="<?php echo base_url()?>Semua_Produk">Kuliner</a></li>
+													<li><a class="clc" href="<?php echo base_url()?>Semua_Produk">Fashion</a></li>
+													<li><a class="clc" href="<?php echo base_url()?>Semua_Produk">Kerajinan Tangan</a></li>
+													<li><a class="clc" href="<?php echo base_url()?>Semua_Produk">Pernak Pernik</a></li>
+													<li><a class="clc" href="<?php echo base_url()?>Semua_Produk">Produk Kulit</a></li>
 												</ul>
 											</div>
 										</div>
@@ -95,7 +95,7 @@
 							<div class="cart">
 								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
 									<div class="cart_icon">
-										<img src="images/cart.png" alt="">
+										<img src="<?php echo base_url()?>assets/homepage_lib/images/cart.png" alt="">
 										<div class="cart_count"><span>1</span></div>
 									</div>
 									<div class="cart_content">
@@ -237,7 +237,7 @@
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="index.html">Beranda<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="<?php echo base_url()?>Welcome">Beranda<i class="fas fa-chevron-down"></i></a></li>
 									<li class="hassubs">
 										<a href="#">Promo Menarik<i class="fas fa-chevron-down"></i></a>
 										<ul>
@@ -255,8 +255,8 @@
 									<li class="hassubs">
 										<a href="#">Halaman<i class="fas fa-chevron-down"></i></a>
 										<ul>
-											<li><a href="shop.html">Semua Produk</a></li>
-											<li><a href="cart.html">Keranjang</a></li>
+											<li><a href="<?php echo base_url()?>Semua_Produk">Semua Produk</a></li>
+											<li><a href="<?php echo base_url()?>Keranjang">Keranjang</a></li>
 											<li><a href="contact.html">Kontak</a></li>
 										</ul>
 									</li>
@@ -357,7 +357,7 @@
 						<h1 class="banner_text">era baru umkm</h1>
 						<div class="banner_price"><span>Rp 125.000</span>Rp 100.000</div>
 						<div class="banner_product_name">Tas Rajut Kerajinan Tangan</div>
-						<div class="button banner_button"><a href="product.html">Belanja Sekarang</a></div>
+						<div class="button banner_button"><a href="<?php echo base_url()?>Detail_Product">Belanja Sekarang</a></div>
 					</div>
 				</div>
 			</div>
