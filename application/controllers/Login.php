@@ -26,16 +26,16 @@ class Login extends CI_Controller {
 
     public function cekDb($password)
     {
-        $username = $this->input->post('username'); 
-        $result = $this->Login_model->login($username,$password);
+        $email = $this->input->post('email'); 
+        $result = $this->Login_model->login($email,$password);
         if($result){
            $session_array = array();
                 foreach ($result as $key) {
                     $session_array = array(
                         'id'=>$key->login_id,
-                        'username'=>$key->username,
-                        'level'=>$key->level,
-                        'status' => $key->status,
+                        'e_mail'=>$key->e_mail,
+                        'level'=>$key->login_level,
+                        'status' => $key->login_status,
                         'logged_in' => true
                     );
                     // $this->session->set_userdata($session_array);
@@ -59,7 +59,7 @@ class Login extends CI_Controller {
 
         public function cekLogin()
         {
-            $this->form_validation->set_rules('username', 'Username', 'trim|required');
+            $this->form_validation->set_rules('email', 'E-mail', 'trim|required');
             $this->form_validation->set_rules('password', 'Password', 'trim|required|callback_cekDb');
             if ($this->form_validation->run() == FALSE) {
                 $this->load->view('Register/login_new');

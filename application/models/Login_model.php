@@ -14,11 +14,11 @@ class Login_model extends CI_Model {
 		return false;
 	}
 
-	public function checkid($username)
+	public function checkemail($email)
 	{
-		$this->db->select('username');
+		$this->db->select('e_mail');
 		$this->db->from($this->table);
-		$this->db->where('username',$username);
+		$this->db->where('e_mail',$email);
 		$query = $this->db->get();
 		if($query->num_rows() == 0){
 			return true;
@@ -28,11 +28,11 @@ class Login_model extends CI_Model {
 		}
 	}
 
-	public function login($username,$password)
+	public function login($email,$password)
     {
-        $this->db->select('login_id,username,password,level,status');
+        $this->db->select('login_id,e_mail,password,login_level,login_status');
         $this->db->from($this->table);
-        $this->db->where('username', $username);
+        $this->db->where('e_mail', $email);
         $this->db->where('password', $password);
         $query = $this->db->get();
         if($query->num_rows()==1){

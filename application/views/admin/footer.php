@@ -49,5 +49,6 @@
         <script src="<?php echo base_url('assets/templateadmin/global/js/Plugin/jvectormap.js')?>"></script>
     
         <script src="<?php echo base_url('assets/templateadmin/base/assets/examples/js/dashboard/v1.js')?>"></script>
+          <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/b-1.5.6/b-colvis-1.5.6/fc-3.2.5/fh-3.1.4/r-2.2.2/datatables.min.js"></script>
   </body>
 </html>

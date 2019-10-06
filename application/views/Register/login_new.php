@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Pendaftaran</title>
+		<title>Login</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<!-- MATERIAL DESIGN ICONIC FONT -->
@@ -28,7 +28,7 @@
 					<h3>Masuk</h3>
 
 					<div class="form-wrapper">
-						<input type="text" placeholder="Nama Pengguna" class="form-control" name="username">
+						<input type="text" placeholder="E-mail" class="form-control" name="email">
 						<i class="zmdi zmdi-account"></i>
 					</div>
 

@@ -31,15 +31,15 @@
 						<input type="text" placeholder="Nama" class="form-control" name="name">
 					</div>
 
-					<div class="form-group">
+					<!-- <div class="form-group">
 					<div class="form-wrapper">
 						<label style="color: red"><?php echo form_error('alamat') ?></label>
 					</div>
 					<textarea class="form-control" name="alamat" id="alamat" rows="3" placeholder="Alamat"></textarea>
-					</div>
+					</div> -->
 
 
-					<div class="form-wrapper">
+					<!-- <div class="form-wrapper">
 						<label style="color: red"><?php echo form_error('jenis_kelamin') ?></label>
 						<select name="jenis_kelamin" class="form-control">
 							<option value="" disabled selected>Jenis Kelamin</option>
@@ -48,28 +48,27 @@
 							
 						</select>
 						<i class="zmdi zmdi-caret-down" style="font-size: 17px"></i>
-					</div>
+					</div> -->
 						
 					<div class="form-wrapper">
 						<label style="color: red"><?php echo form_error('no_telp') ?></label>
-						<input type="number" name="no_telp" placeholder="Kontak" class="form-control">
-						<i class="zmdi zmdi-email"></i>
+						<input type="number" name="no_telp" placeholder="No Handphone" class="form-control">
 					</div>	
 
 					<div class="form-wrapper">
-						<label style="color: red"><?php echo form_error('email') ?></label>
-						<input type="text" placeholder="Alamat Email" class="form-control" name="email">
+						<label style="color: red" id="status"><?php echo form_error('email') ?></label>
+						<input type="text" placeholder="Alamat Email" class="form-control" name="email" id="email">
 						<i class="zmdi zmdi-email"></i>
 					</div>					
 
 					<div class="form-wrapper"> 
-					<label style="color: red"><?php echo $error?></label>
+					<!-- <label style="color: red"><?php echo $error?></label>
 					<div class="form-group">
 					<label>Foto Profil</label><br>
 					<input type="file" class="form-control" name="user_file">
-					<br>
+					<br> -->
 					<!-- <button class="btn btn-warning" type="submit">Upload</button> -->
-				</div>
+				<!-- </div> -->
 
 				<div class="form-wrapper">
 						<label style="color: red"><?php echo form_error('level') ?></label>
@@ -83,11 +82,11 @@
 							
 			
 					</div>
-					<div class="form-wrapper">
+					<!-- <div class="form-wrapper">
 						<label style="color: red" id="status"><?php echo form_error('username') ?></label>
 						<input type="text" placeholder="Nama Pengguna" class="form-control" name="username" id="username">
 						<i class="zmdi zmdi-account"></i>
-					</div>
+					</div> -->
 					<div class="form-wrapper">
 						<label style="color: red"><?php echo form_error('password') ?></label>
 						<input type="password" placeholder="Password" class="form-control" name="password">
@@ -98,7 +97,7 @@
 						<input type="password" placeholder="Confirm Password" class="form-control" name="confirm_password">
 						<i class="zmdi zmdi-lock"></i>
 					</div>
-					<button>Register
+					<button id="btnSubmit">Register
 						<i class="zmdi zmdi-arrow-right"></i>
 					</button>
 					<?php echo form_close();?>
@@ -107,33 +106,27 @@
 	<script type="text/javascript">
 	 $(document).ready(function(){
 
-	   $('#username').change(function() { 
+	   $('#email').change(function() { 
       
-          var x= $('#username').val();
+          var x= $('#email').val();
           var status = document.querySelector("#status");
-          var panjang = x.length;
 
-          if(panjang < 8){
-          	 status.style.color = 'red';
-          	 $("#status").html("Username minimal 8 karakter.");
-          }
-          else{
           	 $.ajax({
-               url : "<?php echo base_url();?>Register/checkid",
+               url : "<?php echo base_url();?>Register/checkemail",
                method : "POST",
-               data : { username: x},
+               data : { email: x},
                async : false,
                dataType : 'json',
                success: function(data){
-               if(data == "Username Tersedia"){
-               	  status.style.color = 'black';
+               	console.log(data);
+               if(data == "E-mail sudah dipakai."){
       		   	  $("#status").html(data);
+      		   	  $("#btnSubmit").attr("disabled", true);
                }
                else{
-               	  $("#status").html(data);
+               	  $("#btnSubmit").attr("disabled", false);
                }
            }});
-          }
         });
 	 // document.getElementById("status").innerHTML = "You wrote: " + x;
 	});

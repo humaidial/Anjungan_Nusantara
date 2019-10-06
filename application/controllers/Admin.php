@@ -24,7 +24,19 @@ class Admin extends CI_Controller {
 			// 'level'= $session_data'level',
 			'sidebar' => 'admin/sidebar',
 			'content' => 'admin/dashboard',
-			'title' => 'Daftar Kota',
+			'footer' => 'admin/footer',
+
+		];
+		$this->load->view('admin/template',$data);
+	}
+
+	public function akun($tipe_user)
+	{
+		$data = [
+			// 'username'= $session_data'username',
+			// 'level'= $session_data'level',
+			'sidebar' => 'admin/sidebar',
+			'content' => 'admin/akun',
 			'footer' => 'admin/footer',
 
 		];

@@ -21,25 +21,18 @@ class Register extends CI_Controller {
 		 $next = $this->Profile_model->get_next_id();
 		 $profile_id = $next->AUTO_INCREMENT;
 
-		 $config['upload_path']          = './assets/foto/foto_user';
-         $config['allowed_types']        = 'gif|jpg|png';
-         $config['file_name']			 = 'profile_'.$profile_id ;
+		 // $config['upload_path']          = './assets/foto/foto_user';
+   //       $config['allowed_types']        = 'gif|jpg|png';
+   //       $config['file_name']			 = 'profile_'.$profile_id ;
 
-         $this->load->library('upload', $config);
+   //       $this->load->library('upload', $config);
 
 		$this->form_validation->set_rules('name','Nama','required',array('required' => '%s tidak boleh kosong.'));
-		$this->form_validation->set_rules('alamat','Alamat','required',array('required' => '%s tidak boleh kosong.'));
-		$this->form_validation->set_rules('jenis_kelamin','Jenis Kelamin','required',array('required' => '%s tidak boleh kosong.'));
+		// $this->form_validation->set_rules('alamat','Alamat','required',array('required' => '%s tidak boleh kosong.'));
+		// $this->form_validation->set_rules('jenis_kelamin','Jenis Kelamin','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('no_telp','No Telpon','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('email','E-mail','required',array('required' => '%s tidak boleh kosong.'));
-		$this->form_validation->set_rules('level','Level','required',array('required' => '%s tidak boleh kosong.'));
-		$this->form_validation->set_rules(
-	        'username', 'Username','required|min_length[8]',
-	        array(
-	                'required'      => '%s tidak boleh kosong.',
-	                'min_length'     => '%s minimal 8 karakter.'
-	        )
-		);
+		$this->form_validation->set_rules('level','Tipe','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]',array('required' => '%s tidak boleh kosong.',  'min_length'     => '%s minimal 8 karakter.'));
 		$this->form_validation->set_rules('confirm_password', 'Confirm Password', 'required|matches[password]', array(
 				'required' => 'Silahkan ulangi password anda.',
@@ -50,11 +43,11 @@ class Register extends CI_Controller {
 		{
 			$this->load->view('Register/register_new',array('error' => ' '));
 		}
-		else if(!$this->upload->do_upload('user_file')){
-			$error = array('error' => $this->upload->display_errors());
+		// else if(!$this->upload->do_upload('user_file')){
+		// 	$error = array('error' => $this->upload->display_errors());
 
-			$this->load->view('Register/register_new', $error);
-		}
+		// 	$this->load->view('Register/register_new', $error);
+		// }
 		else
 		{
 			//ambil id increment untuk profil baru
@@ -62,11 +55,10 @@ class Register extends CI_Controller {
 
 			$dataprofile = array(
 				'profile_nama' => $this->input->post('name'),
-				'profile_alamat' => $this->input->post('alamat'),
-				'profile_jenis_kelamin' => $this->input->post('jenis_kelamin'),
-				'profile_no_telp' => $this->input->post('no_telp'),
-				'profile_email' => $this->input->post('email'),
-				'profile_picture' => $this->upload->data('file_name'),
+				// 'profile_alamat' => $this->input->post('alamat'),
+				// 'profile_jenis_kelamin' => $this->input->post('jenis_kelamin'),
+				'profile_no_hp' => $this->input->post('no_telp'),
+				// 'profile_picture' => $this->upload->data('file_name'),
 			);
 			$this->Profile_model->insert($dataprofile);
 
@@ -81,10 +73,11 @@ class Register extends CI_Controller {
 			}
 
 			$datalogin = array(
-				'username' => $this->input->post('username'),
+				// 'username' => $this->input->post('username'),
+				'e_mail' => $this->input->post('email'),
 				'password' => $this->input->post('password'),
-				'level' => $level,
-				'status' => $status,
+				'login_level' => $level,
+				'login_status' => $status,
 				'login_profile_id' => $profile_id
 			);
 			$this->Login_model->insert($datalogin);
@@ -93,17 +86,16 @@ class Register extends CI_Controller {
 		}
 	}
 
-	public function checkid()
+	public function checkemail()
 	{
-		$username = $this->input->post('username');
-		$ketersediaan = $this->Login_model->checkid($username);
+		$email = $this->input->post('email');
+		$ketersediaan = $this->Login_model->checkemail($email );
 		if($ketersediaan == true){
-			echo json_encode($status = 'Username Tersedia');
+			echo json_encode($status = 'E-mail belum dipakai.');
 		}
 		else{
-			echo json_encode($status = 'Username Tidak Tersedia');	
+			echo json_encode($status = 'E-mail sudah dipakai.');
 		}
-		
 		// echo "<pre>";
 		// echo var_dump($ketersediaan);
 		// echo "</pre>";
