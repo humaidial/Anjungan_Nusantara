@@ -209,12 +209,28 @@
                     </a>
                 <ul class="site-menu-sub">
                   <li class="site-menu-item">
-                    <a class="animsition-link" href="layouts/menu-collapsed.html">
+                    <a class="animsition-link" href="<?php echo base_url()?>/Admin/akun/Pembeli">
                       <span class="site-menu-title">Akun Pembeli</span>
                     </a>
                   </li>
                 </ul>
+                 <ul class="site-menu-sub">
+                  <li class="site-menu-item">
+                    <a class="animsition-link" href="<?php echo base_url()?>/Admin/akun/Penjual">
+                      <span class="site-menu-title">Akun Penjual</span>
+                    </a>
+                  </li>
+                </ul>
+                 <ul class="site-menu-sub">
+                  <li class="site-menu-item">
+                    <a class="animsition-link" href="<?php echo base_url()?>/Admin/akun/Admin">
+                      <span class="site-menu-title">Akun Admin</span>
+                    </a>
+                  </li>
+                </ul>
               </li>
+
+
             </ul>
           </div>
         </div>

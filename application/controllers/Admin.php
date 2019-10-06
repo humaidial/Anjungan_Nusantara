@@ -7,6 +7,7 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('Login_model');
+		$this->load->model('Profile_model');
 
 		if ($this->session->userdata('logged_in')) {
 			$session_data=$this->session->userdata('logged_in');
@@ -22,8 +23,6 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 		$data = [
-			// 'username'= $session_data'username',
-			// 'level'= $session_data'level',
 			'notif' => $this->notif_about_akun(),
 			'sidebar' => 'admin/sidebar',
 			'content' => 'admin/dashboard',
@@ -33,32 +32,21 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/template',$data);
 	}
 
-	public function tes()
-	{
-		$data = [
-			// 'username'= $session_data'username',
-			// 'level'= $session_data'level',
-			'notif' => $this->notif_about_akun(),
-			'sidebar' => 'admin/sidebar',
-			'content' => 'admin/dashboard',
-			'footer' => 'admin/footer',
-
-		];
-		var_dump($data);
-		// $this->load->view('admin/template',$data);
-	}
 
 	public function akun($tipe_user)
 	{
+		$data_akun = $this->Profile_model->profile_and_login($tipe_user);
 		$data = [
-			// 'username'= $session_data'username',
-			// 'level'= $session_data'level',
+			'notif' => $this->notif_about_akun(),
+			'data_akun' => $data_akun,
+			'judul' => $tipe_user,
 			'sidebar' => 'admin/sidebar',
 			'content' => 'admin/akun',
 			'footer' => 'admin/footer',
 
 		];
 		$this->load->view('admin/template',$data);
+		// var_dump($data);
 	}
 
 	public function notif_about_akun()

@@ -20,6 +20,15 @@ class Profile_model extends CI_Model {
 		return $query->row(0);
 	}
 
+	public function profile_and_login($level = null)
+	{
+		if($level != null){
+			$query =  $this->db->query("SELECT * FROM login inner join profile on login.login_profile_id = profile.profile_id WHERE login.login_level = '$level'");
+		}
+		
+		return $query->result();
+	}
+
 }
 
 /* End of file Profile_model.php */
