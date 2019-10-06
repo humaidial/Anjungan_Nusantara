@@ -42,6 +42,15 @@ class Login_model extends CI_Model {
         }                        
     }
 
+    public function get_data_belum_verifikasi()
+	{
+		$this->db->select('*');
+		$this->db->from($this->table);
+		$this->db->where('login_status','Belum Terverifikasi');
+		$query = $this->db->get();
+		return $query->num_rows();
+	}
+
 }
 
 /* End of file Login_model.php */

@@ -93,32 +93,53 @@
     
           <!-- Navbar Toolbar Right -->
           <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+            <!-- notification system -->
+
+             <?php 
+                   $jumlah_notif = 0;
+                 foreach ($notif as $key => $value) {
+
+                 if($value > 0){
+                    $jumlah_notif += 1;
+                 };
+              } 
+
+              ?>
+            
             <li class="nav-item dropdown">
               <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" title="Notifications"
                 aria-expanded="false" data-animation="scale-up" role="button">
                 <i class="icon wb-bell" aria-hidden="true"></i>
-                <span class="badge badge-pill badge-danger up">5</span>
+                <span class="badge badge-pill badge-danger up"><?php echo $jumlah_notif ?></span>
               </a>
+
+             
               <div class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
                 <div class="dropdown-menu-header">
                   <h5>Pemberitahuan</h5>
-                  <span class="badge badge-round badge-danger">New 5</span>
                 </div>
     
                 <div class="list-group">
                   <div data-role="container">
                     <div data-role="content">
-                      <a class="list-group-item dropdown-item" href="javascript:void(0)" role="menuitem">
+                     
+                       <!--  notif -->
+                    <?php if($notif[0] > 0) { ?>
+                        <a class="list-group-item dropdown-item" href="reroute to akun penjual" role="menuitem">
                         <div class="media">
                           <div class="pr-10">
                             <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
                           </div>
                           <div class="media-body">
-                            <h6 class="media-heading">Completed the task</h6>
-                            <time class="media-meta" datetime="2018-06-11T18:29:20+08:00">2 days ago</time>
+                            <h6 class="media-heading">Beberapa akun penjual menunggu verifikasi.</h6>
+                             <span class="badge badge-round badge-danger"><?php echo $notif[0]?></span>
                           </div>
                         </div>
                       </a>
+                    <?php } ?>
+
+                         
+
                     </div>
                   </div>
                 </div>
