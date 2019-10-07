@@ -247,7 +247,7 @@
 											</li>
 											<li><a href="#">Gebyar UKM</a>
 											</li>
-											<li><a href="#">Flash Sale</a>
+											<li><a href="#">Flash Sales</a>
 											</li>
 										</ul>
 									</li>
