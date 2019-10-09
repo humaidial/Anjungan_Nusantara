@@ -7,7 +7,7 @@
     <meta name="description" content="bootstrap admin template">
     <meta name="author" content="">
     
-    <title>Halaman Admin</title>
+    <title>Halaman Penjual</title>
     
     <link rel="apple-touch-icon" href="<?php echo base_url('assets/templateadmin/base/assets/images/apple-touch-icon.png')?>">
     <link rel="shortcut icon" href="<?php echo base_url('assets/templateadmin/base/assets/images/favicon.ico')?>">
@@ -75,7 +75,7 @@
           <i class="icon wb-more-horizontal" aria-hidden="true"></i>
         </button>
         <div class="navbar-brand navbar-brand-center" data-toggle="gridmenu">
-          <span class="navbar-brand-text hidden-xs-down">Halaman Admin</span>
+          <span class="navbar-brand-text hidden-xs-down">Halaman Penjual</span>
         </div>
         <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
           data-toggle="collapse">
@@ -127,7 +127,7 @@
                      
                        <!--  notif -->
                     <?php if($notif[0] > 0) { ?>
-                        <a class="list-group-item dropdown-item" href="<?php echo base_url()?>Admin/akun/Penjual" role="menuitem">
+                        <a class="list-group-item dropdown-item" href="reroute to akun penjual" role="menuitem">
                         <div class="media">
                           <div class="pr-10">
                             <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
@@ -194,74 +194,8 @@
             <ul class="site-menu" data-plugin="menu">
               <li class="site-menu-category">Menu</li>
               <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Admin/index">
-                        <i class="site-menu-icon wb-dashboard" aria-hidden="true"></i>
-                        <span class="site-menu-title">Dashboard</span>
-                           <!--  <div class="site-menu-badge">
-                                <span class="badge badge-pill badge-success">3</span>
-                            </div> -->
-                </a>
+                <a href="<?php echo base_url() ?>Penjual/buat_usaha_baru">Buat Baru</a>
               </li>
-              <li class="site-menu-item has-sub">
-                <a href="javascript:void(0)">
-                        <!--menu beri ikon -->
-                        <i aria-hidden="true"></i>
-                        <span class="site-menu-title">Manajemen Akun</span>
-                                <span class="site-menu-arrow"></span>
-                    </a>
-                <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/akun/Pembeli">
-                      <span class="site-menu-title">Akun Pembeli</span>
-                    </a>
-                  </li>
-                </ul>
-                 <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/akun/Penjual">
-                      <span class="site-menu-title">Akun Penjual</span>
-                    </a>
-                  </li>
-                </ul>
-                 <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/akun/Admin">
-                      <span class="site-menu-title">Akun Admin</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-                <li class="site-menu-item has-sub">
-                <a href="javascript:void(0)">
-                        <!--menu beri ikon -->
-                        <i aria-hidden="true"></i>
-                        <span class="site-menu-title">Manajemen Produk</span>
-                                <span class="site-menu-arrow"></span>
-                    </a>
-                <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/kategori">
-                      <span class="site-menu-title">Kategori dan Subkategori</span>
-                    </a>
-                  </li>
-                </ul>
-                 <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/list_ukm">
-                      <span class="site-menu-title">Daftar UKM</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/produk">
-                      <span class="site-menu-title">Daftar Produk</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
 
             </ul>
           </div>

@@ -118,12 +118,13 @@
                async : false,
                dataType : 'json',
                success: function(data){
-               	console.log(data);
+               	// console.log(data);
                if(data == "E-mail sudah dipakai."){
       		   	  $("#status").html(data);
       		   	  $("#btnSubmit").attr("disabled", true);
                }
                else{
+               	  $("#status").html("");
                	  $("#btnSubmit").attr("disabled", false);
                }
            }});
