@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2019 at 12:35 PM
+-- Generation Time: Oct 10, 2019 at 02:54 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -25,6 +25,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kategori`
+--
+
+CREATE TABLE `kategori` (
+  `kategori_id` int(11) NOT NULL,
+  `kategori_nama` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `login`
 --
 
@@ -42,7 +53,12 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`login_id`, `e_mail`, `password`, `login_level`, `login_status`, `login_profile_id`) VALUES
-(14, 'putra.nijikun@gmail.com', '12345678', 'Pembeli', 'Terverifikasi', 14);
+(1, 'admin', 'admin', 'Admin', 'Terverifikasi', 1),
+(5, 'putra.nijikun@gmail.com', '12345678', '', 'Terverifikasi', 5),
+(6, 'putra.nijikun@gmail.com', '12345678', 'Pembeli', 'Terverifikasi', 6),
+(7, 'amelf@gmail.com', '123456', 'Pembeli', 'Terverifikasi', 7),
+(8, 'ikin@hotelier.co.id', '12345678', 'Penjual', 'Terverifikasi', 8),
+(9, 'putra.notalone@yahoo.com', '12345678', 'Penjual', 'Terverifikasi', 9);
 
 -- --------------------------------------------------------
 
@@ -62,7 +78,24 @@ CREATE TABLE `profile` (
 --
 
 INSERT INTO `profile` (`profile_id`, `profile_nama`, `profile_no_hp`, `profile_alamat`) VALUES
-(14, 'Yudistira Putra', '083834565645', '');
+(1, 'admin', '', ''),
+(5, 'cc', '12345678', 'Sukun malang'),
+(6, 'Yudistira Eka Putra', '083834565645', 'Sukun malang'),
+(7, 'Yudis', '2112443', 'Sukun malang'),
+(8, 'Amelia Frisianti', '083834565645', ''),
+(9, 'FF', '089891234', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subkategori`
+--
+
+CREATE TABLE `subkategori` (
+  `subkategori_id` int(11) NOT NULL,
+  `subkategori_nama` varchar(255) NOT NULL,
+  `subkategori_kategori_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -90,9 +123,31 @@ INSERT INTO `tes` (`nama`) VALUES
 ('tt'),
 ('');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usaha`
+--
+
+CREATE TABLE `usaha` (
+  `usaha_id` int(11) NOT NULL,
+  `usaha_nama` varchar(255) NOT NULL,
+  `usaha_alamat` varchar(255) NOT NULL,
+  `usaha_no_telp` varchar(255) NOT NULL,
+  `usaha_email` varchar(255) NOT NULL,
+  `usaha_foto` varchar(255) NOT NULL,
+  `usaha_profile_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `kategori`
+--
+ALTER TABLE `kategori`
+  ADD PRIMARY KEY (`kategori_id`);
 
 --
 -- Indexes for table `login`
@@ -108,20 +163,50 @@ ALTER TABLE `profile`
   ADD PRIMARY KEY (`profile_id`);
 
 --
+-- Indexes for table `subkategori`
+--
+ALTER TABLE `subkategori`
+  ADD PRIMARY KEY (`subkategori_id`);
+
+--
+-- Indexes for table `usaha`
+--
+ALTER TABLE `usaha`
+  ADD PRIMARY KEY (`usaha_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `kategori`
+--
+ALTER TABLE `kategori`
+  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `subkategori`
+--
+ALTER TABLE `subkategori`
+  MODIFY `subkategori_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `usaha`
+--
+ALTER TABLE `usaha`
+  MODIFY `usaha_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
