@@ -30,11 +30,13 @@ class Login_model extends CI_Model {
 
 	public function login($email,$password)
     {
-        $this->db->select('login_id,e_mail,password,login_level,login_status');
-        $this->db->from($this->table);
-        $this->db->where('e_mail', $email);
-        $this->db->where('password', $password);
-        $query = $this->db->get();
+        // $this->db->select('login_id,e_mail,password,login_level,login_status,login_profile_id');
+        // $this->db->from($this->table);
+        // $this->db->where('e_mail', $email);
+        // $this->db->where('password', $password);
+        // $query = $this->db->get();
+        $query =  $this->db->query("SELECT l.login_id,l.e_mail,l.password,l.login_level,l.login_status,l.login_profile_id, p.profile_nama FROM login as l inner join profile as p on l.login_profile_id = p.profile_id WHERE l.e_mail = '$email' AND l.password = '$password'");
+        
         if($query->num_rows()==1){
             return $query->result();
         }else{

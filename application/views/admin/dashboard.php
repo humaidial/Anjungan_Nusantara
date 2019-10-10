@@ -9,7 +9,7 @@
               <div class="card-block p-0">
                 <div class="row no-space h-full" data-plugin="matchHeight">
                   <div class="col-md-12 col-sm-12">
-                    <h3>Selamat Datang, </h3>
+                    <h3>Selamat Datang, <?=$this->session->userdata('username');?></h3>
                   </div>
                 </div>
               </div>

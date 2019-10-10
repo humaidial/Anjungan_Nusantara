@@ -36,6 +36,8 @@ class Login extends CI_Controller {
                         'e_mail'=>$key->e_mail,
                         'level'=>$key->login_level,
                         'status' => $key->login_status,
+                        'profile_id' => $key->login_profile_id,
+                        'username' =>  $key->profile_nama,
                         'logged_in' => true
                     );
                     // $this->session->set_userdata($session_array);

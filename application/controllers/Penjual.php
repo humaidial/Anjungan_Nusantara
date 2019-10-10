@@ -6,9 +6,28 @@ class Penjual extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		//Do your magic here
 		$this->load->model('Login_model');
 		$this->load->model('Profile_model');
+		$this->load->model('Usaha_model');
+
+		if ($this->session->userdata('logged_in')) {
+			$session_data=$this->session->userdata('logged_in');
+			$data['username'] = $session_data['username'];
+			$data['level']=$session_data['level'];
+			$usahaId =$session_data['profile_id'];
+
+			if($this->cek_usaha($usahaId) == "Belum Ada"){
+				$this->buat_usaha_baru();
+			}
+			else{
+				$this->index();
+			}
+
+		}
+		else{
+			echo '<script>alert("Anda Belum Login")</script>';
+			redirect('Login','refresh');
+		}
 	}
 
 	public function index()
@@ -37,8 +56,13 @@ class Penjual extends CI_Controller {
 
 	public function form_usaha_baru($value='')
 	{
-		$this->load->view('penjual/buat_baru');
-
+		$data = [
+			'notif' => $this->notif_about_akun(),
+			'sidebar' => 'penjual/sidebar',
+			'content' => 'penjual/buat_baru',
+			'footer' => 'penjual/footer',
+		];
+		$this->load->view('penjual/template',$data);
 	}
 
 	public function notif_about_akun()
@@ -46,6 +70,21 @@ class Penjual extends CI_Controller {
 		$notifakun = $this->Login_model->get_data_belum_verifikasi();
 		$notiflainnya = 0;
 		return(array($notifakun, $notiflainnya));
+	}
+
+	public function cek_usaha($id)
+	{
+		if($this->Usaha_model->cek_usaha($id)){
+			return "Belum Ada";
+		}
+		else{
+			return "Sudah Ada";
+		}
+	}
+
+	public 	function tes()
+	{
+		$this->load->view('penjual/dashboard');
 	}
 
 }
