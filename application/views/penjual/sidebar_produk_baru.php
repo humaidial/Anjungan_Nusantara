@@ -194,81 +194,8 @@
             <ul class="site-menu" data-plugin="menu">
               <li class="site-menu-category">Menu</li>
               <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Penjual/index">Dashboard</a>
+                <a href="<?php echo base_url() ?>Penjual/form_produk_baru">Buat Baru</a>
               </li>
-
-              <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Penjual/index">Profil</a>
-              </li>
-
-              <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Penjual/buat_produk_baru">Produk</a>
-              </li>
-
-              <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Penjual/index">Penjualan</a>
-              </li>
-
-<!--              <li class="site-menu-item has-sub">
-                <a href="javascript:void(0)">
-                        menu beri ikon 
-                        <i aria-hidden="true"></i>
-                        <span class="site-menu-title">Produk</span>
-                                <span class="site-menu-arrow"></span>
-                    </a>
-                <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/akun/Pembeli">
-                      <span class="site-menu-title">Akun Pembeli</span>
-                    </a>
-                  </li>
-                </ul>
-                 <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/akun/Penjual">
-                      <span class="site-menu-title">Akun Penjual</span>
-                    </a>
-                  </li>
-                </ul>
-                 <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/akun/Admin">
-                      <span class="site-menu-title">Akun Admin</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-                <li class="site-menu-item has-sub">
-                <a href="javascript:void(0)">
-                        menu beri ikon 
-                        <i aria-hidden="true"></i>
-                        <span class="site-menu-title">Manajemen Produk</span>
-                                <span class="site-menu-arrow"></span>
-                    </a>
-                <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/kategori">
-                      <span class="site-menu-title">Kategori dan Subkategori</span>
-                    </a>
-                  </li>
-                </ul>
-                 <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/list_ukm">
-                      <span class="site-menu-title">Daftar UKM</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="site-menu-sub">
-                  <li class="site-menu-item">
-                    <a class="animsition-link" href="<?php echo base_url()?>Admin/produk">
-                      <span class="site-menu-title">Daftar Produk</span>
-                    </a>
-                  </li>
-                </ul>
-              </li>-->
-
 
             </ul>
           </div>

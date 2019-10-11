@@ -65,6 +65,30 @@ class Penjual extends CI_Controller {
 		$this->load->view('penjual/template',$data);
 	}
 
+	public function buat_produk_baru()
+	{
+		$data = [
+			'notif' => $this->notif_about_akun(),
+			'sidebar' => 'penjual/sidebar_produk_baru',
+			'content' => 'penjual/dashboard_produk_baru',
+			'footer' => 'penjual/footer',
+		];
+
+		$this->load->view('penjual/template',$data);
+	}
+
+	public function form_produk_baru()
+	{
+		$data = [
+			'notif' => $this->notif_about_akun(),
+			'sidebar' => 'penjual/sidebar',
+			'content' => 'penjual/buat_produk_baru',
+			'footer' => 'penjual/footer',
+		];
+		$this->load->view('penjual/template',$data);
+	}
+
+
 	public function notif_about_akun()
 	{
 		$notifakun = $this->Login_model->get_data_belum_verifikasi();
