@@ -16,12 +16,12 @@ class Penjual extends CI_Controller {
 			$data['level']=$session_data['level'];
 			$usahaId =$session_data['profile_id'];
 
-			if($this->cek_usaha($usahaId) == "Belum Ada"){
-				$this->buat_usaha_baru();
-			}
-			else{
-				$this->index();
-			}
+			// if($this->cek_usaha($usahaId) == "Belum Ada"){
+			// 	$this->buat_usaha_baru();
+			// }
+			// else{
+			// 	$this->index();
+			// }
 
 		}
 		else{
@@ -54,7 +54,7 @@ class Penjual extends CI_Controller {
 		$this->load->view('penjual/template',$data);
 	}
 
-	public function form_usaha_baru($value='')
+	public function form_usaha_baru()
 	{
 		$data = [
 			'notif' => $this->notif_about_akun(),
