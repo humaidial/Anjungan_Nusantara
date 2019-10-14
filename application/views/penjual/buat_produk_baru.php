@@ -101,9 +101,25 @@
                       </div>
 
                       <div class="form-group">
+                        <label class="form-control-file" for="file">Foto Produk</label>
+                        <br>
+                        <img class="images" type="file" id="foto" height="128" data-src="default.jpg"
+                         data-holder-rendered="true" style="width: 140px; height: 140px;" src="default.jpg"/>
+                         <br><br>
+                         <input type="file" name="foto" type="button" class="btn btn-primary" id="change-profile-pic">
+
+
+                      <!--  <input type="file" class="form-control" id="inputBasicFotoProfil" name="inputFotoProfil"
+                          placeholder="Foto Profil Toko Anda" autocomplete="off" /> -->
+                      </div>
+
+                      <!--<div class="form-group">
                         <label for="foto">Foto Produk</label>
                         <input class="form-control-file" type="file" id="foto" name="images" />
-                      </div>
+                        <input class="form-control-file" type="file" id="foto" name="images" />
+                        <input class="form-control-file" type="file" id="foto" name="images" />
+                        <input class="form-control-file" type="file" id="foto" name="images" />
+                      </div> -->
 
                       <div class="form-group">
                         <label for="deskripsi">Deskripsi Produk</label>
