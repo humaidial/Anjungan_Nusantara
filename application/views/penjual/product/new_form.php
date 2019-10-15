@@ -7,10 +7,10 @@
 
 <body id="page-top">
 
-	<?php $this->load->view("penjual/_partials/navbar.php") ?>
+	<!--<?php// $this->load->view("penjual/_partials/navbar.php") ?>-->
 	<div id="wrapper">
 
-		<?php $this->load->view("penjual/_partials/sidebar.php") ?>
+		<!--<?php// $this->load->view("penjual/_partials/sidebar.php") ?>-->
 
 		<div id="content-wrapper">
 
@@ -82,7 +82,7 @@
 				<!-- /.container-fluid -->
 
 				<!-- Sticky Footer -->
-				<?php $this->load->view("penjual/_partials/footer.php") ?>
+				<!--<?php// $this->load->view("penjual/_partials/footer.php") ?>-->
 
 			</div>
 			<!-- /.content-wrapper -->

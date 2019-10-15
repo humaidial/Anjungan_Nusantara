@@ -9,8 +9,6 @@ class Penjual extends CI_Controller {
 		$this->load->model('Login_model');
 		$this->load->model('Profile_model');
 		$this->load->model('Usaha_model');
-		$this->load->model("product_model");
-        $this->load->library('form_validation');
 
 		if ($this->session->userdata('logged_in')) {
 			$session_data=$this->session->userdata('logged_in');

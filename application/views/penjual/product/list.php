@@ -7,10 +7,10 @@
 
 <body id="page-top">
 
-	<?php $this->load->view("penjual/_partials/navbar.php") ?>
+	<!--<?php// $this->load->view("penjual/_partials/navbar.php") ?>-->
 	<div id="wrapper">
 
-		<?php $this->load->view("penjual/_partials/sidebar.php") ?>
+		<!--<?php// $this->load->view("penjual/_partials/sidebar.php") ?>-->
 
 		<div id="content-wrapper">
 
@@ -21,7 +21,7 @@
 				<!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('penjual/add') ?>"><i class="fas fa-plus"></i> Add New</a>
+						<a href="<?php echo site_url('products/add') ?>"><i class="fas fa-plus"></i> Add New</a>
 					</div>
 					<div class="card-body">
 
@@ -51,9 +51,9 @@
 										<td class="small">
 											<?php echo substr($product->description, 0, 120) ?>...</td>
 										<td width="250">
-											<a href="<?php echo site_url('penjual/edit/'.$product->product_id) ?>"
+											<a href="<?php echo site_url('products/edit/'.$product->product_id) ?>"
 											 class="btn btn-small"><i class="fas fa-edit"></i> Edit</a>
-											<a onclick="deleteConfirm('<?php echo site_url('penjual/delete/'.$product->product_id) ?>')"
+											<a onclick="deleteConfirm('<?php echo site_url('products/delete/'.$product->product_id) ?>')"
 											 href="#!" class="btn btn-small text-danger"><i class="fas fa-trash"></i> Hapus</a>
 										</td>
 									</tr>
@@ -69,7 +69,7 @@
 			<!-- /.container-fluid -->
 
 			<!-- Sticky Footer -->
-			<?php $this->load->view("penjual/_partials/footer.php") ?>
+			<!--<?php// $this->load->view("penjual/_partials/footer.php") ?>-->
 
 		</div>
 		<!-- /.content-wrapper -->
