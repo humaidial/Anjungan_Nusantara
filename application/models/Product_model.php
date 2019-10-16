@@ -79,10 +79,13 @@ class Product_model extends CI_Model
         $config['max_size']         = 1024; //1Mb
         // $config['max_width']     =1024;
         // $config['max_height']    =768;
+        
 
         $this->load->library('upload', $config);
 
         if($this->upload->do_upload('image')) {
+            $this->load->library('image_lib', $config);
+            $this->image_lib->resize();
             return $this->upload->data("file_name");
         }
 
