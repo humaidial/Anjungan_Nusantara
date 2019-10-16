@@ -58,4 +58,6 @@ class Products extends CI_Controller
             redirect(site_url('products'));
         }
     }
+
+    
 }
