@@ -14,6 +14,26 @@ class Usaha_model extends CI_Model {
 		}
 	}
 
+	 public function getBuat_baru()
+          {
+            
+              $query= $this->db->get('usaha');
+              return $query->result();
+          }
+
+          public function getUpdate_Usaha($Id)
+          {
+            $this->db->where('id_user',$Id);
+            $query = $this->db->get('usaha');
+            return $query->result();
+          }
+
+          public function GetUser($data)
+        {
+          $query = $this->db->get_where('usaha', $data);
+          return $query;
+        }
+
 }
 
 /* End of file Usaha_model.php */

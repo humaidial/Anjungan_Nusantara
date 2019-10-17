@@ -79,60 +79,67 @@
                 <!-- Example Basic Form (Form grid) -->
                 <div class="example-wrap">
                   <h1 class="example-title">Identitas Toko</h4>
+                    <?php echo $error?>
                   <div class="example">
                     <form autocomplete="off">
 
                       <div class="form-group">
+                   <?php echo form_open_multipart('Penjual/create_penjual'); ?>
+                     
+                        <?php echo validation_errors(); ?>
+                        <?php  if(isset($error)){echo $error;} ?>
+                   <!-- <form method="post" accept-charset="utf-8" action="<?= site_url()?>/penjual/create_penjual" id="usaha_id"> -->
+
                         <label class="form-control-label" for="inputBasicNama">Nama Toko</label>
-                        <input type="email" class="form-control" id="inputBasicEmail" name="inputEmail"
+                        <input type="text" class="form-control" id="usaha_nama" name="usaha_nama"
                           placeholder="Nama Toko Anda" autocomplete="off" />
                       </div>
 
                        <div class="form-group">
                         <label class="form-control-label" for="inputBasicAlamatToko">Alamat Toko</label>
-                        <input type="text" class="form-control" id="inputBasicText" name="inputAlamat"
+                        <input type="text" class="form-control" id="usaha_alamat" name="usaha_alamat"
                           placeholder="Alamat Toko Anda" autocomplete="off" />
                       </div>
 
                       <div class="form-group">
                         <label class="form-control-label" for="inputBasicNo.Telpon">No. Telp.</label>
-                        <input type="number" class="form-control" id="inputBasicNumber" name="inputNo.Telepon"
+                        <input type="number" class="form-control" id="usaha_no_telp" name="usaha_no_telp"
                           placeholder="No. Telepon Toko Anda" autocomplete="off" />
                       </div>
 
                       <div class="form-group">
-                        <label class="form-control-label" for="inputBasicemail">Email</label>
-                        <input type="email" class="form-control" id="inputBasicEmail" name="inputEmail"
+                        <label class="form-control-label" for="inputBasicemail">E-mail</label>
+                        <input type="email" class="form-control" id="usaha_email" name="usaha_email"
                           placeholder="Email Toko Anda" autocomplete="off" />
                       </div>
 
                       <div class="form-group">
-                        <label class="form-control-label" for="inputBasicFotoProfil">Foto Profil</label>
+                        <label class="form-control-label" for="inputBasicfotoprofil">Foto Profil</label>
                         <br>
-                        <img class="img-circle" id="profile_picture" height="128" data-src="default.jpg"
-                         data-holder-rendered="true" style="width: 140px; height: 140px;" src="default.jpg"/>
-                         <br><br>
-                         <button type="button" class="btn btn-primary" id="change-profile-pic">Upload Foto Profil</button>
-
-
-                      <!--  <input type="file" class="form-control" id="inputBasicFotoProfil" name="inputFotoProfil"
-                          placeholder="Foto Profil Toko Anda" autocomplete="off" /> -->
+                        Select image to upload:
+                        <input type="file" name="usaha_foto" id="usaha_foto">
+                        <!--<input type="submit" value="Upload Image" name="submit">-->
                       </div>
 
                       <div class="form-group">
-                        <label class="form-control-label" for="inputBasicFotoProfil">Profil</label>
-                        <textarea class="form-control" cols="20" rows="10" name="alamat" id="alamat">Profil Toko Anda</textarea>
+                        <label class="form-control-label" for="inputBasicUsahaProfil">Profil</label>
+                        <textarea class="form-control" cols="20" rows="10" name="usaha_profil" id="usaha_profil">Profil Toko Anda</textarea>
                         <!--<input type=textarea rows="5" class="form-control" id="inputBasicFotoProfil" name="inputFotoProfil"
                           placeholder="Profil Toko Anda" autocomplete="off" /> -->
                       </div>
 
                       <div class="form-group">
-                        <button type="button" class="btn btn-primary">Daftar</button>
+                        <input type="submit" name="submit" value="Buat Toko" class="btn btn-primary" id="simpan" nama="simpan"> 
+                      <!-- Buat Toko </button> -->
+                        <?php echo form_close();?>
                       </div>
                     </form>
                   </div>
                 </div>
                 <!-- End Example Basic Form (Form grid) -->
               </div>
+
+
+                  
 </body>
 </html>

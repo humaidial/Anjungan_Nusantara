@@ -1,4 +1,6 @@
     <!-- Page -->
+    <?php $this->load->view('penjual/template'); ?>
+
     <div class="page">
       <div class="page-content container-fluid">
         <div class="row" data-plugin="matchHeight" data-by-row="true">
@@ -11,10 +13,13 @@
                   <div class="col-md-12 col-sm-12">
                     <h3>Selamat Datang, </h3>
                     <br> <br> <br> <br>
-                    <center>
-                    <a href="<?php echo base_url('Penjual/form_usaha_baru')?>">
-                    <button type="button" class="btn btn-primary btn-lg"> Buat Usaha Baru </button></a>
-                  </center>
+                     <?php
+
+                            echo "sukses Simpan Data";
+
+                            echo anchor('penjual/dashboard', 'Masukkan Data Lagi');
+                        ?>
+
 
                   </div>
                 </div>

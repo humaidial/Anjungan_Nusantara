@@ -8,7 +8,8 @@ application/logs/*
 !application/logs/index.html
 
 !application/*/.htaccess
-
+application/controllers/Penjual.php
+application/views/penjual/buat_baru.php
 composer.lock
 
 user_guide_src/build/*
