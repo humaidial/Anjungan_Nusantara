@@ -202,7 +202,7 @@
               </li>
 
               <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Penjual/index">Produk</a>
+                <a href="<?php echo base_url() ?>Penjual/buat_produk_baru">Produk</a>
               </li>
 
               <li class="site-menu-item">
