@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="<?php echo base_url('assets/templateadmin/base/assets/images/favicon.ico')?>">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="<?php echo base_url('assets/sweetalert/sweetalert2.all.min.js')?>"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>assets/js/dataTables.editor.js"></script>
     <link rel="stylesheet" href="<?php echo base_url('assets/sweetalert/sweetalert2.min.css')?>">
 
     

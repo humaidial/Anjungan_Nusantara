@@ -8,6 +8,7 @@ class Admin extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Login_model');
 		$this->load->model('Profile_model');
+		$this->load->model('Kategori_model');
 
 		if ($this->session->userdata('logged_in')) {
 			$session_data=$this->session->userdata('logged_in');
@@ -57,7 +58,9 @@ class Admin extends CI_Controller {
 
 	public function kategori()
 	{
+		$kategori = $this->Kategori_model->get_all();
 		$data = [
+			'kategori' => $kategori,
 			'notif' => $this->notif_about_akun(),
 			'sidebar' => 'admin/sidebar',
 			'content' => 'admin/kategori',
@@ -135,6 +138,27 @@ class Admin extends CI_Controller {
 		$notifakun = $this->Login_model->get_data_belum_verifikasi();
 		$notiflainnya = 0;
 		return(array($notifakun, $notiflainnya));
+	}
+
+	public function proses_kategori()
+	{
+		 $id = $this->input->post('id');
+		 $nama = $this->input->post('nama');
+		 $tipe = $this->input->post('tipe');
+
+		 if($tipe == "baru"){
+		 	$data = array(
+		 		'kategori_nama' => $nama
+		 	);
+		 	if($this->Kategori_model->insert($data)){
+		 		$hasil = "Tambah Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Tambah Gagal";
+		 	}
+		 }
+
+		 echo json_encode($hasil);
 	}
 
 }
