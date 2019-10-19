@@ -21,7 +21,7 @@
 				<!-- DataTables -->
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('products/add') ?>"><i class="fas fa-plus"></i> Add New</a>
+						<a href="<?php echo site_url('products/add') ?>"><i class="fas fa-plus"></i> Tambahkan Baru</a>
 					</div>
 					<div class="card-body">
 
@@ -29,11 +29,11 @@
 							<table class="table table-hover" id="dataTable" width="100%" cellspacing="0">
 								<thead>
 									<tr>
-										<th>Name</th>
-										<th>Price</th>
-										<th>Photo</th>
-										<th>Description</th>
-										<th>Action</th>
+										<th>Nama Produk</th>
+										<th>Harga</th>
+										<th>Foto</th>
+										<th>Deskripsi Produk</th>
+										<th>Opsi</th>
 									</tr>
 								</thead>
 								<tbody>

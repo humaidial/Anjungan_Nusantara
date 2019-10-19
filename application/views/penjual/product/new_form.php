@@ -29,12 +29,14 @@
 						<a href="<?php echo site_url('products/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
 					</div>
 					<div class="card-body">
-
+						<div class="example-wrap">
+                  		<h1 class="example-title">Tambahkan Produk</h4>
+                  		<div class="example">
 						<form action="<?php base_url('product/add') ?>" method="post" enctype="multipart/form-data" >
 							<div class="form-group">
 								<label for="name">Name*</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-								 type="text" name="name" placeholder="Product name" />
+								 type="text" name="name" id="name" placeholder="Product name" />
 								<div class="invalid-feedback">
 									<?php echo form_error('name') ?>
 								</div>
@@ -43,7 +45,7 @@
 							<div class="form-group">
 								<label for="price">Price*</label>
 								<input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="number" name="price" min="0" placeholder="Product price" />
+								 type="number" name="price" id="price" min="0" placeholder="Product price" />
 								<div class="invalid-feedback">
 									<?php echo form_error('price') ?>
 								</div>
@@ -51,18 +53,18 @@
 
 
 							<div class="form-group">
-								<label for="name">Photo</label>
+								<label for="image">Photo</label>
 								<input class="form-control-file <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="file" name="image" />
+								 type="file" name="image" id="image"/>
 								<div class="invalid-feedback">
 									<?php echo form_error('image') ?>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="name">Description*</label>
+								<label for="de">Description*</label>
 								<textarea class="form-control <?php echo form_error('description') ? 'is-invalid':'' ?>"
-								 name="description" placeholder="Product description..."></textarea>
+								 name="description" id="description" placeholder="Product description..."></textarea>
 								<div class="invalid-feedback">
 									<?php echo form_error('description') ?>
 								</div>
