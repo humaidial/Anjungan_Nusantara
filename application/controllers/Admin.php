@@ -9,6 +9,7 @@ class Admin extends CI_Controller {
 		$this->load->model('Login_model');
 		$this->load->model('Profile_model');
 		$this->load->model('Kategori_model');
+		$this->load->model('SubKategori_model');
 
 		if ($this->session->userdata('logged_in')) {
 			$session_data=$this->session->userdata('logged_in');
@@ -151,10 +152,77 @@ class Admin extends CI_Controller {
 		 		'kategori_nama' => $nama
 		 	);
 		 	if($this->Kategori_model->insert($data)){
-		 		$hasil = "Tambah Berhasil";
+		 		$hasil = "Tambah Kategori Berhasil";
 		 	}
 		 	else{
-		 		$hasil = "Tambah Gagal";
+		 		$hasil = "Tambah Kategori Gagal";
+		 	}
+		 }
+		 else if($tipe == "hapus"){
+		 	$data = array(
+		 		'kategori_id' => $id
+		 	);
+		 	if($this->Kategori_model->delete($data)){
+		 		$hasil = "Hapus Kategori Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Hapus Kategori Gagal";
+		 	}
+		 }
+		 else if($tipe == "update"){
+		 	$data = array(
+		 		'kategori_nama' => $nama
+		 	);
+		 	if($this->Kategori_model->update($data,$id)){
+		 		$hasil = "Update Kategori Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Update Kategori Gagal";
+		 	}
+		 }
+
+		 echo json_encode($hasil);
+	}
+
+	public function proses_subkategori()
+	{
+		 $id = $this->input->post('id');
+		 $idkategori = $this->input->post("idkategori");
+		 $nama = $this->input->post('nama');
+		 $tipe = $this->input->post('tipe');
+
+		 if($tipe == "baru"){
+		 	$data = array(
+		 		'subkategori_nama' => $nama,
+		 		'subkategori_kategori_id' => $idkategori
+		 	);
+		 	if($this->SubKategori_model->insert($data)){
+		 		$hasil = "Tambah Sub-Kategori Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Tambah Sub-Kategori Gagal";
+		 	}
+		 }
+		 else if($tipe == "hapus"){
+		 	$data = array(
+		 		'kategori_id' => $id
+		 	);
+		 	if($this->Kategori_model->delete($data)){
+		 		$hasil = "Hapus Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Hapus Gagal";
+		 	}
+		 }
+		 else if($tipe == "update"){
+		 	$data = array(
+		 		'kategori_nama' => $nama
+		 	);
+		 	if($this->Kategori_model->update($data,$id)){
+		 		$hasil = "Update Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Update Gagal";
 		 	}
 		 }
 

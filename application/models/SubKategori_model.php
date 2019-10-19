@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kategori_model extends CI_Model {
+class SubKategori_model extends CI_Model {
 
-	var $table = "kategori";
+	var $table = "subkategori";
 
 	public function get_all()
 	{
