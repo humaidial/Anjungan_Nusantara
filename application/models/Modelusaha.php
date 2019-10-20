@@ -1,9 +1,9 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Usaha_model extends CI_Model {
-
-   private $_table = "usaha";
+class Modelusaha extends CI_Model
+{
+ 
+     private $_table = "usaha";
 
     public $usaha_id;
     public $usaha_nama;
@@ -12,19 +12,30 @@ class Usaha_model extends CI_Model {
     public $usaha_email;
     public $usaha_foto = "default.jpg";
     public $usaha_profil;
-    public $usaha_profile_id;
+    public $usaha_profile_id;  
 
-	public function cek_usaha($id)
-	{
-		$query =  $this->db->query("SELECT * FROM usaha inner join profile on usaha.usaha_profile_id = profile.profile_id WHERE usaha.usaha_profile_id = '$id'");
-		if($query->num_rows() == 0){
-			return true;
-		}
-		else{
-			return false;
-		}
-	}
-       
+    public function rules()
+    {
+        return [
+            ['field' => 'name',
+            'label' => 'Name',
+            'rules' => 'required'],
+
+            ['field' => 'price',
+            'label' => 'Price',
+            'rules' => 'numeric'],
+            
+            ['field' => 'description',
+            'label' => 'Description',
+            'rules' => 'required'],
+
+            ['field' => 'email',
+            'label' => 'Email',
+            'rules' => 'required']
+
+        ];
+    }
+
     public function getAll()
     {
         return $this->db->get($this->_table)->result();
@@ -37,7 +48,7 @@ class Usaha_model extends CI_Model {
 
     public function save()
     {
-        $post = $this->input->post();
+         $post = $this->input->post();
         $this->usaha_id = uniqid();
         $this->usaha_nama = $post["usaha_name"];
         $this->usaha_alamat = $post["usaha_alamat"];
@@ -49,7 +60,7 @@ class Usaha_model extends CI_Model {
 
     public function update()
     {
-        $post = $this->input->post();
+          $post = $this->input->post();
         $this->usaha_id = $post["id"];
         $this->usaha_nama = $post["usaha_name"];
         $this->usaha_alamat = $post["usaha_alamat"];
@@ -74,7 +85,7 @@ class Usaha_model extends CI_Model {
 
     private function _uploadImage()
     {
-        $config['upload_path']      = './upload/images/';
+         $config['upload_path']      = './upload/images/';
         $config['allowed_types']    = 'gif|jpg|png';
         $config['file_name']        =$this->usaha_id;
         $config['overwrite']        =true;
@@ -92,18 +103,16 @@ class Usaha_model extends CI_Model {
         }
 
         return "default.jpg";
-    }
+        }
+
+       
 
     private function _deleteImage($id)
     {
-        $usaha = $this->getById($id);
+         $usaha = $this->getById($id);
         if ($product->image != "default.jpg") {
             $filename = explode(".", $product->image)[0];
             return array_map('unlink', glob(FCPATH."upload/images/$filename.*"));
         }
     }
-
 }
-
-/* End of file Usaha_model.php */
-/* Location: ./application/models/Usaha_model.php */

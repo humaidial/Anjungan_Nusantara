@@ -117,6 +117,7 @@ class Penjual extends CI_Controller {
 		
 		$this->load->library('form_validation');
 		$this->load->model('Usaha_model');
+
 		$this->form_validation->set_rules('usaha_nama','Nama Toko','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('usaha_alamat','Alamat Toko',array('required'=> '% tidak boleh kosong'));
 		$this->form_validation->set_rules('usaha_no_telp','No. Telp','required',array('required' => '%s tidak boleh kosong.'));
@@ -127,7 +128,7 @@ class Penjual extends CI_Controller {
 		$this->load->helper('url','form');
 		// $data['create_penjual']= $this->Admin_Model->getcreate_penjual($id);
 
-        if($this->form_validation->run()==FALSE)
+        /*if($this->form_validation->run()==FALSE)
         {
             $this->load->view('penjual/buat_baru');
         }
@@ -158,10 +159,16 @@ class Penjual extends CI_Controller {
                 // $this->Admin_Model->updategunung($id);
                 // $this->load->view('Penjual/test');
 								var_dump("succces");
-              }
-        		}
+             		 }
+        		} */
 
-	}
+        		  	if ($validation->run()) {
+            		$product->save();
+            		$this->session->set_flashdata('success', 'Berhasil disimpan');
+       				}
+					$this->load->view("penjual/template");
+					}
+	
 
 }
 
