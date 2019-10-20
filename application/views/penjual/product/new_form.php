@@ -26,7 +26,7 @@
 
 				<div class="card mb-3">
 					<div class="card-header">
-						<a href="<?php echo site_url('products/') ?>"><i class="fas fa-arrow-left"></i> Back</a>
+						<a href="<?php echo site_url('products/') ?>"><i class="fas fa-arrow-left"></i> Kembali</a>
 					</div>
 					<div class="card-body">
 						<div class="example-wrap">
@@ -34,18 +34,18 @@
                   		<div class="example">
 						<form action="<?php base_url('product/add') ?>" method="post" enctype="multipart/form-data" >
 							<div class="form-group">
-								<label for="name">Name*</label>
+								<label for="name">Nama</label>
 								<input class="form-control <?php echo form_error('name') ? 'is-invalid':'' ?>"
-								 type="text" name="name" id="name" placeholder="Product name" />
+								 type="text" name="name" id="name" placeholder="Nama Produk" />
 								<div class="invalid-feedback">
 									<?php echo form_error('name') ?>
 								</div>
 							</div>
 
 							<div class="form-group">
-								<label for="price">Price*</label>
+								<label for="price">Harga*</label>
 								<input class="form-control <?php echo form_error('price') ? 'is-invalid':'' ?>"
-								 type="number" name="price" id="price" min="0" placeholder="Product price" />
+								 type="nomor" name="price" id="price" min="0" placeholder="Harga Produk" />
 								<div class="invalid-feedback">
 									<?php echo form_error('price') ?>
 								</div>
@@ -53,7 +53,7 @@
 
 
 							<div class="form-group">
-								<label for="image">Photo</label>
+								<label for="image">Foto</label>
 								<input class="form-control-file <?php echo form_error('price') ? 'is-invalid':'' ?>"
 								 type="file" name="image" id="image"/>
 								<div class="invalid-feedback">
@@ -62,21 +62,21 @@
 							</div>
 
 							<div class="form-group">
-								<label for="de">Description*</label>
+								<label for="description">Deskripsi*</label>
 								<textarea class="form-control <?php echo form_error('description') ? 'is-invalid':'' ?>"
-								 name="description" id="description" placeholder="Product description..."></textarea>
+								 name="description" id="description" placeholder="Deskripsi Produk..."></textarea>
 								<div class="invalid-feedback">
 									<?php echo form_error('description') ?>
 								</div>
 							</div>
 
-							<input class="btn btn-success" type="submit" name="btn" value="Save" />
+							<input class="btn btn-success" type="submit" name="btn" value="Simpan" />
 						</form>
 
 					</div>
 
 					<div class="card-footer small text-muted">
-						* required fields
+						* Harus diisi
 					</div>
 
 
