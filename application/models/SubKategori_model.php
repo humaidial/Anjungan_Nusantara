@@ -5,9 +5,10 @@ class SubKategori_model extends CI_Model {
 
 	var $table = "subkategori";
 
-	public function get_all()
+	public function get_where($id)
 	{
 		$this->db->select('*');
+		$this->db->where('subkategori_kategori_id', $id);
 		$this->db->from($this->table);
 		$query = $this->db->get();
 		if($query->num_rows() != 0){

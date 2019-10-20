@@ -47,6 +47,7 @@
                       <td><?php echo $i ?></td>
                       <td><?php echo $key->kategori_nama ?></td>
                       <td class="actions">
+                         <button type="submit" class="btn btn-info btnGenerateKategori" id="<?php echo $key->kategori_id ?>" value="<?php echo $key->kategori_nama ?>">Sub-Kategori</button>
                          <button type="submit" class="btn btn-success btnUpdateKategori" data-target="#exampleUpdateKategori" data-toggle="modal" id="<?php echo $key->kategori_id ?>" value="<?php echo $key->kategori_nama ?>">Update</button>
                          <button type="submit" class="btn btn-warning btnHapusKategori" id="<?php echo $key->kategori_id ?>">Hapus</button>
                       </td>
@@ -62,6 +63,20 @@
                       </div>
                       <div class="tab-pane" id="exampleTabsLeftTwo" role="tabpanel">
                         <h5 id="notifSubKategori">Silahkan Pilih Kategori Terlebih Dahulu</h5>
+                        <h4 id="headerSubKategori" style="display: none"></h4>
+                        <br>
+                        <table id="tabelsubkategori" class="table table-hover dataTable table-striped w-full" data-plugin="dataTable" >
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+               
+              </tbody>
+            </table>
                       </div>
                     </div>
                   </div>
@@ -246,9 +261,68 @@
 
           });
 
+            $('.btnHapusSubKategori').click(function(){
+
+              // console.log(this.id);
+              alert(this.id);
+              // Swal.fire({
+              //      title: 'Apakah anda yakin ?',
+              //       type: 'warning',
+              //       showCancelButton: true,
+              //       confirmButtonColor: '#3085d6',
+              //       cancelButtonColor: '#d33',
+              //       confirmButtonText: 'Ya, hapus'
+              //        }).then((result) => {
+              //         if (result.value) {
+              //               var hasill = set_get_subkategori(this.id,0, 0,'hapus');
+
+              //                Swal.fire({
+              //                title: 'Terhapus',
+              //                type: 'success',
+              //                confirmButtonColor: '#3085d6',
+              //                confirmButtonText: 'OK'
+              //                }).then((result) => {
+              //                if (result.value) {
+              //                   location.reload();
+              //                   }
+              //                })
+              //      }
+              //    })
+
+
+          });
+
         $('.btnUpdateKategori').click(function(){ 
              $('#namaUpdateKategori').val(this.value);
              $('#idUpdateKategori').val(this.id);
+        });
+
+         $('.btnGenerateKategori').click(function(){ 
+            var idKategori = this.id;
+            var namaKategori = this.value;
+
+            var hasill = set_get_subkategori(0, idKategori,0,"ambil");
+
+            console.log(hasill);
+            console.log(namaKategori);
+
+            $("#notifSubKategori").css("display", "none");
+            $("#tabelsubkategori").css("display", "block");
+            $("#headerSubKategori").html("Sub-Kategori " + namaKategori);
+            $("#headerSubKategori").css("display", "block");
+
+            $("#tabelsubkategori > tbody").html("");
+
+            var i = 1;
+
+            jQuery.each( hasill, function( i, val ) {
+              // $( "#" + i ).append( document.createTextNode( " - " + val ) );
+
+              var newRowContent = "<tr><td>" + i +"</td><td>" + val.subkategori_nama + "</td><td><button type='submit' class='btn btn-success btnUpdateKategori' data-target='#exampleUpdateSubKategori' data-toggle='modal' id='" +  val.subkategori_id+"' value='" +  val.subkategori_nama +"'>Update</button><button type='submit' class='btn btn-warning btnHapusSubKategori' id='" +  val.subkategori_id+"'>Hapus</button></td></tr>";  
+              $(newRowContent).appendTo($("#tabelsubkategori"));
+               i++;
+            });
+            
         });
 
         $('#updateKategori').click(function(){ 
@@ -275,7 +349,9 @@
         });
 
         function tes_halo() {
-          return "halo";
+          $.each({ name: "John", lang: "JS" }, function( k, v ) {
+            alert( "Key: " + k + ", Value: " + v );
+          });
         }
 
        function set_get_kategori(id, nama, tipe){
@@ -311,5 +387,7 @@
 
            return hasil;  
         }
+
+      
         });
     </script>

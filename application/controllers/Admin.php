@@ -203,11 +203,14 @@ class Admin extends CI_Controller {
 		 		$hasil = "Tambah Sub-Kategori Gagal";
 		 	}
 		 }
+		 else if($tipe == "ambil"){
+		 	$hasil = $this->SubKategori_model->get_where($idkategori);
+		 }
 		 else if($tipe == "hapus"){
 		 	$data = array(
-		 		'kategori_id' => $id
+		 		'subkategori_id' => $id
 		 	);
-		 	if($this->Kategori_model->delete($data)){
+		 	if($this->SubKategori_model->delete($data)){
 		 		$hasil = "Hapus Berhasil";
 		 	}
 		 	else{
