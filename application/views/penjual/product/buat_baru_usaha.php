@@ -115,5 +115,4 @@
 		<?php $this->load->view("penjual/_partials/js.php") ?>
 
 </body>
-
 </html>
