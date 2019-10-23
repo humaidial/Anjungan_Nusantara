@@ -78,15 +78,15 @@
               <div class="col-md-6">
                 <!-- Example Basic Form (Form grid) -->
                 <div class="example-wrap">
-                  <h1 class="example-title">Identitas Toko</h4>
+                  <h1 class="example-title">Update Identitas Toko</h4>
                   <div class="example">
 
                       <div class="form-group">
-                      <?php echo form_open_multipart('Penjual/create_penjual'); ?>
+                      <?php echo form_open_multipart('Penjual/update_usaha/'.$this->uri->segment(3)); ?>
 
                         <label class="form-control-label" for="inputBasicNama">Nama Toko</label>
                         <input type="text" class="form-control" id="usaha_nama" name="usaha_nama"
-                          placeholder="Nama Toko Anda" autocomplete="off" />
+                          placeholder="Nama Toko Anda" autocomplete="off" value="<?php echo $usaha_data[0]->usaha_nama?>" />
                           <br>
                         <label style="color: red"><?php echo form_error('usaha_nama') ?></label>
                       </div>
@@ -94,7 +94,7 @@
                        <div class="form-group">
                         <label class="form-control-label" for="inputBasicAlamatToko">Alamat Toko</label>
                         <input type="text" class="form-control" id="usaha_alamat" name="usaha_alamat"
-                          placeholder="Alamat Toko Anda" autocomplete="off" />
+                          placeholder="Alamat Toko Anda" autocomplete="off" value="<?php echo $usaha_data[0]->usaha_alamat?>" />
                            <br>
                         <label style="color: red"><?php echo form_error('usaha_alamat') ?></label>
                       </div>
@@ -102,7 +102,7 @@
                       <div class="form-group">
                         <label class="form-control-label" for="inputBasicNo.Telpon">No. Telp.</label>
                         <input type="number" class="form-control" id="usaha_no_telp" name="usaha_no_telp"
-                          placeholder="No. Telepon Toko Anda" autocomplete="off" />
+                          placeholder="No. Telepon Toko Anda" autocomplete="off" value="<?php echo $usaha_data[0]->usaha_no_telp?>" />
                            <br>
                         <label style="color: red"><?php echo form_error('usaha_no_telp') ?></label>
                       </div>
@@ -110,7 +110,7 @@
                       <div class="form-group">
                         <label class="form-control-label" for="inputBasicemail">E-mail</label>
                         <input type="email" class="form-control" id="usaha_email" name="usaha_email"
-                          placeholder="Email Toko Anda" autocomplete="off" />
+                          placeholder="Email Toko Anda" autocomplete="off" value="<?php echo $usaha_data[0]->usaha_email?>" />
                            <br>
                         <label style="color: red"><?php echo form_error('usaha_email') ?></label>
                       </div>
@@ -126,13 +126,13 @@
 
                       <div class="form-group">
                         <label class="form-control-label" for="inputBasicUsahaProfil">Profil</label>
-                        <textarea class="form-control" cols="20" rows="10" name="usaha_keterangan" id="usaha_keterangan" placeholder="Jelaskan tentang Usaha Anda"></textarea>
+                        <textarea class="form-control" cols="20" rows="10" name="usaha_keterangan" id="usaha_keterangan" placeholder="Jelaskan tentang Usaha Anda"><?php echo $usaha_data[0]->usaha_keterangan?></textarea>
                         <!--<input type=textarea rows="5" class="form-control" id="inputBasicFotoProfil" name="inputFotoProfil"
                           placeholder="Profil Toko Anda" autocomplete="off" /> -->
                       </div>
 
                       <div class="form-group">
-                        <input type="submit" name="submit" value="Buat Toko" class="btn btn-primary" id="simpan" nama="simpan"> 
+                        <input type="submit" name="submit" value="Update" class="btn btn-primary" id="simpan" nama="simpan"> 
                       <!-- Buat Toko </button> -->
                         <?php echo form_close();?>
                       </div>

@@ -198,11 +198,11 @@
               </li>
 
               <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Penjual/index">Profil</a>
+                <a href="<?php echo base_url() ?>Penjual/profil">Profil</a>
               </li>
 
               <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Penjual/buat_produk_baru">Produk</a>
+                <a href="<?php echo base_url() ?>Penjual/produk">Produk</a>
               </li>
 
               <li class="site-menu-item">

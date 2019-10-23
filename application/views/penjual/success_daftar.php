@@ -7,14 +7,14 @@
             <div class="example-wrap">
               <div class="example example-well">
                 <div class="page-header text-center">
-                  <h1 class="page-title">Anda Belum Mempunyai Usaha</h1>
+                  <h1 class="page-title">Pendafaran Usaha Berhasil</h1>
                 </div>
                 <div class="page-header text-center">
-                  <img src="<?php echo base_url() ?>assets/icon/store.png" alt="">  
+                  <img src="<?php echo base_url() ?>assets/icon/success.png" alt="" height="100" width="100">  
                 </div>
                 <div class="page-header text-center">
-                  <a class="btn btn-primary btn-round" href="<?php echo base_url()?>Penjual/form_usaha_baru">
-                    Buat Usaha Baru
+                  <a class="btn btn-primary btn-round" href="<?php echo base_url()?>Penjual/index">
+                    Pendaftaran Toko Berhasil, Silahkan Klik disini.
                   </a>
                 </div>
               </div>

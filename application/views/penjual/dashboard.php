@@ -9,13 +9,10 @@
               <div class="card-block p-0">
                 <div class="row no-space h-full" data-plugin="matchHeight">
                   <div class="col-md-12 col-sm-12">
-                    <h3>Selamat Datang, </h3>
+                    <h3>Selamat Datang, <?php echo $this->session->userdata('username') ?></h3>
                     <br> <br> <br> <br>
                     <center>
-                    <a href="<?php echo base_url('Penjual/form_usaha_baru')?>">
-                    <button type="button" class="btn btn-primary btn-lg"> Buat Usaha Baru </button></a>
                   </center>
-
                   </div>
                 </div>
               </div>
