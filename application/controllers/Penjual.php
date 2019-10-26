@@ -9,6 +9,9 @@ class Penjual extends CI_Controller {
 		$this->load->model('Login_model');
 		$this->load->model('Profile_model');
 		$this->load->model('Usaha_model');
+		$this->load->model('Produk_model');
+		$this->load->model('Kategori_model');
+		$this->load->model('SubKategori_model');
 
 		if ($this->session->userdata('logged_in')) {
 			$session_data=$this->session->userdata('logged_in');
@@ -94,10 +97,26 @@ class Penjual extends CI_Controller {
 
 	public function form_produk_baru()
 	{
+		$kategori = $this->Kategori_model->get_all();
 		$data = [
 			'notif' => $this->notif_about_akun(),
+			'kategori' => $kategori,
 			'sidebar' => 'penjual/sidebar',
 			'content' => 'penjual/buat_produk_baru',
+			'footer' => 'penjual/footer',
+		];
+		$this->load->view('penjual/template',$data);
+	}
+
+	public function produk()
+	{
+		$para = $this->session->userdata('profile_id');
+		$produk_data = $this->Produk_model->GetProduk($para);
+		$data = [
+			'notif' => $this->notif_about_akun(),
+			'produk_data' => $produk_data,
+			'sidebar' => 'penjual/sidebar',
+			'content' => 'penjual/list_produk',
 			'footer' => 'penjual/footer',
 		];
 		$this->load->view('penjual/template',$data);
@@ -115,6 +134,28 @@ class Penjual extends CI_Controller {
 			'footer' => 'penjual/footer',
 		];
 		$this->load->view('penjual/template',$data);
+	}
+
+	public function lihat_foto($id)
+	{
+		$para = array('list_produk_id' => $id);
+		$foto_data = $this->Produk_model->get_foto_produk($para);
+		$data = [
+			'foto_data' => $foto_data,
+			'notif' => $this->notif_about_akun(),
+			'sidebar' => 'penjual/sidebar',
+			'content' => 'penjual/foto_produk',
+			'footer' => 'penjual/footer',
+		];
+		$this->load->view('penjual/template',$data);
+	}
+
+	public function pilih_foto($id)
+	{
+		$foto = $this->input->post('foto_depan');
+		$data = array('produk_foto_depan' => $foto);
+		$this->Produk_model->update($id, $data);
+		$this->produk();
 	}
 
 
@@ -135,9 +176,17 @@ class Penjual extends CI_Controller {
 		}
 	}
 
+
+
 	public 	function tes()
 	{
 		$this->load->view('penjual/dashboard');
+	}
+
+	public function get_subkategori(){
+		$id=$this->input->post('id');
+		$data=$this->SubKategori_model->get_where($id);
+		echo json_encode($data);
 	}
 
 	public function create_penjual()
@@ -265,6 +314,74 @@ class Penjual extends CI_Controller {
         }
 	}
 
+	public function tambahkan_produk()
+	{
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('produk_nama','Nama Toko','required',array('required' => '%s tidak boleh kosong.'));
+		$this->form_validation->set_rules('produk_harga','Alamat Toko','required',array('required' => '%s tidak boleh kosong.'));
+		$this->form_validation->set_rules('produk_stock','No. Telp','required',array('required' => '%s tidak boleh kosong.'));
+
+        if($this->form_validation->run()==FALSE)
+        {
+			$this->form_produk_baru();
+        }
+        else
+        {
+        	$next = $this->Produk_model->get_next_id();
+			$produk_id = $next->AUTO_INCREMENT;
+			$list_namafile = array();
+
+
+		    $files = $_FILES;
+		    $filesCount = count($_FILES['userfile']['name']);
+		    for($i=0; $i< $filesCount; $i++)
+		    {           
+		    	 $config = array();
+		         $config['upload_path'] = './assets/foto/foto_produk';
+		         $config['allowed_types'] = 'jpg|png';
+		         $config['file_name'] = $produk_id."_".($i+1);
+
+		        $_FILES['userfile']['name']= $files['userfile']['name'][$i];
+		        $_FILES['userfile']['type']= $files['userfile']['type'][$i];
+		        $_FILES['userfile']['tmp_name']= $files['userfile']['tmp_name'][$i];
+		        $_FILES['userfile']['error']= $files['userfile']['error'][$i];
+		        $_FILES['userfile']['size']= $files['userfile']['size'][$i];
+
+		         $this->load->library('upload', $config, 'fotoupload');
+          		 $this->fotoupload->initialize($config);
+
+          		  $this->fotoupload->do_upload();
+				  $namafile = $this->fotoupload->data('file_name');
+				  array_push($list_namafile, $namafile);
+
+
+		        // $this->upload->initialize($config);
+		        // $this->upload->do_upload();
+
+		        $this->Produk_model->list_gambar($produk_id,$namafile);
+		    }
+		    	 $para = array('usaha_profile_id' =>  $this->session->userdata('profile_id'));
+		    	 $idusaha = $this->Usaha_model->GetUser($para); 
+
+		    	 $data = array(
+				  	'produk_nama' => $this->input->post('produk_nama'),
+				  	'produk_subkategori_id' => $this->input->post('subkategori'),
+				  	'produk_harga' => $this->input->post('produk_harga'),
+				  	'produk_stock' => $this->input->post('produk_stock'),
+				  	'produk_deskripsi' => $this->input->post('deskripsi'),
+				  	'produk_foto_depan' => $list_namafile[0],
+				  	'produk_status' => "Menunggu",
+				  	'produk_usaha_id' => $idusaha[0]->usaha_id
+				  );
+
+				  $this->Produk_model->insert($data);
+				  $this->produk();
+
+           }
+                
+                
+            }
 }
 
 /* End of file Penjual.php */

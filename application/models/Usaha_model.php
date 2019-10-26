@@ -3,7 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Usaha_model extends CI_Model {
 
+
   var $table = "usaha";
+
+   private $_table = "usaha";
+
+
 
 	public function cek_usaha($id)
 	{
@@ -15,6 +20,57 @@ class Usaha_model extends CI_Model {
 			return false;
 		}
 	}
+       
+    public function getAll()
+    {
+        return $this->db->get($this->_table)->result();
+    }
+    
+    public function getById($id)
+    {
+        return $this->db->get_where($this->_table, ["usaha_id" => $id])->row();
+    }
+
+    public function save()
+    {
+        $post = $this->input->post();
+        $this->usaha_id = uniqid();
+        $this->usaha_nama = $post["usaha_name"];
+        $this->usaha_alamat = $post["usaha_alamat"];
+        $this->usaha_no_telp= $post["usaha_no_telp"];
+        $this->usaha_foto = $this->_uploadImage();
+        $this->usaha_profil = $post["usaha_profil"];
+        $this->db->insert($this->_table, $this);
+    }
+
+    public function delete($id)
+    {
+        $this->_deleteImage($id);
+        return $this->db->delete($this->_table, array("usaha_id" => $id));
+    }
+
+    private function _uploadImage()
+    {
+        $config['upload_path']      = './upload/images/';
+        $config['allowed_types']    = 'gif|jpg|png';
+        $config['file_name']        =$this->usaha_id;
+        $config['overwrite']        =true;
+        $config['max_size']         = 1024; //1Mb
+        // $config['max_width']     =1024;
+        // $config['max_height']    =768;
+        
+
+        $this->load->library('upload', $config);
+
+        if($this->upload->do_upload('image')) {
+            $this->load->library('image_lib', $config);
+            $this->image_lib->resize();
+            return $this->upload->data("file_name");
+        }
+
+        return "default.jpg";
+    }
+
 
   public function get_next_id()
   {
@@ -58,7 +114,7 @@ class Usaha_model extends CI_Model {
         {
           $this->db->where('usaha_id', $id);
           $this->db->update($this->table, $data);
-        }
+      }
 
 }
 
