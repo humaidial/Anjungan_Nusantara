@@ -9,6 +9,12 @@ class Produk_model extends CI_Model {
     {
         $query =  $this->db->query("SELECT p.produk_id,p.produk_nama, p.produk_harga,p.produk_stock,p.produk_deskripsi,p.produk_subkategori_id,p.produk_usaha_id,p.produk_status, subka.subkategori_nama FROM produk as p inner join usaha as u on u.usaha_id = p.produk_usaha_id inner join profile as pr on pr.profile_id = u.usaha_profile_id inner join subkategori as subka on subka.subkategori_id = p.produk_subkategori_id where pr.profile_id=$id");
         return $query->result();
+	}
+	
+	public function GetProdukForAdmin()
+    {
+        $query =  $this->db->query("SELECT p.produk_id,p.produk_nama, p.produk_harga,p.produk_stock,p.produk_deskripsi,p.produk_subkategori_id,p.produk_usaha_id,p.produk_status, subka.subkategori_nama, u.usaha_nama FROM produk as p inner join usaha as u on u.usaha_id = p.produk_usaha_id inner join profile as pr on pr.profile_id = u.usaha_profile_id inner join subkategori as subka on subka.subkategori_id = p.produk_subkategori_id order by p.produk_status = 'Menunggu'");
+        return $query->result();
     }
 
     public function get_next_id()
@@ -37,7 +43,36 @@ class Produk_model extends CI_Model {
         {
           $this->db->where('produk_id', $id);
           $this->db->update($this->table, $data);
-      }
+	  }
+	  
+	  public function verifikasi($id)
+	  {
+		  $date = date("Y-m-d H:i:s"); 
+		  $data = array(
+			  'produk_status' => "Disetujui",
+			  'produk_rilis' => $date,
+		  );
+		  $this->db->where('produk_id', $id);
+		  $this->db->update('produk', $data);
+	  }
+
+	  public function get_data_belum_disetujui()
+	  {
+		$this->db->select('*');
+		$this->db->from($this->table);
+		$this->db->where('produk_status','Menunggu');
+		$query = $this->db->get();
+		return $query->num_rows();
+	  }
+
+	  public function get_produk_rilis()
+	  {
+		$this->db->select('*');
+		$this->db->from($this->table);
+		$this->db->where('produk_status','Disetujui');
+		$query = $this->db->get();
+		return $query->result();
+	  }
 	
 
 }

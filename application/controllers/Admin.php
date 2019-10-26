@@ -10,6 +10,7 @@ class Admin extends CI_Controller {
 		$this->load->model('Profile_model');
 		$this->load->model('Kategori_model');
 		$this->load->model('SubKategori_model');
+		$this->load->model('Produk_model');
 
 		if ($this->session->userdata('logged_in')) {
 			$session_data=$this->session->userdata('logged_in');
@@ -85,6 +86,13 @@ class Admin extends CI_Controller {
 		 echo json_encode("Verifikasi berhasil dilakukan.");
 	}
 
+	public function ganti_status_produk()
+	{
+		 $id = $this->input->post('id');
+		 $data = $this->Produk_model->verifikasi($id);
+		 echo json_encode("Verifikasi berhasil dilakukan.");
+	}
+
 	public function checkemail()
 	{
 		$email = $this->input->post('email');
@@ -137,8 +145,8 @@ class Admin extends CI_Controller {
 	public function notif_about_akun()
 	{
 		$notifakun = $this->Login_model->get_data_belum_verifikasi();
-		$notiflainnya = 0;
-		return(array($notifakun, $notiflainnya));
+		$notifproduk = $this->Produk_model->get_data_belum_disetujui();
+		return(array($notifakun, $notifproduk));
 	}
 
 	public function proses_kategori()
@@ -230,6 +238,19 @@ class Admin extends CI_Controller {
 		 }
 
 		 echo json_encode($hasil);
+	}
+
+	public function produk()
+	{
+		$produk_data = $this->Produk_model->GetProdukForAdmin();
+		$data = [
+			'notif' => $this->notif_about_akun(),
+			'produk_data' => $produk_data,
+			'sidebar' => 'admin/sidebar',
+			'content' => 'admin/list_produk',
+			'footer' => 'admin/footer',
+		];
+		$this->load->view('admin/template',$data);
 	}
 
 }

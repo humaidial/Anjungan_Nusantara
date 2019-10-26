@@ -137,7 +137,21 @@
                           </div>
                           <div class="media-body">
                             <h6 class="media-heading">Beberapa akun penjual menunggu verifikasi.</h6>
-                             <span class="badge badge-round badge-danger" id="notif_penjual"><?php echo $notif[0]?></span>
+                             <span class="badge badge-round badge-danger" id="notif_akun"><?php echo $notif[0]?></span>
+                          </div>
+                        </div>
+                      </a>
+                    <?php } ?>
+
+                    <?php if($notif[1] > 0) { ?>
+                        <a class="list-group-item dropdown-item" href="<?php echo base_url()?>Admin/produk" role="menuitem">
+                        <div class="media">
+                          <div class="pr-10">
+                            <i class="icon wb-user bg-green-600 white icon-circle" aria-hidden="true"></i>
+                          </div>
+                          <div class="media-body">
+                            <h6 class="media-heading">Ada produk yang menunggu persetujuan.</h6>
+                             <span class="badge badge-round badge-danger" id="notif_produk"><?php echo $notif[1]?></span>
                           </div>
                         </div>
                       </a>

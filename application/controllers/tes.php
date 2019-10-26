@@ -39,8 +39,30 @@ class Tes extends CI_Controller {
 
 	public function teslagi()
 	{
-		$notifakun = $this->Login_model->get_data_belum_verifikasi();
-		var_dump($notifakun);
+		// $notifakun = $this->Produk_model->get_data_belum_disetujui();
+
+			//pusher untuk admin
+			require "vendor/autoload.php";
+	
+			$options = array(
+				'cluster' => 'ap1',
+				'useTLS' => true
+			);
+			$pusher = new Pusher\Pusher(
+				'07266be1b2356948225a',
+				'18436d630779a7ec8b65',
+				'887894',
+				$options
+			);
+
+			$data['produk_butuh_persetujuan'] = "2";
+			$pusher->trigger('my-channel', 'new_produk', $data);
+	}
+
+	public function waktu()
+	{
+		$dateTimeVariable = date("F j, Y \a\t g:ia");
+		var_dump($dateTimeVariable);
 	}
 
 }

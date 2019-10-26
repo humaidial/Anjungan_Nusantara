@@ -176,8 +176,6 @@ class Penjual extends CI_Controller {
 		}
 	}
 
-
-
 	public 	function tes()
 	{
 		$this->load->view('penjual/dashboard');
@@ -297,22 +295,33 @@ class Penjual extends CI_Controller {
 		    	  unlink(FCPATH."assets/foto/foto_usaha/".$usaha_data[0]->usaha_foto);
 				  $this->fotoupload->do_upload('usaha_foto');
 				  $namafile = $this->fotoupload->data('file_name');
-		    };
 
 				  $data = array(
-				  	'usaha_nama' => $this->input->post('usaha_nama'),
-				  	'usaha_alamat' => $this->input->post('usaha_alamat'),
-				  	'usaha_no_telp' => $this->input->post('usaha_no_telp'),
-				  	'usaha_email' => $this->input->post('usaha_email'),
-				  	'usaha_foto' => $namafile,
-				  	'usaha_keterangan' => $this->input->post('usaha_keterangan'),
-				  	'usaha_profile_id' => $this->session->userdata('profile_id'),
-				  );
-
+					'usaha_nama' => $this->input->post('usaha_nama'),
+					'usaha_alamat' => $this->input->post('usaha_alamat'),
+					'usaha_no_telp' => $this->input->post('usaha_no_telp'),
+					'usaha_email' => $this->input->post('usaha_email'),
+					'usaha_foto' => $namafile,
+					'usaha_keterangan' => $this->input->post('usaha_keterangan'),
+					'usaha_profile_id' => $this->session->userdata('profile_id'),
+				);
+			}
+			else{
+				$data = array(
+					'usaha_nama' => $this->input->post('usaha_nama'),
+					'usaha_alamat' => $this->input->post('usaha_alamat'),
+					'usaha_no_telp' => $this->input->post('usaha_no_telp'),
+					'usaha_email' => $this->input->post('usaha_email'),
+					'usaha_keterangan' => $this->input->post('usaha_keterangan'),
+					'usaha_profile_id' => $this->session->userdata('profile_id'),
+				);
+			}
+				 
 				  $this->Usaha_model->update($id, $data);
+				  $this->session->set_flashdata('flash_message', 'Update Profil Berhasil');
 				  $this->profil();
-        }
-	}
+		}
+    }
 
 	public function tambahkan_produk()
 	{
@@ -376,12 +385,32 @@ class Penjual extends CI_Controller {
 				  );
 
 				  $this->Produk_model->insert($data);
-				  $this->produk();
+
+				  
+			$notifakun = $this->Produk_model->get_data_belum_disetujui();
+
+			//pusher untuk admin
+			require "vendor/autoload.php";
+	
+			$options = array(
+				'cluster' => 'ap1',
+				'useTLS' => true
+			);
+			$pusher = new Pusher\Pusher(
+				'07266be1b2356948225a',
+				'18436d630779a7ec8b65',
+				'887894',
+				$options
+			);
+
+			$data['produk_butuh_persetujuan'] = strval($notifakun);
+			$pusher->trigger('my-channel', 'new_produk', $data);
+			$this->produk();
 
            }
                 
                 
-            }
+    }
 }
 
 /* End of file Penjual.php */

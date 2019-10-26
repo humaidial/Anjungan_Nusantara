@@ -135,6 +135,7 @@
                         <input type="submit" name="submit" value="Update" class="btn btn-primary" id="simpan" nama="simpan"> 
                       <!-- Buat Toko </button> -->
                         <?php echo form_close();?>
+                        <a href="<?php echo base_url()?>/Penjual/profil"><input type="button" name="back" value="Kembali" class="btn btn-primary"></a>
                       </div>
                   </div>
                 </div>

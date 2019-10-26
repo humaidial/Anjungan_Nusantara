@@ -198,7 +198,7 @@
               </li>
 
               <li class="site-menu-item">
-                <a href="<?php echo base_url() ?>Penjual/profil">Profil</a>
+                <a href="<?php echo base_url() ?>Penjual/profil">Profil Toko</a>
               </li>
 
               <li class="site-menu-item">

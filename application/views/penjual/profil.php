@@ -63,6 +63,14 @@
           </div>
         </div>
     <!-- End Page -->
-    <script type="text/javascript">
-
-    </script>
+    <?php if ($this->session->flashdata('flash_message')): ?>
+                            <script>
+                                Swal.fire({
+                                    title: "Done",
+                                    text: "<?php echo $this->session->flashdata('flash_message'); ?>",
+                                    timer: 1800,
+                                    showConfirmButton: false,
+                                    type: 'success'
+                                });
+                            </script>
+    <?php endif; ?>

@@ -53,6 +53,12 @@ class Kategori_model extends CI_Model {
 		}
 	}
 
+	public function get_kategori_dan_sub()
+	{
+		$query =  $this->db->query("SELECT k.kategori_id, k.kategori_nama, s.subkategori_id, s.subkategori_nama, s.subkategori_kategori_id from  subkategori as s inner join kategori as k on k.kategori_id = s.subkategori_kategori_id order by k.kategori_id");
+		return $query->result();
+	}
+
 }
 
 /* End of file Kategori_model.php */
