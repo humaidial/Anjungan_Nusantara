@@ -65,7 +65,7 @@
                         <h5 id="notifSubKategori">Silahkan Pilih Kategori Terlebih Dahulu</h5>
                         <h4 id="headerSubKategori" style="display: none"></h4>
                         <br>
-                        <table id="tabelsubkategori" class="table table-hover dataTable table-striped w-full" data-plugin="dataTable" >
+                        <!-- <table id="tabelsubkategori" class="table table-hover dataTable table-striped w-full" data-plugin="dataTable" >
               <thead>
                 <tr>
                   <th>No</th>
@@ -73,10 +73,10 @@
                   <th>Action</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="bodysubkategori">
                
               </tbody>
-            </table>
+            </table> -->
                       </div>
                     </div>
                   </div>
@@ -311,16 +311,15 @@
             $("#headerSubKategori").html("Sub-Kategori " + namaKategori);
             $("#headerSubKategori").css("display", "block");
 
-            $("#tabelsubkategori > tbody").html("");
+            document.getElementById("exampleTabsLeftTwo").innerHTML += "<table id='tabelsubkategori' class='table table-hover dataTable table-striped w-full' data-plugin='dataTable' ><thead><tr><th>No</th><th>Nama</th><th>Action</th></tr></thead><tbody id='bodysubkategori'></tbody></table>";
 
-            var i = 1;
-
+            var y = 1;
             jQuery.each( hasill, function( i, val ) {
               // $( "#" + i ).append( document.createTextNode( " - " + val ) );
-
-              var newRowContent = "<tr><td>" + i +"</td><td>" + val.subkategori_nama + "</td><td><button type='submit' class='btn btn-success btnUpdateKategori' data-target='#exampleUpdateSubKategori' data-toggle='modal' id='" +  val.subkategori_id+"' value='" +  val.subkategori_nama +"'>Update</button><button type='submit' class='btn btn-warning btnHapusSubKategori' id='" +  val.subkategori_id+"'>Hapus</button></td></tr>";  
-              $(newRowContent).appendTo($("#tabelsubkategori"));
-               i++;
+              document.getElementById("bodysubkategori").innerHTML += "<tr><td>" + y +"</td><td>" + val.subkategori_nama + "</td><td><button type='submit' class='btn btn-success btnUpdateKategori' data-target='#exampleUpdateSubKategori' data-toggle='modal' id='" +  val.subkategori_id+"' value='" +  val.subkategori_nama +"'>Update</button><button type='submit' class='btn btn-warning btnHapusSubKategori' id='" +  val.subkategori_id+"'>Hapus</button></td></tr>";
+              // var newRowContent = "<tr><td>" + i +"</td><td>" + val.subkategori_nama + "</td><td><button type='submit' class='btn btn-success btnUpdateKategori' data-target='#exampleUpdateSubKategori' data-toggle='modal' id='" +  val.subkategori_id+"' value='" +  val.subkategori_nama +"'>Update</button><button type='submit' class='btn btn-warning btnHapusSubKategori' id='" +  val.subkategori_id+"'>Hapus</button></td></tr>";  
+              // $(newRowContent).appendTo($("#tabelsubkategori"));
+               y++;
             });
             
         });

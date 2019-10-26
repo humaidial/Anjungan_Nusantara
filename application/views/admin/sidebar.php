@@ -53,6 +53,8 @@
     <![endif]-->
     
     <!-- Scripts -->
+    <script src="https://js.pusher.com/5.0/pusher.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>/assets/my_js/pusher_admin.js"></script>
     <script src="<?php echo base_url('assets/templateadmin/global/vendor/breakpoints/breakpoints.js')?>"></script>
     <script>
       Breakpoints();
@@ -113,7 +115,7 @@
               <a class="nav-link" data-toggle="dropdown" href="javascript:void(0)" title="Notifications"
                 aria-expanded="false" data-animation="scale-up" role="button">
                 <i class="icon wb-bell" aria-hidden="true"></i>
-                <span class="badge badge-pill badge-danger up"><?php echo $jumlah_notif ?></span>
+                <span class="badge badge-pill badge-danger up" id="jumlah_notif"><?php echo $jumlah_notif ?></span>
               </a>
 
              
@@ -124,7 +126,7 @@
     
                 <div class="list-group">
                   <div data-role="container">
-                    <div data-role="content">
+                    <div data-role="content" id="container_notif">
                      
                        <!--  notif -->
                     <?php if($notif[0] > 0) { ?>
@@ -135,7 +137,7 @@
                           </div>
                           <div class="media-body">
                             <h6 class="media-heading">Beberapa akun penjual menunggu verifikasi.</h6>
-                             <span class="badge badge-round badge-danger"><?php echo $notif[0]?></span>
+                             <span class="badge badge-round badge-danger" id="notif_penjual"><?php echo $notif[0]?></span>
                           </div>
                         </div>
                       </a>

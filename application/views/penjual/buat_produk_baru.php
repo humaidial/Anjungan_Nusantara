@@ -80,33 +80,53 @@
                 <div class="example-wrap">
                   <h1 class="example-title">Tambahkan Produk</h4>
                   <div class="example">
-                    <form autocomplete="off">
+                  <?php echo form_open_multipart('Penjual/tambahkan_produk'); ?>
 
                       <div class="form-group">
                         <label class="form-control-label" for="name">Nama Produk</label>
-                        <input type="text" class="form-control" id="name" name="inputBasicText"
-                          placeholder="Nama Toko Anda" autocomplete="off" required="" />
+                        <input type="text" class="form-control" id="produk_nama" name="produk_nama"
+                          placeholder="Nama Produk Anda" autocomplete="off" required="" />
+                           <?php echo form_error('produk_nama') ?>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="form-control-label" for="name">Kategori</label>
+                                  <select class="form-control" id="kategori">
+                                     <option>--Pilih--</option>
+                                     <?php foreach ($kategori as $key) { ?>
+                                       <option value="<?php echo $key->kategori_id?>"><?php echo $key->kategori_nama ?></option>
+                                      <?php } ?>
+                                  </select>
+                      </div>
+
+                      <div class="form-group">
+                       <label class="form-control-label" for="name">Sub Kategori</label>
+                            <select class="form-control" id="subkategori" name="subkategori">
+                                     <option>--Pilih--</option>
+                            </select>
                       </div>
 
                       <div class="form-group">
                         <label class="form-control-label" for="harga">Harga Produk</label>
-                        <input type="price" class="form-control" id="harga" name="price"
+                        <input type="price" class="form-control" id="produk_harga" name="produk_harga"
                           placeholder="Harga Produk Anda" autocomplete="off" required="" />
+                          <?php echo form_error('produk_harga') ?>
                       </div>
 
                       <div class="form-group">
                         <label class="form-control-label" for="stok">Stok Produk</label>
-                        <input type="number" min="0" class="form-control" id="stok" name="stok"
+                        <input type="number" min="0" class="form-control" id="produk_stock" name="produk_stock"
                           placeholder="Stok Produk Anda" autocomplete="off" required="" />
+                          <?php echo form_error('produk_stock') ?>
                       </div>
+
+                       <input type="price" class="form-control" id="produk_usaha_id" name="produk_usaha_id"
+                          style="display: none;" value=<?php echo $this->session->userdata('profile_id')?> />
 
                       <div class="form-group">
                         <label class="form-control-file" for="file">Foto Produk</label>
-                        <br>
-                        <img class="images" type="file" id="foto" height="128" data-src="default.jpg"
-                         data-holder-rendered="true" style="width: 140px; height: 140px;" src="default.jpg"/>
-                         <br><br>
-                         <input type="file" name="foto" type="button" class="btn btn-primary" id="change-profile-pic">
+                         <label class="form-control-file" for="file">Maksimal 4 Foto</label>
+                         <input type="file" name="userfile[]" type="button" class="btn btn-primary" id="change-profile-pic" multiple>
 
 
                       <!--  <input type="file" class="form-control" id="inputBasicFotoProfil" name="inputFotoProfil"
@@ -124,16 +144,37 @@
                       <div class="form-group">
                         <label for="deskripsi">Deskripsi Produk</label>
                         <textarea type="text" class="form-control" id="deskripsi" name="deskripsi"
-                          placeholder="Deskripsi Produk Anda" required="" autocomplete="off" /></textarea>
+                          placeholder="Deskripsi Produk Anda" autocomplete="off" rows="5" /></textarea>
                       </div>
 
                       <div class="form-group">
-                        <button type="button" class="btn btn-primary">Tambahkan</button>
+                        <button type="submit" class="btn btn-primary">Tambahkan</button>
                       </div>
-                    </form>
+                      <?php echo form_close(); ?>
+                   
                   </div>
                 </div>
                 <!-- End Example Basic Form (Form grid) -->
               </div>
+              <script>
+                $('#kategori').change(function(){
+                  var id=$(this).val();
+                        $('#kons_det_kmd_id').empty().append('<option selected="selected" value="">--Pilih--</option>')
+
+                        $.ajax({
+                    url : "<?php echo base_url();?>Penjual/get_subkategori",
+                    method : "POST",
+                    data : {id: id},
+                    async : false,
+                        dataType : 'json',
+                    success: function(data){
+                      // console.log(data);
+                                for (let index = 0; index < data.length; index++) {
+                                    $("#subkategori").append("<option value="+data[index].subkategori_id+">"+data[index].subkategori_nama+"</option>");
+                                }
+                    }
+                  });
+                });
+              </script>
 </body>
 </html>

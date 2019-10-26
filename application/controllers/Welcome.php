@@ -22,4 +22,9 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('home/homepage');
 	}
+
+	public function detail()
+	{
+		$this->load->view('home/detail_product');
+	}
 }

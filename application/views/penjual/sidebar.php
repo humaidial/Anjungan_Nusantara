@@ -14,8 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <script src="<?php echo base_url('assets/sweetalert/sweetalert2.all.min.js')?>"></script>
     <link rel="stylesheet" href="<?php echo base_url('assets/sweetalert/sweetalert2.min.css')?>">
-
-    
+    <script src="<?php echo base_url('assets/image-picker/image-picker.min.js')?>"></script>
+    <link rel="stylesheet" href="<?php echo base_url('assets/image-picker/image-picker.css')?>">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="<?php echo base_url('assets/templateadmin/global/css/bootstrap.min.css')?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/templateadmin/global/css/bootstrap.css')?>">

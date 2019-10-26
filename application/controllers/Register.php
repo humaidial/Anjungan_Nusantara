@@ -21,15 +21,7 @@ class Register extends CI_Controller {
 		 $next = $this->Profile_model->get_next_id();
 		 $profile_id = $next->AUTO_INCREMENT;
 
-		 // $config['upload_path']          = './assets/foto/foto_user';
-   //       $config['allowed_types']        = 'gif|jpg|png';
-   //       $config['file_name']			 = 'profile_'.$profile_id ;
-
-   //       $this->load->library('upload', $config);
-
 		$this->form_validation->set_rules('name','Nama','required',array('required' => '%s tidak boleh kosong.'));
-		// $this->form_validation->set_rules('alamat','Alamat','required',array('required' => '%s tidak boleh kosong.'));
-		// $this->form_validation->set_rules('jenis_kelamin','Jenis Kelamin','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('no_telp','No Telpon','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('email','E-mail','required',array('required' => '%s tidak boleh kosong.'));
 		$this->form_validation->set_rules('level','Tipe','required',array('required' => '%s tidak boleh kosong.'));
@@ -43,11 +35,6 @@ class Register extends CI_Controller {
 		{
 			$this->load->view('Register/register_new',array('error' => ' '));
 		}
-		// else if(!$this->upload->do_upload('user_file')){
-		// 	$error = array('error' => $this->upload->display_errors());
-
-		// 	$this->load->view('Register/register_new', $error);
-		// }
 		else
 		{
 			//ambil id increment untuk profil baru
@@ -56,9 +43,7 @@ class Register extends CI_Controller {
 			$dataprofile = array(
 				'profile_nama' => $this->input->post('name'),
 				// 'profile_alamat' => $this->input->post('alamat'),
-				// 'profile_jenis_kelamin' => $this->input->post('jenis_kelamin'),
 				'profile_no_hp' => $this->input->post('no_telp'),
-				// 'profile_picture' => $this->upload->data('file_name'),
 			);
 			$this->Profile_model->insert($dataprofile);
 
@@ -81,6 +66,25 @@ class Register extends CI_Controller {
 				'login_profile_id' => $profile_id
 			);
 			$this->Login_model->insert($datalogin);
+
+			$notifakun = $this->Login_model->get_data_belum_verifikasi();
+
+				//pusher untuk admin
+				require "vendor/autoload.php";
+		
+				$options = array(
+					'cluster' => 'ap1',
+					'useTLS' => true
+				);
+				$pusher = new Pusher\Pusher(
+					'07266be1b2356948225a',
+					'18436d630779a7ec8b65',
+					'887894',
+					$options
+				);
+
+				$data['akun_butuh_verifikasi'] = strval($notifakun);
+				$pusher->trigger('my-channel', 'new_penjual', $data);
 
 			$this->load->view($succes_page);
 		}

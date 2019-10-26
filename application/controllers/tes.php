@@ -3,37 +3,44 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Tes extends CI_Controller {
 
-	var $user;
-
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('Login_model');
-		$this->load->model('Profile_model');
-		$this->load->model('Usaha_model');
-
-		if ($this->session->userdata('logged_in')) {
-			$session_data=$this->session->userdata('logged_in');
-			$this->user = $session_data['username'];
-			$data['level']=$session_data['level'];
-			$this->usahaId =$session_data['profile_id'];
-		}
-		else{
-			echo '<script>alert("Anda Belum Login")</script>';
-			redirect('Login','refresh');
-		}
 	}
+	
 
 	public function index()
 	{
-		if($this->Usaha_model->cek_usaha($this->session->userdata('profile_id'))){
-			// $this->buat_usaha_baru();
-			echo "Belum Ada";
-		}
-		else{
-			// $this->dashboard();
-			echo "Sudah Ada";
-		}
+		$notifakun = $this->Login_model->get_data_belum_verifikasi();
+
+		require "vendor/autoload.php";
+		
+		$options = array(
+			'cluster' => 'ap1',
+			'useTLS' => true
+		);
+		$pusher = new Pusher\Pusher(
+			'07266be1b2356948225a',
+			'18436d630779a7ec8b65',
+			'887894',
+			$options
+		);
+
+		$data['akun_butuh_verifikasi'] = '1';
+		$pusher->trigger('my-channel', 'new_penjual', $data);
+	}
+
+	public function tes_p()
+	{
+		$this->load->view('tes_pusher');
+		
+	}
+
+	public function teslagi()
+	{
+		$notifakun = $this->Login_model->get_data_belum_verifikasi();
+		var_dump($notifakun);
 	}
 
 }
