@@ -62,7 +62,7 @@ class Tes extends CI_Controller {
 	public function waktu()
 	{
 		date_default_timezone_set('Asia/Jakarta');
-		$date = date('m/d/Y h:i:s a', time());
+		$date = date('Y-m-d h:i:s', time());
 		var_dump($date);
 	}
 
