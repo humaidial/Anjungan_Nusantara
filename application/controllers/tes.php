@@ -55,7 +55,7 @@ class Tes extends CI_Controller {
 				$options
 			);
 
-			$data['produk_butuh_persetujuan'] = "2";
+			$data['produk_butuh_persetujuan'] = "1";
 			$pusher->trigger('my-channel', 'new_produk', $data);
 	}
 
