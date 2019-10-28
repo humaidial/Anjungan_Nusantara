@@ -47,7 +47,8 @@ class Produk_model extends CI_Model {
 	  
 	  public function verifikasi($id)
 	  {
-		  $date = date("Y-m-d H:i:s"); 
+			date_default_timezone_set('Asia/Jakarta');
+			$date = date('m/d/Y h:i:s a', time());
 		  $data = array(
 			  'produk_status' => "Disetujui",
 			  'produk_rilis' => $date,
