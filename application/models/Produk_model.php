@@ -74,8 +74,34 @@ class Produk_model extends CI_Model {
 		$query = $this->db->get();
 		return $query->result();
 	  }
-	
 
+	  public function get_produk_minggu()
+     {
+        $query =  $this->db->query("SELECT * FROM `produk` WHERE produk_status = 'Disetujui' ORDER BY produk_rilis DESC LIMIT 5");
+        return $query->result();
+	 }
+	 
+	 public function get_baru_terjual(){
+		$query =  $this->db->query("SELECT * FROM `produk` WHERE produk_status = 'Disetujui' AND produk_terakhir_dibeli is not null order by produk_terakhir_dibeli desc limit 8");
+        return $query->result();
+	 }
+	
+	 public function get_produk_by_rating(){
+		$query =  $this->db->query("SELECT r.rating_produk_id, AVG(r.rating_nilai) as rata, p.produk_id, p.produk_nama,p.produk_harga, p.produk_stock, p.produk_deskripsi, p.produk_foto_depan, p.produk_status,p.produk_status, p.produk_diupload,p.produk_rilis,p.produk_terakhir_dibeli,p.produk_subkategori_id,p.produk_usaha_id FROM rating as r inner join produk as p on r.rating_produk_id = p.produk_id ORDER BY rata  limit 8
+		");
+        return $query->result();
+	 }
+
+	 public function get_produk_jual_terbanyak(){
+		$query =  $this->db->query("SELECT * FROM produk as p inner join subkategori as sk on p.produk_subkategori_id = sk.subkategori_id WHERE produk_status = 'Disetujui' AND produk_terjual > 0 order by produk_terjual DESC");
+        return $query->result();
+	 }
+
+	 public function get_detail_produk($id)
+	 {
+		 
+	 }
+	 
 }
 
 /* End of file Produk_model.php */

@@ -380,7 +380,8 @@ class Penjual extends CI_Controller {
 				  	'produk_stock' => $this->input->post('produk_stock'),
 				  	'produk_deskripsi' => $this->input->post('deskripsi'),
 				  	'produk_foto_depan' => $list_namafile[0],
-				  	'produk_status' => "Menunggu",
+					  'produk_status' => "Menunggu",
+					  'produk_terjual' => 0,
 				  	'produk_usaha_id' => $idusaha[0]->usaha_id
 				  );
 

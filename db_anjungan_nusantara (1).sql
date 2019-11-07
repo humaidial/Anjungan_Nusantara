@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 26, 2019 at 02:13 PM
+-- Generation Time: Nov 07, 2019 at 03:55 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -40,7 +40,8 @@ CREATE TABLE `kategori` (
 INSERT INTO `kategori` (`kategori_id`, `kategori_nama`) VALUES
 (1, 'Suvenir'),
 (2, 'Makanan'),
-(4, 'Oleh-oleh');
+(4, 'Oleh-oleh'),
+(5, 'Alat rumah tangga');
 
 -- --------------------------------------------------------
 
@@ -58,8 +59,10 @@ CREATE TABLE `list_gambar_produk` (
 --
 
 INSERT INTO `list_gambar_produk` (`list_produk_id`, `list_gambar`) VALUES
-(1, '1_12.jpg'),
-(2, '2_11.jpg');
+(1, '1_1.jpg'),
+(1, '1_2.jpg'),
+(1, '1_3.jpg'),
+(1, '1_4.jpg');
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,8 @@ CREATE TABLE `login` (
 
 INSERT INTO `login` (`login_id`, `e_mail`, `password`, `login_level`, `login_status`, `login_profile_id`) VALUES
 (1, 'admin', 'admin', 'Admin', 'Terverifikasi', 1),
-(2, 'andi@gmail.com', '12345678', 'Penjual', 'Terverifikasi', 2);
+(2, 'andi@gmail.com', '12345678', 'Penjual', 'Terverifikasi', 2),
+(3, 'afi@yahoo.com', 'abcd1234', 'Penjual', 'Terverifikasi', 3);
 
 -- --------------------------------------------------------
 
@@ -95,11 +99,13 @@ CREATE TABLE `produk` (
   `produk_nama` varchar(255) NOT NULL,
   `produk_harga` int(11) NOT NULL,
   `produk_stock` int(11) NOT NULL,
+  `produk_terjual` int(11) NOT NULL,
   `produk_deskripsi` text NOT NULL,
   `produk_foto_depan` varchar(255) NOT NULL,
   `produk_status` varchar(255) NOT NULL,
   `produk_diupload` timestamp NOT NULL DEFAULT current_timestamp(),
   `produk_rilis` timestamp NULL DEFAULT NULL,
+  `produk_terakhir_dibeli` timestamp NULL DEFAULT NULL,
   `produk_subkategori_id` int(11) NOT NULL,
   `produk_usaha_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -108,9 +114,8 @@ CREATE TABLE `produk` (
 -- Dumping data for table `produk`
 --
 
-INSERT INTO `produk` (`produk_id`, `produk_nama`, `produk_harga`, `produk_stock`, `produk_deskripsi`, `produk_foto_depan`, `produk_status`, `produk_diupload`, `produk_rilis`, `produk_subkategori_id`, `produk_usaha_id`) VALUES
-(1, 'Mug Kucing', 26000, 50, 'Mug Kucing Lucu', '1_12.jpg', 'Disetujui', '2019-10-26 09:49:34', '2019-10-26 05:09:48', 1, 1),
-(2, 'Mug Gajah', 30000, 20, 'Mug Gajah', '2_11.jpg', 'Menunggu', '2019-10-26 09:53:13', NULL, 1, 1);
+INSERT INTO `produk` (`produk_id`, `produk_nama`, `produk_harga`, `produk_stock`, `produk_terjual`, `produk_deskripsi`, `produk_foto_depan`, `produk_status`, `produk_diupload`, `produk_rilis`, `produk_terakhir_dibeli`, `produk_subkategori_id`, `produk_usaha_id`) VALUES
+(1, 'Gantungan Kunci Owl', 8000, 12, 0, 'Gantungan kunci gambar Owl terbuat dari kayu', '1_1.jpg', 'Disetujui', '2019-11-07 02:26:41', '2019-11-07 02:29:32', NULL, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -131,7 +136,28 @@ CREATE TABLE `profile` (
 
 INSERT INTO `profile` (`profile_id`, `profile_nama`, `profile_no_hp`, `profile_alamat`) VALUES
 (1, 'Yudistira', '0812345678', ''),
-(2, 'andi', '0812345678', '');
+(2, 'andi', '0812345678', ''),
+(3, 'afi', '099', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rating`
+--
+
+CREATE TABLE `rating` (
+  `rating_produk_id` int(11) NOT NULL,
+  `rating_profile_id` int(11) NOT NULL,
+  `rating_nilai` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rating`
+--
+
+INSERT INTO `rating` (`rating_produk_id`, `rating_profile_id`, `rating_nilai`) VALUES
+(3, 98, 3),
+(3, 99, 5);
 
 -- --------------------------------------------------------
 
@@ -153,7 +179,11 @@ INSERT INTO `subkategori` (`subkategori_id`, `subkategori_nama`, `subkategori_ka
 (1, 'Mug', 1),
 (2, 'Kipas', 1),
 (3, 'Camilan', 2),
-(4, 'Kripik', 2);
+(4, 'Kripik', 2),
+(5, 'Suvenir kayu', 1),
+(6, 'Peralatan Makan', 5),
+(7, 'Oleh - oleh Khas Malang', 4),
+(8, 'Peralatan dapur', 5);
 
 -- --------------------------------------------------------
 
@@ -203,7 +233,8 @@ CREATE TABLE `usaha` (
 --
 
 INSERT INTO `usaha` (`usaha_id`, `usaha_nama`, `usaha_alamat`, `usaha_no_telp`, `usaha_email`, `usaha_foto`, `usaha_keterangan`, `usaha_profile_id`) VALUES
-(1, 'Sumber Makmur Batu', 'Jl. Alun-alun Batu', '0812345678', 'sumbermakmu@gmail.com', '1.png', 'Toko Kami Menjual Segala Macam macam oleh-oleh.', 2);
+(1, 'Sumber Makmur Batu', 'Jl. Alun-alun Batu', '0812345678', 'sumbermakmu@gmail.com', '1.png', 'Toko Kami Menjual Segala Macam macam oleh-oleh.', 2),
+(2, 'Sumber Maju Jaya', 'jl. afi', '908', 'afitoko@gmail.com', '2.jpg', 'tooko', 3);
 
 --
 -- Indexes for dumped tables
@@ -254,37 +285,37 @@ ALTER TABLE `usaha`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `profile_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `subkategori`
 --
 ALTER TABLE `subkategori`
-  MODIFY `subkategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `subkategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `usaha`
 --
 ALTER TABLE `usaha`
-  MODIFY `usaha_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `usaha_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
