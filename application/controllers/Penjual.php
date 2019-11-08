@@ -110,6 +110,7 @@ class Penjual extends CI_Controller {
 
 	public function produk()
 	{
+		
 		$para = $this->session->userdata('profile_id');
 		$produk_data = $this->Produk_model->GetProduk($para);
 		$data = [

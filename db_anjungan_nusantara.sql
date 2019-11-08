@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2019 at 03:55 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.8
+-- Generation Time: Nov 08, 2019 at 11:27 PM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,7 +41,8 @@ INSERT INTO `kategori` (`kategori_id`, `kategori_nama`) VALUES
 (1, 'Suvenir'),
 (2, 'Makanan'),
 (4, 'Oleh-oleh'),
-(5, 'Alat rumah tangga');
+(5, 'Alat rumah tangga'),
+(6, 'Minuman');
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,34 @@ INSERT INTO `list_gambar_produk` (`list_produk_id`, `list_gambar`) VALUES
 (1, '1_1.jpg'),
 (1, '1_2.jpg'),
 (1, '1_3.jpg'),
-(1, '1_4.jpg');
+(1, '1_4.jpg'),
+(2, '2_1.png'),
+(2, '90754_view_512x512.ico'),
+(2, '2_3.jpg'),
+(2, '2_4.png'),
+(3, '3_1.jpg'),
+(3, '3_2.jpg'),
+(3, '3_3.jpg'),
+(4, '4_1.jpg'),
+(4, '4_2.jpg'),
+(5, '5_1.jpg'),
+(5, '5_2.jpg'),
+(6, '6_11.jpg'),
+(6, '6_2.jpg'),
+(7, '7_12.jpg'),
+(7, '7_2.jpg'),
+(8, '8_11.jpg'),
+(8, '8_2.jpg'),
+(9, '9_11.jpg'),
+(9, '9_2.jpg'),
+(10, '10_11.jpg'),
+(10, '10_2.jpg'),
+(11, '11_11.jpg'),
+(11, '11_2.jpg'),
+(11, '11_3.jpg'),
+(11, '11_4.jpg'),
+(12, '12_11.jpg'),
+(13, '13_1.png');
 
 -- --------------------------------------------------------
 
@@ -103,7 +131,7 @@ CREATE TABLE `produk` (
   `produk_deskripsi` text NOT NULL,
   `produk_foto_depan` varchar(255) NOT NULL,
   `produk_status` varchar(255) NOT NULL,
-  `produk_diupload` timestamp NOT NULL DEFAULT current_timestamp(),
+  `produk_diupload` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `produk_rilis` timestamp NULL DEFAULT NULL,
   `produk_terakhir_dibeli` timestamp NULL DEFAULT NULL,
   `produk_subkategori_id` int(11) NOT NULL,
@@ -115,7 +143,16 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`produk_id`, `produk_nama`, `produk_harga`, `produk_stock`, `produk_terjual`, `produk_deskripsi`, `produk_foto_depan`, `produk_status`, `produk_diupload`, `produk_rilis`, `produk_terakhir_dibeli`, `produk_subkategori_id`, `produk_usaha_id`) VALUES
-(1, 'Gantungan Kunci Owl', 8000, 12, 0, 'Gantungan kunci gambar Owl terbuat dari kayu', '1_1.jpg', 'Disetujui', '2019-11-07 02:26:41', '2019-11-07 02:29:32', NULL, 5, 1);
+(1, 'Gantungan Kunci Owl', 8000, 12, 0, 'Gantungan kunci gambar Owl terbuat dari kayu', '1_1.jpg', 'Disetujui', '2019-11-07 02:26:41', '2019-11-07 02:29:32', NULL, 5, 1),
+(3, 'Mug Dmoni', 12000, 20, 0, 'mug gambar karakter', '3_1.jpg', 'Disetujui', '2019-11-08 18:11:58', '2019-11-08 18:13:39', NULL, 6, 1),
+(6, 'Kopi Malang', 30000, 123, 0, 'kopi khas Malang', '6_11.jpg', 'Menunggu', '2019-11-08 18:18:04', NULL, NULL, 0, 1),
+(7, 'Kopi Malang', 30000, 123, 0, 'kopi khas Malang', '7_12.jpg', 'Menunggu', '2019-11-08 18:18:10', NULL, NULL, 0, 1),
+(8, 'kopi enak', 13000, 12, 0, 'kopi enak poll', '8_11.jpg', 'Menunggu', '2019-11-08 18:23:06', NULL, NULL, 0, 1),
+(9, 'kopi khas malang ', 34000, 30, 0, 'Kopi khas malang.', '9_11.jpg', 'Disetujui', '2019-11-08 18:42:11', '2019-11-08 18:42:44', NULL, 9, 1),
+(10, 'kripik tempe rasa original', 8000, 120, 0, 'Kripik tempe renyah khas Malang.', '10_11.jpg', 'Disetujui', '2019-11-08 18:46:43', '2019-11-08 18:49:15', NULL, 7, 1),
+(11, 'Talenan Kayu', 8000, 300, 0, 'Telenan terbuat dari kayu', '11_11.jpg', 'Disetujui', '2019-11-08 19:09:34', '2019-11-08 19:10:49', NULL, 8, 1),
+(12, 'Keranjang Rotan', 12000, 120, 0, 'Keranjang dari Rotan', '12_11.jpg', 'Menunggu', '2019-11-08 19:12:37', NULL, NULL, 5, 1),
+(13, 'www', 13, 12, 0, 'www', '13_1.png', 'Menunggu', '2019-11-08 20:12:46', NULL, NULL, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -183,7 +220,10 @@ INSERT INTO `subkategori` (`subkategori_id`, `subkategori_nama`, `subkategori_ka
 (5, 'Suvenir kayu', 1),
 (6, 'Peralatan Makan', 5),
 (7, 'Oleh - oleh Khas Malang', 4),
-(8, 'Peralatan dapur', 5);
+(8, 'Peralatan dapur', 5),
+(9, 'Kopi', 6),
+(11, 'Herbal', 6),
+(12, 'Minuman Segar', 6);
 
 -- --------------------------------------------------------
 
@@ -285,7 +325,7 @@ ALTER TABLE `usaha`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `kategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `login`
@@ -297,7 +337,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `produk_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `profile`
@@ -309,7 +349,7 @@ ALTER TABLE `profile`
 -- AUTO_INCREMENT for table `subkategori`
 --
 ALTER TABLE `subkategori`
-  MODIFY `subkategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `subkategori_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `usaha`

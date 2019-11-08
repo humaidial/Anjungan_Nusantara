@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+	<?php $this->load->helper('rupiah_helper'); ?>
 	<?php $this->load->view("penjual/_partials/head.php") ?>
+
 </head>
 
 <body id="page-top">
@@ -42,8 +44,9 @@
 										<td width="150">
 											<?php echo $product->name ?>
 										</td>
-										<td>
-											<?php echo $product->price ?>
+										<td> 
+											<?php 
+											echo $this->fungsi->nominal('$product->price');?> 
 										</td>
 										<td>
 											<img src="<?php echo base_url('upload/product/'.$product->image) ?>" width="64" />
@@ -82,6 +85,8 @@
 	<?php $this->load->view("penjual/_partials/modal.php") ?>
 
 	<?php $this->load->view("penjual/_partials/js.php") ?>
+
+	<script type="text/javascript"  src="<?php echo base_url('assets/style-rupiah/rupiah.js')?>"></script>
 
 	<script>
 	function deleteConfirm(url){

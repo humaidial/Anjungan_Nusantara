@@ -109,8 +109,9 @@
                       <div class="form-group">
                         <label class="form-control-label" for="harga">Harga Produk</label>
                         <input type="price" class="form-control" id="produk_harga" name="produk_harga"
-                          placeholder="Harga Produk Anda" onkeyup="convertToRupiah(this);" autocomplete="off" required="" />
-                          <?php echo form_error('produk_harga') ?>
+                          placeholder="Harga Produk Anda" /*onkeyup="convertToRupiah(this);" */autocomplete="off" required="" />
+                          <?php 
+                          echo form_error('produk_harga') ?>
                       </div>
 
                       <div class="form-group">

@@ -18,13 +18,13 @@ function convertToRupiah(objek) {
 	}       
 
 	function convertToAngka()
-	{	var nominal= document.getElementById("nominal").value;
-		var angka = parseInt(nominal.replace(/,.*|[^0-9]/g, ''), 10);
+	{	var produk_harga= document.getElementById("produk_harga").value;
+		var angka = parseInt(produk_harga.replace(/,.*|[^0-9]/g, ''), 10);
 		document.getElementById("angka").innerHTML= angka;
 	}       
 
 	function convertToAngka()
-	{	var nominal1= document.getElementById("nominal1").value;
-		var angka1 = parseInt(nominal.replace(/,.*|[^0-9]/g, ''), 10);
+	{	var produk_harga1= document.getElementById("produk_harga1").value;
+		var angka1 = parseInt(produk_harga.replace(/,.*|[^0-9]/g, ''), 10);
 		document.getElementById("angka1").innerHTML= angka;
 	}
