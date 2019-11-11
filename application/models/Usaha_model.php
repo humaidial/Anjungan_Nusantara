@@ -78,6 +78,12 @@ class Usaha_model extends CI_Model {
     return $query->row(0);
   }
 
+  public function get_usaha_pemilik()
+  {
+    $query =  $this->db->query("SELECT * FROM usaha as u inner join profile as p on p.profile_id = u.usaha_profile_id");
+    return $query->result();
+  }
+
   public function insert($data)
   {
     $insert = $this->db->insert($this->table,$data);
@@ -89,6 +95,7 @@ class Usaha_model extends CI_Model {
     }
     
   }
+  
 
 	 public function getBuat_baru()
           {
@@ -114,6 +121,29 @@ class Usaha_model extends CI_Model {
         {
           $this->db->where('usaha_id', $id);
           $this->db->update($this->table, $data);
+      }
+
+      public function update_ajax($id, $data)
+      {
+        $this->db->where('usaha_id', $id);
+        $update = $this->db->update("usaha", $data);
+        if($update){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+
+      public function hapus_ajax($id){
+        $this->db->where('usaha_id', $id);
+        $delete = $this->db->delete("usaha");
+        if($delete){
+          return true;
+        }
+        else{
+          return false;
+        }
       }
 
 }

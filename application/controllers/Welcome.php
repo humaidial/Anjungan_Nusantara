@@ -61,7 +61,7 @@ class Welcome extends CI_Controller {
 	}
 
 	public function detail_produk($id)
-	{	$detail = $this->Produk_model->GetProduk($id);
+	{	$detail = $this->Produk_model->get_detail_produk($id);
 		$data = array(
 			'detail' => $detail
 		);

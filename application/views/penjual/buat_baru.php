@@ -8,8 +8,6 @@
     <meta name="author" content="">
 
     <title>Halaman Penjual</title>
-
-    <?php include 'link_asset.php'?>
     
     <script src="<?php echo base_url('assets/templateadmin/global/vendor/breakpoints/breakpoints.js')?>"></script>
     <script>
@@ -21,26 +19,10 @@
         <div class="panel">
           <div class="panel-body container-fluid">
 
-              <?php $this->load->view("penjual/_partials/breadcrumb.php") ?>
-              <?php if ($this->session->flashdata('success')): ?>
-              <div class="alert alert-success" role="alert">
-              <?php echo $this->session->flashdata('success'); ?>
-              </div>
-              <?php endif; ?>
 
             <div class="row row-lg">
               <div class="col-md-2">
-                <!-- Example Basic Form (Form grid) -->
-                <div class="example-wrap">
-                  <div class="example">
-                    <form autocomplete="off">
-                      <div class="row">
-                        	<img class="img-circle img-bordered img-bordered-orange" width="200" height="200" src="../../../global/photos/placeholder.png" alt="...">
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <!-- End Example Basic Form (Form grid) -->
+              
               </div>
               <div class="col-md-6">
                 <!-- Example Basic Form (Form grid) -->
@@ -86,9 +68,9 @@
                       </div>
 
                       <div class="form-group">
-                        <label class="form-control-label" for="inputBasicfotoprofil">Foto Profil</label>
+                        <label class="form-control-label" for="inputBasicfotoprofil">Logo Toko</label>
                         <br>
-                        Silahkan Upload Foto Profil Anda    :
+                        Silahkan Upload Logo Toko Anda    :
                         <input type="file" name="usaha_foto" id="usaha_foto">
                         <label style="color: red"><?php echo form_error('usaha_foto') ?></label>
                         <!--<input type="submit" value="Upload Image" name="submit">-->

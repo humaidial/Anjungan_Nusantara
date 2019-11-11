@@ -31,8 +31,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col d-flex flex-row">
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url('assets/homepage_lib/images/phone.png')?>" alt=""></div>(031) - 8894850</div>
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url()?>assets/homepage_lib/images/mail.png" alt=""></div><a href="mailto:humaidialmasmed@gmail.com">humaidialmasmed@gmail.com</a></div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url('assets/homepage_lib/images/phone.png')?>" alt=""></div>(0341) - 123456</div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url()?>assets/homepage_lib/images/mail.png" alt=""></div>anjungannusantarabatu@gmail.com</div>
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_user">
 								<div class="user_icon"><img src="<?php echo base_url('assets/homepage_lib/images/user.svg')?>" alt=""></div>
@@ -140,7 +140,7 @@
 
 							<!-- Main Nav Menu -->
 
-							<div class="main_nav_menu ml-auto">
+							<!-- <div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
 									<li><a href="<?php echo base_url()?>Welcome">Beranda<i class="fas fa-chevron-down"></i></a></li>
 									<li class="hassubs">
@@ -174,7 +174,7 @@
 										</ul>
 									</li>
 								</ul>
-							</div>
+							</div> -->
 
 							<!-- Menu Trigger -->
 
@@ -1715,7 +1715,7 @@
 	</div>
 
 	<!-- Best Sellers -->
-
+	
 	<div class="best_sellers">
 		<div class="container">
 			<div class="row">
@@ -2213,7 +2213,7 @@
 			</div>
 		</div>
 	</div>
-
+	
 
 
 	<!-- Reviews -->
@@ -2423,8 +2423,8 @@
 						<div class="footer_title">Anjungan<br>Nusantara</div>
 						<ul class="footer_list">
 							<li><a href="shop.html">Tentang Kami</a></li>
-							<li><a href="shop.html">Karir</a></li>
-							<li><a href="shop.html">Berita</a></li>
+							<!-- <li><a href="shop.html">Karir</a></li> -->
+							<!-- <li><a href="shop.html">Berita</a></li> -->
 							<li><a href="shop.html">Semua Produk</a></li>
 						</ul>
 					</div>
@@ -2436,7 +2436,7 @@
 						<ul class="footer_list">
 							<li><a href="shop.html">Cara Berbelanja</a></li>
 							<li><a href="shop.html">Metode Pembayaran</a></li>
-							<li><a href="shop.html">Lihat Promo</a></li>
+							<!-- <li><a href="shop.html">Lihat Promo</a></li> -->
 							<li><a href="shop.html">Produk Terkini</a></li>
 						</ul>
 					</div>
@@ -2447,8 +2447,8 @@
 						<div class="footer_title">Penjual<br><br></div>
 						<ul class="footer_list">
 							<li><a href="#">Berjualan di Anjungan.com</a></li>
-							<li><a href="#">Seller Center</a></li>
-							<li><a href="#">Super Seller</a></li>
+							<!-- <li><a href="#">Seller Center</a></li>
+							<li><a href="#">Super Seller</a></li> -->
 						</ul>
 					</div>
 				</div>
@@ -2477,16 +2477,17 @@
 
 					<div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
 						<div class="copyright_content">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  <i  aria-hidden="true"></i> by <a href="https://instagram.com/masmed__" target="_blank">Masmed</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
 
 </div>
 						<div class="logos ml-sm-auto">
-							<ul class="logos_list">
+						<!--logo list -->
+							<!-- <ul class="logos_list">
 								<li><a href="#"><img src="<?php echo base_url()?>assets/homepage_lib/images/logos_1.png" alt=""></a></li>
 								<li><a href="#"><img src="<?php echo base_url()?>assets/homepage_lib/images/logos_2.png" alt=""></a></li>
 								<li><a href="#"><img src="<?php echo base_url()?>assets/homepage_lib/images/logos_3.png" alt=""></a></li>
 								<li><a href="#"><img src="<?php echo base_url()?>assets/homepage_lib/images/logos_4.png" alt=""></a></li>
-							</ul>
+							</ul> -->
 						</div>
 					</div>
 				</div>

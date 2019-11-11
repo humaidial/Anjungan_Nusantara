@@ -65,18 +65,19 @@
                         <h5 id="notifSubKategori">Silahkan Pilih Kategori Terlebih Dahulu</h5>
                         <h4 id="headerSubKategori" style="display: none"></h4>
                         <br>
-                        <!-- <table id="tabelsubkategori" class="table table-hover dataTable table-striped w-full" data-plugin="dataTable" >
+                        <table id="tabelsubkategori" class="table table-hover dataTable table-striped w-full" data-plugin="dataTable" >
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama</th>
+                  <th>Nama Sub Kategori</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody id="bodysubkategori">
+             
                
               </tbody>
-            </table> -->
+            </table>
                       </div>
                     </div>
                   </div>
@@ -159,6 +160,31 @@
                                 <div class="modal-footer">
                                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                   <button type="button" class="btn btn-primary" id="saveSubKategori">Save</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- End Modal -->
+
+                           <!-- Modal update data -->
+                           <div class="modal fade" id="exampleUpdateSubKategori" aria-hidden="true" aria-labelledby="examplePositionCenter"
+                            role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-simple modal-center">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                  </button>
+                                  <h4 class="modal-title">Update Sub Kategori</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <h4 class="example-title">Nama Sub Kategori</h4>
+                                 <input type="text" class="form-control infoNama" id="namaUpdateSubKategori" placeholder="Nama">
+                                  <input type="text" class="form-control" id="idUpdateSubKategori" placeholder="Nama" style="display: none;">
+                                </div>
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  <button type="button" class="btn btn-primary" id="updateSubKategori">Save</button>
                                 </div>
                               </div>
                             </div>
@@ -297,31 +323,43 @@
              $('#idUpdateKategori').val(this.id);
         });
 
+        $('.btnUpdateSubKategori').click(function(){ 
+            //  $('#namaUpdateKategori').val(this.value);
+            //  $('#idUpdateKategori').val(this.id);
+            console.log(Halo);
+        });
+
          $('.btnGenerateKategori').click(function(){ 
             var idKategori = this.id;
             var namaKategori = this.value;
 
             var hasill = set_get_subkategori(0, idKategori,0,"ambil");
 
-            console.log(hasill);
-            console.log(namaKategori);
+            // console.log(hasill);
+            // console.log(namaKategori);
 
             $("#notifSubKategori").css("display", "none");
-            $("#tabelsubkategori").css("display", "block");
             $("#headerSubKategori").html("Sub-Kategori " + namaKategori);
             $("#headerSubKategori").css("display", "block");
 
-            document.getElementById("exampleTabsLeftTwo").innerHTML += "<table id='tabelsubkategori' class='table table-hover dataTable table-striped w-full' data-plugin='dataTable' ><thead><tr><th>No</th><th>Nama</th><th>Action</th></tr></thead><tbody id='bodysubkategori'></tbody></table>";
-
-            var y = 1;
-            jQuery.each( hasill, function( i, val ) {
-              // $( "#" + i ).append( document.createTextNode( " - " + val ) );
-              document.getElementById("bodysubkategori").innerHTML += "<tr><td>" + y +"</td><td>" + val.subkategori_nama + "</td><td><button type='submit' class='btn btn-success btnUpdateKategori' data-target='#exampleUpdateSubKategori' data-toggle='modal' id='" +  val.subkategori_id+"' value='" +  val.subkategori_nama +"'>Update</button><button type='submit' class='btn btn-warning btnHapusSubKategori' id='" +  val.subkategori_id+"'>Hapus</button></td></tr>";
-              // var newRowContent = "<tr><td>" + i +"</td><td>" + val.subkategori_nama + "</td><td><button type='submit' class='btn btn-success btnUpdateKategori' data-target='#exampleUpdateSubKategori' data-toggle='modal' id='" +  val.subkategori_id+"' value='" +  val.subkategori_nama +"'>Update</button><button type='submit' class='btn btn-warning btnHapusSubKategori' id='" +  val.subkategori_id+"'>Hapus</button></td></tr>";  
-              // $(newRowContent).appendTo($("#tabelsubkategori"));
-               y++;
+            var table = $('#tabelsubkategori').DataTable();
+ 
+            table
+                .clear()
+                .draw();
+          
+          var y = 1;
+            jQuery.each( hasill, function( i, val ) { 
+              table.row.add( [
+                  y,
+                  val.subkategori_nama,
+                  "<button type='submit' class='btn btn-success btnUpdateSubKategori' data-target='#exampleUpdateSubKategori' data-toggle='modal' id='" +  val.subkategori_id+"' value='" +  val.subkategori_nama +"'>Update</button><button type='submit' class='btn btn-warning btnHapusSubKategori' id='" +  val.subkategori_id+"'>Hapus</button>"
+              ] ).draw( false );
+              y++;
             });
+
             
+           
         });
 
         $('#updateKategori').click(function(){ 

@@ -99,8 +99,40 @@ class Produk_model extends CI_Model {
 
 	 public function get_detail_produk($id)
 	 {
-		 
+		$query = $this->db->query("SELECT p.produk_id,p.produk_nama, p.produk_harga,p.produk_stock,p.produk_deskripsi,p.produk_subkategori_id,p.produk_usaha_id,p.produk_foto_depan, p.produk_status, subka.subkategori_nama, g.list_gambar FROM produk as p inner join subkategori as subka on p.produk_subkategori_id = subka.subkategori_id inner join list_gambar_produk as g on g.list_produk_id = p.produk_id where p.produk_id = $id");
+		return $query->result();
 	 }
+
+	 public function get_data_ajax($id){
+		$this->db->select('*');
+		$this->db->from($this->table);
+		$this->db->where('produk_id', $id);
+		$query = $this->db->get();
+		return $query->row(0);
+	 }
+
+	 public function update_ajax($id, $data)
+      {
+        $this->db->where('produk_id', $id);
+        $update = $this->db->update("produk", $data);
+        if($update){
+          return true;
+        }
+        else{
+          return false;
+        }
+	  }
+	  
+	  public function hapus_ajax($id){
+        $this->db->where('produk_id', $id);
+        $delete = $this->db->delete("produk");
+        if($delete){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
 	 
 }
 

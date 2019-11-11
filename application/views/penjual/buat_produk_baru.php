@@ -63,17 +63,7 @@
           <div class="panel-body container-fluid">
             <div class="row row-lg">
               <div class="col-md-2">
-                <!-- Example Basic Form (Form grid) -->
-                <div class="example-wrap">
-                  <div class="example">
-                    <form autocomplete="off">
-                      <div class="row">
-                        	<img class="img-circle img-bordered img-bordered-orange" width="200" height="200" src="../../../global/photos/placeholder.png" alt="...">
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <!-- End Example Basic Form (Form grid) -->
+               
               </div>
               <div class="col-md-6">
                 <!-- Example Basic Form (Form grid) -->
@@ -159,8 +149,9 @@
               <script>
                 $('#kategori').change(function(){
                   var id=$(this).val();
-                        $('#kons_det_kmd_id').empty().append('<option selected="selected" value="">--Pilih--</option>')
+                        $('#subkategori').empty().append('<option selected="selected" value="">--Pilih--</option>');
 
+                        
                         $.ajax({
                     url : "<?php echo base_url();?>Penjual/get_subkategori",
                     method : "POST",
@@ -168,7 +159,8 @@
                     async : false,
                         dataType : 'json',
                     success: function(data){
-                      // console.log(data);
+                      
+
                                 for (let index = 0; index < data.length; index++) {
                                     $("#subkategori").append("<option value="+data[index].subkategori_id+">"+data[index].subkategori_nama+"</option>");
                                 }

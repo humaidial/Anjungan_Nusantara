@@ -408,10 +408,44 @@ class Penjual extends CI_Controller {
 			$pusher->trigger('my-channel', 'new_produk', $data);
 			$this->produk();
 
-           }
-                
-                
-    }
+           }    
+	}
+	
+	public function proses_produk(){
+		$id = $this->input->post('id');
+		$tipe = $this->input->post('tipe');
+		$nama = $this->input->post('nama');
+		$harga = $this->input->post('harga');
+		$stok = $this->input->post('stok');
+
+		if($tipe == "ambil"){
+			$hasil = $this->Produk_model->get_data_ajax($id);
+		}
+		else if($tipe == "update"){
+			$data = array(
+				'produk_nama' => $nama,
+				'produk_harga' => $harga,
+				'produk_stock' => $stok,
+			);
+			if($this->Produk_model->update_ajax($id,$data)){
+				$hasil = "Update Berhasil";
+			}
+			else{
+				$hasil = "Update Gagal";
+			}
+		}
+		else if($tipe == "hapus"){
+		 	
+			if($this->Produk_model->hapus_ajax($id)){
+				$hasil = "Hapus Berhasil";
+			}
+			else{
+				$hasil = "Hapus Gagal";
+			}
+		}
+
+		echo json_encode($hasil);
+	}
 }
 
 /* End of file Penjual.php */

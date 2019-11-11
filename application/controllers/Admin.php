@@ -11,6 +11,7 @@ class Admin extends CI_Controller {
 		$this->load->model('Kategori_model');
 		$this->load->model('SubKategori_model');
 		$this->load->model('Produk_model');
+		$this->load->model('Usaha_model');
 
 		if ($this->session->userdata('logged_in')) {
 			$session_data=$this->session->userdata('logged_in');
@@ -52,7 +53,6 @@ class Admin extends CI_Controller {
 			'sidebar' => 'admin/sidebar',
 			'content' => 'admin/akun',
 			'footer' => 'admin/footer',
-
 		];
 		$this->load->view('admin/template',$data);
 		// var_dump($data);
@@ -240,6 +240,57 @@ class Admin extends CI_Controller {
 		 echo json_encode($hasil);
 	}
 
+	public function proses_usaha()
+	{
+		 $id = $this->input->post('id');
+		 $tipe = $this->input->post('tipe');
+		 $nama = $this->input->post('nama');
+		 $alamat = $this->input->post('alamat');
+		 $hape = $this->input->post('hape');
+		 $email = $this->input->post('email');
+
+		 if($tipe == "baru"){
+		 	$data = array(
+		 		'subkategori_nama' => $nama,
+		 		'subkategori_kategori_id' => $idkategori
+		 	);
+		 	if($this->SubKategori_model->insert($data)){
+		 		$hasil = "Tambah Sub-Kategori Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Tambah Sub-Kategori Gagal";
+		 	}
+		 }
+		 else if($tipe == "ambil"){
+		 	$hasil = $this->Usaha_model->getById($id);
+		 }
+		 else if($tipe == "hapus"){
+		 	
+		 	if($this->Usaha_model->hapus_ajax($id)){
+		 		$hasil = "Hapus Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Hapus Gagal";
+		 	}
+		 }
+		 else if($tipe == "update"){
+		 	$data = array(
+				 'usaha_nama' => $nama,
+				 'usaha_alamat' => $alamat,
+				 'usaha_email' => $email,
+				 'usaha_no_telp' => $hape
+		 	);
+		 	if($this->Usaha_model->update_ajax($id,$data)){
+		 		$hasil = "Update Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Update Gagal";
+		 	}
+		 }
+
+		 echo json_encode($hasil);
+	}
+
 	public function produk()
 	{
 		$produk_data = $this->Produk_model->GetProdukForAdmin();
@@ -251,6 +302,55 @@ class Admin extends CI_Controller {
 			'footer' => 'admin/footer',
 		];
 		$this->load->view('admin/template',$data);
+	}
+
+	public function proses_produk(){
+		$id = $this->input->post('id');
+		$tipe = $this->input->post('tipe');
+		$nama = $this->input->post('nama');
+		$harga = $this->input->post('harga');
+		$stok = $this->input->post('stok');
+
+		if($tipe == "ambil"){
+			$hasil = $this->Produk_model->get_data_ajax($id);
+		}
+		else if($tipe == "update"){
+			$data = array(
+				'produk_nama' => $nama,
+				'produk_harga' => $harga,
+				'produk_stock' => $stok,
+			);
+			if($this->Produk_model->update_ajax($id,$data)){
+				$hasil = "Update Berhasil";
+			}
+			else{
+				$hasil = "Update Gagal";
+			}
+		}
+		else if($tipe == "hapus"){
+		 	
+			if($this->Produk_model->hapus_ajax($id)){
+				$hasil = "Hapus Berhasil";
+			}
+			else{
+				$hasil = "Hapus Gagal";
+			}
+		}
+
+		echo json_encode($hasil);
+	}
+
+	public function list_ukm(){
+		$list_ukm = $this->Usaha_model->get_usaha_pemilik();
+		$data = [
+			'notif' => $this->notif_about_akun(),
+			'list_ukm' => $list_ukm,
+			'sidebar' => 'admin/sidebar',
+			'content' => 'admin/list_ukm',
+			'footer' => 'admin/footer',
+		];
+		$this->load->view('admin/template',$data);
+		
 	}
 
 }

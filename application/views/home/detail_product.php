@@ -353,9 +353,9 @@
 				<!-- Images -->
 				<div class="col-lg-2 order-lg-1 order-2">
 					<ul class="image_list">
-						<li data-image="images/banner_product2.jpg"><img src="images/banner_product2.jpg" alt=""></li>
-						<li data-image="images/banner_2_product_a.jpg"><img src="images/banner_2_product_a.jpg" alt=""></li>
-						<li data-image="images/banner_2_product_b.jpg"><img src="images/banner_2_product_b.jpg" alt=""></li>
+						<?php foreach($detail as $key) { if($key->list_gambar != $detail[0]->produk_foto_depan) {?>
+						<li data-image="images/banner_product2.jpg"><img src="<?php echo base_url("assets/foto/foto_produk/$key->list_gambar")?>" alt=""></li>
+						<?php }} ?>
 					</ul>
 				</div>
 
@@ -367,14 +367,10 @@
 				<!-- Description -->
 				<div class="col-lg-5 order-3">
 					<div class="product_description">
-						<div class="product_category">Kerajinan Tangan</div>
-						<div class="product_name">Tas Rajut Kerajinan Tangan</div>
+						<div class="product_category"><?php echo $detail[0]->subkategori_nama ?></div>
+						<div class="product_name"><?php echo $detail[0]->produk_nama ?></div>
 						<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
-						<div class="product_text"><p>SILAHKAN CHAT TERLEBIH DAHULU UNTUK KETERSEDIAAN BARANG & WARNA. <br>
-						Yuhuuuuu Lets say hellow to the new comer "Iyvas" bohemian sling bag for summer never end!!! Our brand new design from us!!!!<br>
-						Design baru asli dari kami, design cantik unik dan GAK PASARAN. <br>Cocok buat melengkapi gaya2 summer kamu.Kuy segera dipesan. ;)
-						<br>Ukuran : 20x15cm +- 1cm
-						<br>Bahan : Katun Rami GOOD QUALITY</p></div>
+						<div class="product_text"><p><?php echo $detail[0]->produk_deskripsi ?></p></div>
 						<div class="order_info d-flex flex-row">
 							<form action="#">
 								<div class="clearfix" style="z-index: 1000;">
@@ -390,7 +386,7 @@
 									</div>
 
 									<!-- Product Color -->
-									<ul class="product_color">
+									<!-- <ul class="product_color">
 										<li>
 											<span>Warna: </span>
 											<div class="color_mark_container"><div id="selected_color" class="color_mark"></div></div>
@@ -402,11 +398,11 @@
 												<li><div class="color_mark" style="background: #000000;"></div></li>
 											</ul>
 										</li>
-									</ul>
+									</ul> -->
 
 								</div>
 
-								<div class="product_price">Rp 100.000</div>
+								<div class="product_price">Rp <?php echo $detail[0]->produk_harga ?></div>
 								<div class="button_container">
 									<button type="button" class="button cart_button"><a href="cart.html">Tambahkan Keranjang</button>
 									<div class="product_fav"><i class="fas fa-heart"></i></div>

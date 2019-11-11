@@ -11,11 +11,13 @@
                   <?php echo form_open('Penjual/pilih_foto/'.$this->uri->segment(3)); ?>
                 </div>
                 <div class="page-header text-center">
+                <div class="example-warp">
                  <select class="image-picker show-html" name="foto_depan">
                                      <?php foreach ($foto_data as $key) { ?>
-                                       <option data-img-src="<?php echo base_url()?>/assets/foto/foto_produk/<?php echo $key->list_gambar?>" value="<?php echo $key->list_gambar?>"></option>
+                                       <option data-img-src="<?php echo base_url()?>/assets/foto/foto_produk/<?php echo $key->list_gambar?>" value="<?php echo $key->list_gambar?>"  height="42" width="42"></option>
                                       <?php } ?>
-                  </select> 
+                  </select>
+                  </div> 
                 </div>
                 <div class="page-header text-center">
                   <button type="submit" class="btn btn-primary btn-round">
@@ -30,6 +32,6 @@
       </div>
     </div>
     <script type="text/javascript">
-        $("select").imagepicker()
+        $("select").imagepicker();
     </script>
     <!-- End Page -->
