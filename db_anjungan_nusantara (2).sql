@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2019 at 11:27 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Generation Time: Nov 14, 2019 at 02:11 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -114,7 +114,7 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`login_id`, `e_mail`, `password`, `login_level`, `login_status`, `login_profile_id`) VALUES
 (1, 'admin', 'admin', 'Admin', 'Terverifikasi', 1),
 (2, 'andi@gmail.com', '12345678', 'Penjual', 'Terverifikasi', 2),
-(3, 'afi@yahoo.com', 'abcd1234', 'Penjual', 'Terverifikasi', 3);
+(3, 'andrea.dian@gmail.com', '12345678', 'Penjual', 'Terverifikasi', 3);
 
 -- --------------------------------------------------------
 
@@ -131,7 +131,7 @@ CREATE TABLE `produk` (
   `produk_deskripsi` text NOT NULL,
   `produk_foto_depan` varchar(255) NOT NULL,
   `produk_status` varchar(255) NOT NULL,
-  `produk_diupload` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `produk_diupload` timestamp NOT NULL DEFAULT current_timestamp(),
   `produk_rilis` timestamp NULL DEFAULT NULL,
   `produk_terakhir_dibeli` timestamp NULL DEFAULT NULL,
   `produk_subkategori_id` int(11) NOT NULL,
@@ -143,16 +143,16 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`produk_id`, `produk_nama`, `produk_harga`, `produk_stock`, `produk_terjual`, `produk_deskripsi`, `produk_foto_depan`, `produk_status`, `produk_diupload`, `produk_rilis`, `produk_terakhir_dibeli`, `produk_subkategori_id`, `produk_usaha_id`) VALUES
-(1, 'Gantungan Kunci Owl', 8000, 12, 0, 'Gantungan kunci gambar Owl terbuat dari kayu', '1_1.jpg', 'Disetujui', '2019-11-07 02:26:41', '2019-11-07 02:29:32', NULL, 5, 1),
-(3, 'Mug Dmoni', 12000, 20, 0, 'mug gambar karakter', '3_1.jpg', 'Disetujui', '2019-11-08 18:11:58', '2019-11-08 18:13:39', NULL, 6, 1),
-(6, 'Kopi Malang', 30000, 123, 0, 'kopi khas Malang', '6_11.jpg', 'Menunggu', '2019-11-08 18:18:04', NULL, NULL, 0, 1),
-(7, 'Kopi Malang', 30000, 123, 0, 'kopi khas Malang', '7_12.jpg', 'Menunggu', '2019-11-08 18:18:10', NULL, NULL, 0, 1),
-(8, 'kopi enak', 13000, 12, 0, 'kopi enak poll', '8_11.jpg', 'Menunggu', '2019-11-08 18:23:06', NULL, NULL, 0, 1),
-(9, 'kopi khas malang ', 34000, 30, 0, 'Kopi khas malang.', '9_11.jpg', 'Disetujui', '2019-11-08 18:42:11', '2019-11-08 18:42:44', NULL, 9, 1),
-(10, 'kripik tempe rasa original', 8000, 120, 0, 'Kripik tempe renyah khas Malang.', '10_11.jpg', 'Disetujui', '2019-11-08 18:46:43', '2019-11-08 18:49:15', NULL, 7, 1),
-(11, 'Talenan Kayu', 8000, 300, 0, 'Telenan terbuat dari kayu', '11_11.jpg', 'Disetujui', '2019-11-08 19:09:34', '2019-11-08 19:10:49', NULL, 8, 1),
-(12, 'Keranjang Rotan', 12000, 120, 0, 'Keranjang dari Rotan', '12_11.jpg', 'Menunggu', '2019-11-08 19:12:37', NULL, NULL, 5, 1),
-(13, 'www', 13, 12, 0, 'www', '13_1.png', 'Menunggu', '2019-11-08 20:12:46', NULL, NULL, 3, 1);
+(1, 'Gantungan Kunci Owl', 8000, 12, 5, 'Gantungan kunci gambar Owl terbuat dari kayu', '1_1.jpg', 'Disetujui', '2019-11-06 19:26:41', '2019-11-06 19:29:32', '2019-11-14 01:07:00', 5, 1),
+(3, 'Mug Dmoni', 12000, 20, 4, 'mug gambar karakter', '3_1.jpg', 'Disetujui', '2019-11-08 11:11:58', '2019-11-08 11:13:39', '2019-11-14 01:07:00', 6, 1),
+(6, 'Kopi Malang', 30000, 123, 0, 'kopi khas Malang', '6_11.jpg', 'Menunggu', '2019-11-08 11:18:04', NULL, NULL, 0, 1),
+(7, 'Kopi Malang', 30000, 123, 0, 'kopi khas Malang', '7_12.jpg', 'Menunggu', '2019-11-08 11:18:10', NULL, NULL, 0, 1),
+(8, 'kopi enak', 13000, 12, 0, 'kopi enak poll', '8_11.jpg', 'Menunggu', '2019-11-08 11:23:06', NULL, NULL, 0, 1),
+(9, 'kopi khas malang ', 34000, 30, 3, 'Kopi khas malang.', '9_11.jpg', 'Disetujui', '2019-11-08 11:42:11', '2019-11-08 11:42:44', '2019-11-14 01:07:00', 9, 1),
+(10, 'kripik tempe rasa original', 8000, 120, 2, 'Kripik tempe renyah khas Malang.', '10_11.jpg', 'Disetujui', '2019-11-08 11:46:43', '2019-11-08 11:49:15', '2019-11-14 01:07:00', 7, 1),
+(11, 'Talenan Kayu', 8000, 300, 2, 'Telenan terbuat dari kayu', '11_11.jpg', 'Disetujui', '2019-11-08 12:09:34', '2019-11-08 12:10:49', '2019-11-14 01:07:00', 8, 1),
+(12, 'Keranjang Rotan', 12000, 120, 0, 'Keranjang dari Rotan', '12_11.jpg', 'Menunggu', '2019-11-08 12:12:37', NULL, NULL, 5, 1),
+(13, 'www', 13, 12, 0, 'www', '13_1.png', 'Menunggu', '2019-11-08 13:12:46', NULL, NULL, 3, 1);
 
 -- --------------------------------------------------------
 
@@ -174,7 +174,7 @@ CREATE TABLE `profile` (
 INSERT INTO `profile` (`profile_id`, `profile_nama`, `profile_no_hp`, `profile_alamat`) VALUES
 (1, 'Yudistira', '0812345678', ''),
 (2, 'andi', '0812345678', ''),
-(3, 'afi', '099', '');
+(3, 'Andrea Dian', '081234567891', '');
 
 -- --------------------------------------------------------
 
@@ -274,7 +274,7 @@ CREATE TABLE `usaha` (
 
 INSERT INTO `usaha` (`usaha_id`, `usaha_nama`, `usaha_alamat`, `usaha_no_telp`, `usaha_email`, `usaha_foto`, `usaha_keterangan`, `usaha_profile_id`) VALUES
 (1, 'Sumber Makmur Batu', 'Jl. Alun-alun Batu', '0812345678', 'sumbermakmu@gmail.com', '1.png', 'Toko Kami Menjual Segala Macam macam oleh-oleh.', 2),
-(2, 'Sumber Maju Jaya', 'jl. afi', '908', 'afitoko@gmail.com', '2.jpg', 'tooko', 3);
+(2, 'Dian Souvenir', 'Jl. Soekarno Hatta No 126', '081234567891', 'dian.suvenir@gmail.com', '2.png', 'Halo Selamat Datang Di Toko Kami Silahkan Berbelanja Souviner Untuk Oleh - oleh terbaik anda.', 3);
 
 --
 -- Indexes for dumped tables
