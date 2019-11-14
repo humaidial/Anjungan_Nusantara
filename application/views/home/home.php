@@ -6,14 +6,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Anjungan shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/homepage_lib/styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/styles/bootstrap4/bootstrap.min.css">
 <link href="<?php echo site_url()?>assets/homepage_lib/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/homepage_lib/plugins/slick-1.8.0/slick.css">
-<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/homepage_lib/styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="<?php echo site_url()?>assets/homepage_lib/styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/plugins/slick-1.8.0/slick.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/styles/rating.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/styles/responsive.css">
 
 </head>
 
@@ -373,7 +374,23 @@
 												<br>
 												<br>
 												<br>
-												<div class="rating_r rating_r_4 arrivals_single_rating"><i></i><i></i><i></i><i></i><i></i></div>
+
+										<!--		<div class="rating_r rating_r_4 arrivals_single_rating"><i></i><i></i><i></i><i></i><i></i></div> -->
+										
+<fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+											<br>
+
 												<div class="product_price">Rp <?php echo $key->produk_harga ?></div>
 												<div class="product_name"><div><?php echo $key->produk_nama ?></div></div>
 												<div class="product_extras">
