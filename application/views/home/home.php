@@ -332,7 +332,7 @@
 									<div class="featured_slider_item">
 										<div class="border_active"></div>
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt=""></a></div>
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt="" style="width:150px;height:150px"></a></div>
 											<div class="product_content">
 												<br>
 												<br>
@@ -345,7 +345,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div> -->
-													<a href="<?php echo base_url()?>Detail_Product"><button class="product_cart_button">Tambahkan Keranjang</button></a>
+													<a href="<?php echo base_url()?>Detail_Product/"<?php echo $key->produk_id?>><button class="product_cart_button">Tambahkan Keranjang</button></a>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
