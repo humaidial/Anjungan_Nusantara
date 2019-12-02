@@ -61,7 +61,13 @@ class Kategori_model extends CI_Model {
 
 	public function kategori_populer()
 	{
-		$query =  $this->db->query("SELECT k.kategori_id,k.kategori_nama, COUNT(p.produk_id) from produk as p inner join subkategori as sk on p.produk_subkategori_id =sk.subkategori_id inner join kategori as k on k.kategori_id = sk.subkategori_kategori_id GROUP BY k.kategori_id");
+		$query =  $this->db->query("SELECT k.kategori_id,k.kategori_nama, COUNT(p.produk_id) as jumlah_produk from produk as p inner join subkategori as sk on p.produk_subkategori_id =sk.subkategori_id inner join kategori as k on k.kategori_id = sk.subkategori_kategori_id GROUP BY k.kategori_id order by jumlah_produk DESC");
+		return $query->result();
+	}
+
+	public function subkategori_populer()
+	{
+		$query =  $this->db->query("SELECT subka.subkategori_id, subka.subkategori_nama, count(p.produk_id) as jumlah_produk FROM subkategori as subka inner join produk as p on subka.subkategori_id = p.produk_subkategori_id group by subka.subkategori_id order by jumlah_produk DESC");
 		return $query->result();
 	}
 
