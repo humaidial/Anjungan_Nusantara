@@ -132,13 +132,7 @@ class Produk_model extends CI_Model {
         else{
           return false;
         }
-	  }
-	  
-	  public function get_produk_by_kategori($id)
-	  {
-		$query =  $this->db->query("SELECT p.produk_id,p.produk_nama, p.produk_harga,p.produk_stock,p.produk_deskripsi,p.produk_subkategori_id,p.produk_usaha_id,p.produk_status,p.produk_foto_depan, subka.subkategori_nama FROM produk as p inner join subkategori as subka on p.produk_subkategori_id=subka.subkategori_id where subka.subkategori_id = $id");
-		return $query->result();
-	  }
+      }
 	 
 }
 

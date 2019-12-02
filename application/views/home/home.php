@@ -297,7 +297,7 @@
 											<div class="deals_item_name"><div><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><?php echo $key->produk_nama ?></a></div></div>
 										</div>
 										<div class="available">
-										<div class="deals_item_price ml-auto">Rp <?php echo number_format($key->produk_harga,2,",",".") ?></div>
+										<div class="deals_item_price ml-auto">Rp <?php echo $key->produk_harga ?></div>
 										</div>
 									</div>
 								</div>
@@ -332,12 +332,12 @@
 									<div class="featured_slider_item">
 										<div class="border_active"></div>
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt="" style="width:150px;height:150px"></a></div>
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt="" style="width:150px;height:150px"></a></div>
 											<div class="product_content">
 												<br>
 												<br>
 												<br>
-												<div class="product_price">Rp <?php echo number_format($key->produk_harga,2,",",".") ?></div>
+												<div class="product_price">Rp <?php echo $key->produk_harga ?></div>
 												<div class="product_name"><div><?php echo $key->produk_nama ?></div></div>
 												<div class="product_extras">
 													<!-- <div class="product_color">
@@ -345,7 +345,7 @@
 														<input type="radio" name="product_color" style="background:#000000">
 														<input type="radio" name="product_color" style="background:#999999">
 													</div> -->
-													<a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><button class="product_cart_button">Tambahkan Keranjang</button></a>
+													<a href="<?php echo base_url()?>Detail_Product/"<?php echo $key->produk_id?>><button class="product_cart_button">Tambahkan Keranjang</button></a>
 												</div>
 											</div>
 											<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -369,7 +369,7 @@
 									<div class="featured_slider_item">
 										<div class="border_active"></div>
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt=""></a></div>
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt=""></a></div>
 											<div class="product_content">
 												<br>
 												<br>
@@ -391,7 +391,7 @@
 </fieldset>
 											<br>
 
-												<div class="product_price">Rp <?php echo number_format($key->produk_harga,2,",",".") ?></div>
+												<div class="product_price">Rp <?php echo $key->produk_harga ?></div>
 												<div class="product_name"><div><?php echo $key->produk_nama ?></div></div>
 												<div class="product_extras">
 													<!-- <div class="product_color">
@@ -470,40 +470,34 @@
 						<div class="tabs clearfix tabs-right">
 							<div class="new_arrivals_title">Produk Terbaru</div>
 							<ul class="clearfix">
-							<?php $i =1; foreach ($subkategori_populer as $key) {
-								if($i == 1){ ?>
-									<li class="active"><?php echo $key->subkategori_nama?></a></li>
-								<?php }
-								else{ ?>
-									<li><?php echo $key->subkategori_nama?></a></li>			
-							<?php }
-						 if ($i++ == 3) break;} ?>
+								<li class="active">Ditampilkan</li>
+								<li>Pernak Pernik</li>
+								<li>Fashion</li>
 							</ul>
 							<div class="tabs_line"><span></span></div>
 						</div>
 						<div class="row">
 							<div class="col-lg-9" style="z-index:1;">
 
-								<!-- Product Panel No 1-->
+								<!-- Product Panel -->
 								<div class="product_panel panel active">
 									<div class="arrivals_slider slider">
 
 										<!-- Slider Item -->
-										<?php foreach($produk_terbaru[0] as $key) { ?>
 										<div class="arrivals_slider_item">
 											<div class="border_active"></div>
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" style="width:100px;height:100px"></a></div>
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/banner_product1.png" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">Rp <?php echo number_format($key->produk_harga,"2",",",".") ?></div>
-													<div class="product_name"><div><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><?php echo $key->produk_nama ?></a></div></div>
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
 													<div class="product_extras">
-														<!-- <div class="product_color">
+														<div class="product_color">
 															<input type="radio" checked name="product_color" style="background:#b19c83">
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
-														</div> -->
-														<button class="product_cart_button"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>">Tambahkan Keranjang</a></button>
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -513,33 +507,404 @@
 												</ul>
 											</div>
 										</div>
-										<?php } ?>
 
-										
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount">-25%</li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+										<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
 									</div>
 									<div class="arrivals_slider_dots_cover"></div>
 								</div>
 
-								<!-- Product Panel No 2-->
+								<!-- Product Panel -->
 								<div class="product_panel panel">
 									<div class="arrivals_slider slider">
 
 										<!-- Slider Item -->
-										<?php foreach($produk_terbaru[1] as $key) { ?>
 										<div class="arrivals_slider_item">
 											<div class="border_active"></div>
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" style="width:100px;height:100px"></a></div>
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">Rp <?php echo number_format($key->produk_harga,"2",",",".") ?></div>
-													<div class="product_name"><div><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><?php echo $key->produk_nama ?></a></div></div>
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
 													<div class="product_extras">
-														<!-- <div class="product_color">
+														<div class="product_color">
 															<input type="radio" checked name="product_color" style="background:#b19c83">
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
-														</div> -->
-														<button class="product_cart_button"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>">Tambahkan Keranjang</a></button>
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -549,33 +914,404 @@
 												</ul>
 											</div>
 										</div>
-										<?php } ?>
 
-										
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount">-25%</li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+										<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
 									</div>
 									<div class="arrivals_slider_dots_cover"></div>
 								</div>
 
-								<!-- Product Panel No 3-->
+								<!-- Product Panel -->
 								<div class="product_panel panel">
 									<div class="arrivals_slider slider">
 
 										<!-- Slider Item -->
-										<?php foreach($produk_terbaru[2] as $key) { ?>
 										<div class="arrivals_slider_item">
 											<div class="border_active"></div>
 											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" style="width:100px;height:100px"></a></div>
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
 												<div class="product_content">
-													<div class="product_price">Rp <?php echo number_format($key->produk_harga,"2",",",".") ?></div>
-													<div class="product_name"><div><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><?php echo $key->produk_nama ?></a></div></div>
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
 													<div class="product_extras">
-														<!-- <div class="product_color">
+														<div class="product_color">
 															<input type="radio" checked name="product_color" style="background:#b19c83">
 															<input type="radio" name="product_color" style="background:#000000">
 															<input type="radio" name="product_color" style="background:#999999">
-														</div> -->
-														<button class="product_cart_button"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>">Tambahkan Keranjang</a></button>
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
 													</div>
 												</div>
 												<div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -585,16 +1321,388 @@
 												</ul>
 											</div>
 										</div>
-										<?php } ?>
 
-										
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount">-25%</li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+										<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
+
+										<!-- Slider Item -->
+										<div class="arrivals_slider_item">
+											<div class="border_active"></div>
+											<div class="product_item is_new d-flex flex-column align-items-center justify-content-center text-center">
+												<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="images/" alt=""></a></div>
+												<div class="product_content">
+													<div class="product_price">Rp 125.000</div>
+													<div class="product_name"><div><a href="<?php echo base_url()?>Detail_Product">Tas Rajut Kerajinan Tangan</a></div></div>
+													<div class="product_extras">
+														<div class="product_color">
+															<input type="radio" checked name="product_color" style="background:#b19c83">
+															<input type="radio" name="product_color" style="background:#000000">
+															<input type="radio" name="product_color" style="background:#999999">
+														</div>
+														<button class="product_cart_button"><a href="<?php echo base_url()?>Detail_Product">Tambahkan Keranjang</a></button>
+													</div>
+												</div>
+												<div class="product_fav"><i class="fas fa-heart"></i></div>
+												<ul class="product_marks">
+													<li class="product_mark product_discount"></li>
+													<li class="product_mark product_new">baru</li>
+												</ul>
+											</div>
+										</div>
 									</div>
 									<div class="arrivals_slider_dots_cover"></div>
 								</div>
 
 							</div>
 
-							<!-- <div class="col-lg-3">
+							<div class="col-lg-3">
 								<div class="arrivals_single clearfix">
 									<div class="d-flex flex-column align-items-center justify-content-center">
 										<div class="arrivals_single_image"><a href="<?php echo base_url()?>Detail_Product"><img src="images/banner_product1.png" alt=""></a></div>
@@ -613,7 +1721,7 @@
 										</ul>
 									</div>
 								</div>
-							</div> -->
+							</div>
 
 						</div>
 
@@ -649,12 +1757,12 @@
 								<!-- Best Sellers Item -->
 								<div class="bestsellers_item discount">
 									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="<?php echo base_url()?>Detail_Product"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt="" style="width:100px;height:100px"></a></div>
+										<div class="bestsellers_image"><a href="<?php echo base_url()?>Detail_Product"><img src="images/banner_product1.png" alt=""></a></div>
 										<div class="bestsellers_content">
 											<div class="bestsellers_category"><?php echo $key->subkategori_nama ?></a></div>
 											<div class="bestsellers_name"><a href="<?php echo base_url()?>Detail_Product"><?php echo $key->produk_nama ?></a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
-											<div class="bestsellers_price discount">Rp <?php echo number_format($key->produk_harga,2,",",".") ?></div>
+											<div class="bestsellers_price discount">Rp <?php echo $key->produk_harga ?></div>
 										</div>
 									</div>
 									<div class="bestsellers_fav active"><i class="fas fa-heart"></i></div>
