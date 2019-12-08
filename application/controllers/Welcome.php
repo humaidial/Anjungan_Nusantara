@@ -20,15 +20,7 @@ class Welcome extends CI_Controller {
 		$produk_baru_terjual = $this->Produk_model->get_baru_Terjual();
 		$produk_rating = $this->Produk_model->get_produk_by_rating();
 		$kategori_populer = $this->Kategori_model->kategori_populer();
-		$subkategori_populer = $this->Kategori_model->subkategori_populer();
 		$terjual_terbanyak = $this->Produk_model->get_produk_jual_terbanyak();
-		$produk_terbaru = array();
-		$i = 1;
-		foreach($subkategori_populer as $key){
-			$temp = $this->Produk_model->get_produk_by_kategori($key->subkategori_id);
-			array_push($produk_terbaru, $temp);
-			if ($i++ == 3) break;
-		}
 		$data = array(
 			'kategori' => $kategori,
 			'subkategori' => $subkategori,
@@ -37,9 +29,7 @@ class Welcome extends CI_Controller {
 			'produk_baru_terjual' => $produk_baru_terjual,
 			'produk_rating' => $produk_rating,
 			'kategori_populer' => $kategori_populer,
-			'subkategori_populer' => $subkategori_populer,
-			'terjual_terbanyak' => $terjual_terbanyak,
-			'produk_terbaru' => $produk_terbaru
+			'terjual_terbanyak' => $terjual_terbanyak
 		);
 		$this->load->view('home/home', $data);
 		$this->load->helper('url');
@@ -54,15 +44,7 @@ class Welcome extends CI_Controller {
 		$produk_baru_terjual = $this->Produk_model->get_baru_Terjual();
 		$produk_rating = $this->Produk_model->get_produk_by_rating();
 		$kategori_populer = $this->Kategori_model->kategori_populer();
-		$subkategori_populer = $this->Kategori_model->subkategori_populer();
 		$terjual_terbanyak = $this->Produk_model->get_produk_jual_terbanyak();
-		$produk_terbaru = array();
-		$i = 1;
-		foreach($subkategori_populer as $key){
-			$temp = $this->Produk_model->get_produk_by_kategori($key->subkategori_id);
-			array_push($produk_terbaru, $temp);
-			if ($i++ == 3) break;
-		}
 		$data = array(
 			'kategori' => $kategori,
 			'subkategori' => $subkategori,
@@ -71,9 +53,7 @@ class Welcome extends CI_Controller {
 			'produk_baru_terjual' => $produk_baru_terjual,
 			'produk_rating' => $produk_rating,
 			'kategori_populer' => $kategori_populer,
-			'subkategori_populer' => $subkategori_populer,
-			'terjual_terbanyak' => $terjual_terbanyak,
-			'produk_terbaru' => $produk_terbaru
+			'terjual_terbanyak' => $terjual_terbanyak
 		);
 		// $this->load->view('home/homepage');
 		echo "<pre>";
