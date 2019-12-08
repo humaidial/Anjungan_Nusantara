@@ -7,14 +7,14 @@
 <meta name="description" content="Anjungan shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/styles/bootstrap4/bootstrap.min.css">
-<link href="<?php echo site_url()?>assets/homepage_lib/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/plugins/slick-1.8.0/slick.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/styles/main_styles.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/styles/rating.css">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/homepage_lib/styles/responsive.css">
+<link href="<?php echo base_url()?>assets/homepage_lib/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/homepage_lib/plugins/slick-1.8.0/slick.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/homepage_lib/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/homepage_lib/styles/rating.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/homepage_lib/styles/responsive.css">
 
 </head>
 
@@ -33,7 +33,7 @@
 				<div class="row">
 					<div class="col d-flex flex-row">
 						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url('assets/homepage_lib/images/phone.png')?>" alt=""></div>(0341) - 123456</div>
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url()?>assets/homepage_lib/images/mail.png" alt=""></div>anjungannusantarabatu@gmail.com</div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url(); ?>assets/homepage_lib/images/mail.png" alt=""></div>anjungannusantarabatu@gmail.com</div>
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_user">
 								<div class="user_icon"><img src="<?php echo base_url('assets/homepage_lib/images/user.svg')?>" alt=""></div>
@@ -1145,7 +1145,7 @@
 							<!-- Reviews Slider Item -->
 							<div class="owl-item">
 								<div class="review d-flex flex-row align-items-start justify-content-start">
-									<div><div class="review_image"><img src="images/banner_product1.png" alt=""></div></div>
+									<div><div class="review_image"><!-- <img src="images/banner_product1.png" alt=""> --></div></div>
 									<div class="review_content">
 										<div class="review_name">Humaidi Al</div>
 										<div class="review_rating_container">
@@ -1405,18 +1405,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</div>
 </div>
 
-<script src="<?php echo base_url()?>assets/homepage_lib/js/jquery-3.3.1.min.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/styles/bootstrap4/popper.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/styles/bootstrap4/bootstrap.min.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/plugins/greensock/TweenMax.min.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/plugins/greensock/TimelineMax.min.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/plugins/scrollmagic/ScrollMagic.min.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/plugins/greensock/animation.gsap.min.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/plugins/slick-1.8.0/slick.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/plugins/easing/easing.js"></script>
-<script src="<?php echo base_url()?>assets/homepage_lib/js/custom.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/homepage_lib/js/jquery-3.3.1.min.js')?>"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/styles/bootstrap4/popper.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/styles/bootstrap4/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/plugins/greensock/TweenMax.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/plugins/greensock/TimelineMax.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/plugins/greensock/animation.gsap.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/plugins/slick-1.8.0/slick.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/plugins/easing/easing.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/homepage_lib/js/custom.js"></script>
 </body>
 
 </html>

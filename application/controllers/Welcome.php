@@ -42,6 +42,7 @@ class Welcome extends CI_Controller {
 			'produk_terbaru' => $produk_terbaru
 		);
 		$this->load->view('home/home', $data);
+		$this->load->helper('url');
 	}
 
 	public function dataindex()
