@@ -61,8 +61,10 @@ class Admin extends CI_Controller {
 	public function kategori()
 	{
 		$kategori = $this->Kategori_model->get_all();
+		$subkategori = $this->Kategori_model->get_kategori_dan_sub();
 		$data = [
 			'kategori' => $kategori,
+			'subkategori' => $subkategori,
 			'notif' => $this->notif_about_akun(),
 			'sidebar' => 'admin/sidebar',
 			'content' => 'admin/kategori',
@@ -227,9 +229,9 @@ class Admin extends CI_Controller {
 		 }
 		 else if($tipe == "update"){
 		 	$data = array(
-		 		'kategori_nama' => $nama
+		 		'subkategori_nama' => $nama
 		 	);
-		 	if($this->Kategori_model->update($data,$id)){
+		 	if($this->SubKategori_model->update($data,$id)){
 		 		$hasil = "Update Berhasil";
 		 	}
 		 	else{

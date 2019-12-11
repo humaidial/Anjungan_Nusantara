@@ -47,7 +47,7 @@
                       <td><?php echo $i ?></td>
                       <td><?php echo $key->kategori_nama ?></td>
                       <td class="actions">
-                         <button type="submit" class="btn btn-info btnGenerateKategori" id="<?php echo $key->kategori_id ?>" value="<?php echo $key->kategori_nama ?>">Sub-Kategori</button>
+                         <!-- <button type="submit" class="btn btn-info btnGenerateKategori" id="<?php echo $key->kategori_id ?>" value="<?php echo $key->kategori_nama ?>">Sub-Kategori</button> -->
                          <button type="submit" class="btn btn-success btnUpdateKategori" data-target="#exampleUpdateKategori" data-toggle="modal" id="<?php echo $key->kategori_id ?>" value="<?php echo $key->kategori_nama ?>">Update</button>
                          <button type="submit" class="btn btn-warning btnHapusKategori" id="<?php echo $key->kategori_id ?>">Hapus</button>
                       </td>
@@ -62,20 +62,27 @@
             </table>
                       </div>
                       <div class="tab-pane" id="exampleTabsLeftTwo" role="tabpanel">
-                        <h5 id="notifSubKategori">Silahkan Pilih Kategori Terlebih Dahulu</h5>
-                        <h4 id="headerSubKategori" style="display: none"></h4>
-                        <br>
                         <table id="tabelsubkategori" class="table table-hover dataTable table-striped w-full" data-plugin="dataTable" >
               <thead>
                 <tr>
                   <th>No</th>
                   <th>Nama Sub Kategori</th>
+                  <th>Kategori</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody id="bodysubkategori">
-             
-               
+              <?php $i = 1; foreach ($subkategori as $key) { ?>
+                    <tr>
+                      <td><?php echo $i ?></td>
+                      <td><?php echo $key->subkategori_nama ?></td>
+                      <td><?php echo $key->kategori_nama ?></td>
+                      <td class="actions">
+                         <button type="submit" class="btn btn-success btnUpdateSubKategori" data-target="#exampleUpdateSubKategori" data-toggle="modal" id="<?php echo $key->subkategori_id ?>" value="<?php echo $key->subkategori_nama ?>">Update</button>
+                         <button type="submit" class="btn btn-warning btnHapusSubKategori" id="<?php echo $key->subkategori_id ?>">Hapus</button>
+                      </td>
+                    </tr>
+                <?php $i++ ;} ?>
               </tbody>
             </table>
                       </div>
@@ -290,32 +297,29 @@
             $('.btnHapusSubKategori').click(function(){
 
               // console.log(this.id);
-              alert(this.id);
-              // Swal.fire({
-              //      title: 'Apakah anda yakin ?',
-              //       type: 'warning',
-              //       showCancelButton: true,
-              //       confirmButtonColor: '#3085d6',
-              //       cancelButtonColor: '#d33',
-              //       confirmButtonText: 'Ya, hapus'
-              //        }).then((result) => {
-              //         if (result.value) {
-              //               var hasill = set_get_subkategori(this.id,0, 0,'hapus');
+              Swal.fire({
+                   title: 'Apakah anda yakin ?',
+                    type: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, hapus'
+                     }).then((result) => {
+                      if (result.value) {
+                            var hasill = set_get_subkategori(this.id,0, 0,'hapus');
 
-              //                Swal.fire({
-              //                title: 'Terhapus',
-              //                type: 'success',
-              //                confirmButtonColor: '#3085d6',
-              //                confirmButtonText: 'OK'
-              //                }).then((result) => {
-              //                if (result.value) {
-              //                   location.reload();
-              //                   }
-              //                })
-              //      }
-              //    })
-
-
+                             Swal.fire({
+                             title: 'Terhapus',
+                             type: 'success',
+                             confirmButtonColor: '#3085d6',
+                             confirmButtonText: 'OK'
+                             }).then((result) => {
+                             if (result.value) {
+                                location.reload();
+                                }
+                             })
+                   }
+                 })
           });
 
         $('.btnUpdateKategori').click(function(){ 
@@ -324,9 +328,9 @@
         });
 
         $('.btnUpdateSubKategori').click(function(){ 
-            //  $('#namaUpdateKategori').val(this.value);
-            //  $('#idUpdateKategori').val(this.id);
-            console.log(Halo);
+             $('#namaUpdateSubKategori').val(this.value);
+             $('#idUpdateSubKategori').val(this.id);
+            // console.log("Halo");
         });
 
          $('.btnGenerateKategori').click(function(){ 
@@ -371,6 +375,29 @@
             // var tes = tes_halo();
 
              $('#exampleUpdateKategori').hide();
+             $('.modal-backdrop').hide();
+
+             Swal.fire({
+                title: hasill,
+                type: 'success',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+                }).then((result) => {
+               if (result.value) {
+                location.reload();
+                }
+                })
+        });
+
+        $('#updateSubKategori').click(function(){ 
+             // console.log($('#idUpdateKategori').val());
+            var idSubKategori = $('#idUpdateSubKategori').val();
+            var namaSubKategori =  $('#namaUpdateSubKategori').val();
+
+            var hasill = set_get_subkategori(idSubKategori,' ',namaSubKategori,'update');
+            // var tes = tes_halo();
+
+             $('#exampleUpdateSubKategori').hide();
              $('.modal-backdrop').hide();
 
              Swal.fire({
