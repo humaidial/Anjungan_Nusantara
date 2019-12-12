@@ -36,9 +36,15 @@
 						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="<?php echo base_url(); ?>assets/homepage_lib/images/mail.png" alt=""></div>anjungannusantarabatu@gmail.com</div>
 						<div class="top_bar_content ml-auto">
 							<div class="top_bar_user">
-								<div class="user_icon"><img src="<?php echo base_url('assets/homepage_lib/images/user.svg')?>" alt=""></div>
-								<div><a href="<?php echo base_url()?>Register">Daftar</a></div>
-								<div><a href="<?php echo base_url()?>Login">Masuk</a></div>
+								<?php if($this->session->userdata('logged_in')){ ?>
+								    <br>
+									<div class="user_icon"><img src="<?php echo base_url('assets/homepage_lib/images/user.svg')?>" alt=""></div>
+									<div><h5>Selamat Datang, <?=$this->session->userdata('username');?></h5></div>
+								<?php } else { ?>
+									<div class="user_icon"><img src="<?php echo base_url('assets/homepage_lib/images/user.svg')?>" alt=""></div>
+									<div><a href="<?php echo base_url()?>Register">Daftar</a></div>
+									<div><a href="<?php echo base_url()?>Login">Masuk</a></div>
+								<?php }?>
 							</div>
 						</div>
 					</div>

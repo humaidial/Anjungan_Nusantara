@@ -610,7 +610,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				var idbarang = $('#idbarang').val();
 				var jumlahbarang = $('#quantity_input').val();
 				// set barang ke session
-				window.location.href= "<?php echo base_url()?>Welcome/keranjang";
+				// window.location.href= "<?php echo base_url()?>Welcome/keranjang";
 			}
 		}); 
 		});

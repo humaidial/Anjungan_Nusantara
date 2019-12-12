@@ -76,7 +76,7 @@ class Login extends CI_Controller {
                 	redirect('Penjual','refresh');
                 }
                 else{
-                	redirect('Home','refresh');
+                	redirect('Welcome','refresh');
                 }
                 // var_dump($session_data_level); 
                 

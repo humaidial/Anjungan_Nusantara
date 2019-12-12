@@ -10,6 +10,13 @@ class Welcome extends CI_Controller {
 		$this->load->model('Kategori_model');
 		$this->load->model('Produk_model');
 		$this->load->model('Subkategori_model');
+
+		if ($this->session->userdata('logged_in')) {
+			$session_data=$this->session->userdata('logged_in');
+			$data['username'] = $session_data['username'];
+			$data['level']=$session_data['level'];
+		}
+		
 	}
 	
 	public function index()
