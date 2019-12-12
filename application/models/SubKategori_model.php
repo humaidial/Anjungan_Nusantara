@@ -66,6 +66,20 @@ class SubKategori_model extends CI_Model {
 		}
 	}
 
+	public function get_nama_where($id)
+	{
+		$this->db->select('*');
+		$this->db->where('subkategori_id', $id);
+		$this->db->from($this->table);
+		$query = $this->db->get();
+		if($query->num_rows() != 0){
+			return $query->result();
+		}
+		else{
+			return false;
+		}
+	}
+
 }
 
 /* End of file Kategori_model.php */

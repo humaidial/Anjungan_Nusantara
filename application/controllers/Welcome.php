@@ -9,6 +9,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Kategori_model');
 		$this->load->model('Produk_model');
+		$this->load->model('Subkategori_model');
 	}
 	
 	public function index()
@@ -67,5 +68,32 @@ class Welcome extends CI_Controller {
 			'detail' => $detail
 		);
 		$this->load->view('home/detail_product', $data);
+	}
+
+	public function show_produk($tipe,$id){
+		$kategori = $this->Kategori_model->get_all();
+		$subkategori = $this->Kategori_model->get_kategori_dan_sub();
+
+		if($tipe == "semua"){
+			echo "Halo";
+		}
+		else if($tipe == "subkategori"){
+			$hasil = $this->Produk_model->GetProdukBySubKategori($id);
+			$namasubkategori = $this->Subkategori_model->get_nama_where($id);
+			$data = array(
+				'kategori' => $kategori,
+				'judul' => "Subkategori ".$namasubkategori[0]->subkategori_nama,
+				'subkategori' => $subkategori,
+				'hasil' => $hasil
+			);
+		}
+		// echo "<pre>";
+		// echo var_dump($data);
+		// echo "</pre>";
+		$this->load->view('home/semua_produk', $data);
+	}
+
+	public function keranjang(){
+		$this->load->view('home/keranjang');
 	}
 }

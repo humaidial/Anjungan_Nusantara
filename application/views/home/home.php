@@ -131,7 +131,7 @@
 										<a href="#"><?php echo $key->kategori_nama ?><i class="fas fa-chevron-right"></i></a>
 										<ul>
 										<?php foreach ($subkategori as $key) { if($kategori_id == $key->subkategori_kategori_id) {?>
-											<li><a href="#"><?php echo $key->subkategori_nama ?><i class="fas fa-chevron-right"></i></a></li>
+											<li><a href="<?php echo base_url()?>Welcome/show_produk/subkategori/<?php echo $key->subkategori_id ?>"><?php echo $key->subkategori_nama ?><i class="fas fa-chevron-right"></i></a></li>
 										<?php }} ?>
 										</ul>
 									</li>
@@ -291,7 +291,7 @@
                             <?php foreach ($produk_minggu_ini as $key) { ?>
 								<!-- Deals Item -->
 								<div class="owl-item deals_item">
-									<div class="deals_image"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" width="200" height="300"></div>
+									<div class="deals_image"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" width="200" height="300"></a></div>
 									<div class="deals_content">
 										<div class="deals_info_line d-flex flex-row justify-content-start">
 											<div class="deals_item_name"><div><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><?php echo $key->produk_nama ?></a></div></div>
@@ -303,7 +303,6 @@
 								</div>
                                 <?php } ?>
 							</div>
-                            
 						</div>
 
 						<div class="deals_slider_nav_container">
@@ -332,12 +331,12 @@
 									<div class="featured_slider_item">
 										<div class="border_active"></div>
 										<div class="product_item discount d-flex flex-column align-items-center justify-content-center text-center">
-											<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Detail_Product"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt="" style="width:150px;height:150px"></a></div>
+											<div class="product_image d-flex flex-column align-items-center justify-content-center"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" alt="" style="width:150px;height:150px"></a></div>
 											<div class="product_content">
 												<br>
 												<br>
 												<br>
-												<div class="product_price">Rp <?php echo $key->produk_harga ?></div>
+												<div class="product_price"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>">Rp <?php echo $key->produk_harga ?></a></div>
 												<div class="product_name"><div><?php echo $key->produk_nama ?></div></div>
 												<div class="product_extras">
 													<!-- <div class="product_color">
@@ -1757,10 +1756,10 @@
 								<!-- Best Sellers Item -->
 								<div class="bestsellers_item discount">
 									<div class="bestsellers_item_container d-flex flex-row align-items-center justify-content-start">
-										<div class="bestsellers_image"><a href="<?php echo base_url()?>Detail_Product"><img src="images/banner_product1.png" alt=""></a></div>
+										<div class="bestsellers_image"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><img src="<?php echo base_url("assets/foto/foto_produk/$key->produk_foto_depan")?>" width="200" height="300"></a></div>
 										<div class="bestsellers_content">
 											<div class="bestsellers_category"><?php echo $key->subkategori_nama ?></a></div>
-											<div class="bestsellers_name"><a href="<?php echo base_url()?>Detail_Product"><?php echo $key->produk_nama ?></a></div>
+											<div class="bestsellers_name"><a href="<?php echo base_url()?>Welcome/detail_produk/<?php echo $key->produk_id ?>"><?php echo $key->produk_nama ?></a></div>
 											<div class="rating_r rating_r_4 bestsellers_rating"><i></i><i></i><i></i><i></i><i></i></div>
 											<div class="bestsellers_price discount">Rp <?php echo $key->produk_harga ?></div>
 										</div>

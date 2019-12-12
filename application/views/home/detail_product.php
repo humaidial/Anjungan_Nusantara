@@ -53,7 +53,7 @@
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="index.html">Anjungan<br>Nusantara</a></div>
+							<div class="logo"><a href="<?php echo base_url()?>Welcome">Anjungan<br>Nusantara</a></div>
 						</div>
 					</div>
 
@@ -234,7 +234,7 @@
 
 							<!-- Main Nav Menu -->
 
-							<div class="main_nav_menu ml-auto">
+							<!-- <div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
 									<li><a href="index.html">Beranda<i class="fas fa-chevron-down"></i></a></li>
 									<li class="hassubs">
@@ -268,7 +268,7 @@
 										</ul>
 									</li>
 								</ul>
-							</div>
+							</div> -->
 
 							<!-- Menu Trigger -->
 
@@ -361,7 +361,7 @@
 
 				<!-- Selected Image -->
 				<div class="col-lg-5 order-lg-2 order-1">
-					<div class="image_selected"><img src="images/banner_product2.jpg" alt=""></div>
+					<div class="image_selected"><img src="<?php echo base_url('assets/foto/foto_produk/'.$detail[0]->produk_foto_depan)?>" alt=""></div>
 				</div>
 
 				<!-- Description -->
@@ -369,6 +369,7 @@
 					<div class="product_description">
 						<div class="product_category"><?php echo $detail[0]->subkategori_nama ?></div>
 						<div class="product_name"><?php echo $detail[0]->produk_nama ?></div>
+						<input id="idbarang" type="text" value="<?php echo $detail[0]->produk_id ?>" style="display:none">
 						<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
 						<div class="product_text"><p><?php echo $detail[0]->produk_deskripsi ?></p></div>
 						<div class="order_info d-flex flex-row">
@@ -404,7 +405,7 @@
 
 								<div class="product_price">Rp <?php echo $detail[0]->produk_harga ?></div>
 								<div class="button_container">
-									<button type="button" class="button cart_button"><a href="cart.html">Tambahkan Keranjang</button>
+									<button type="button" class="button cart_button" id="cekkeranjang">Tambahkan Keranjang</button>
 									<div class="product_fav"><i class="fas fa-heart"></i></div>
 								</div>
 								
@@ -418,120 +419,6 @@
 	</div>
 
 	<!-- Recently Viewed -->
-
-	<div class="viewed">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="viewed_title_container">
-						<h3 class="viewed_title">Terakhir Dilihat</h3>
-						<div class="viewed_nav_container">
-							<div class="viewed_nav viewed_prev"><i class="fas fa-chevron-left"></i></div>
-							<div class="viewed_nav viewed_next"><i class="fas fa-chevron-right"></i></div>
-						</div>
-					</div>
-
-					<div class="viewed_slider_container">
-						
-						<!-- Recently Viewed Slider -->
-
-						<div class="owl-carousel owl-theme viewed_slider">
-							
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/banner_product1.png" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">Rp 100.000<span>Rp 125.000</span></div>
-										<div class="viewed_name"><a href="#">Tas Rajut</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">baru</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">Rp 125.000</div>
-										<div class="viewed_name"><a href="#">Kalung Kerajinan Tangan</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">baru</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">Rp 125.000</div>
-										<div class="viewed_name"><a href="#">Kalung Kerajinan Tangan</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">baru</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item is_new d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">Rp 125.000</div>
-										<div class="viewed_name"><a href="#">Kalung Kerajinan Tangan</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">baru</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item discount d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">Rp 275.000<span>Rp 300.000</span></div>
-										<div class="viewed_name"><a href="#">Kalung Emas Murni</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">baru</li>
-									</ul>
-								</div>
-							</div>
-
-							<!-- Recently Viewed Item -->
-							<div class="owl-item">
-								<div class="viewed_item d-flex flex-column align-items-center justify-content-center text-center">
-									<div class="viewed_image"><img src="images/" alt=""></div>
-									<div class="viewed_content text-center">
-										<div class="viewed_price">Rp 125.000</div>
-										<div class="viewed_name"><a href="#">Kalung Kerajinan Tangan</a></div>
-									</div>
-									<ul class="item_marks">
-										<li class="item_mark item_discount">-25%</li>
-										<li class="item_mark item_new">baru</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- Brands -->
 
@@ -568,7 +455,7 @@
 
 	<!-- Newsletter -->
 
-	<div class="newsletter">
+	<!-- <div class="newsletter">
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -589,7 +476,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- Footer -->
 
@@ -710,6 +597,24 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="<?php echo site_url()?>assets/homepage_lib/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="<?php echo site_url()?>assets/homepage_lib/plugins/easing/easing.js"></script>
 <script src="<?php echo site_url()?>assets/homepage_lib/js/product_custom.js"></script>
+<script type="text/javascript">
+        $(document).ready( function () {
+
+        $('#cekkeranjang').click(function(){ 
+			var userName = "<?php echo  $this->session->userdata('username'); ?>";
+			if(userName==""){
+				window.alert('Anda harus Login terlebih dahulu.');
+    			window.location.href= "<?php echo base_url()?>Login";
+			}
+			else{
+				var idbarang = $('#idbarang').val();
+				var jumlahbarang = $('#quantity_input').val();
+				// set barang ke session
+				window.location.href= "<?php echo base_url()?>Welcome/keranjang";
+			}
+		}); 
+		});
+</script>
 </body>
 
 </html>
