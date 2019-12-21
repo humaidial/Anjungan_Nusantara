@@ -100,7 +100,5 @@ class Welcome extends CI_Controller {
 		$this->load->view('home/semua_produk', $data);
 	}
 
-	public function keranjang(){
-		$this->load->view('home/keranjang');
-	}
+	
 }

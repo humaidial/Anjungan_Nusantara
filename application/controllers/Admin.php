@@ -12,6 +12,8 @@ class Admin extends CI_Controller {
 		$this->load->model('SubKategori_model');
 		$this->load->model('Produk_model');
 		$this->load->model('Usaha_model');
+		$this->load->model('Bank_model');
+		$this->load->model('Pembelian_model');
 
 		if ($this->session->userdata('logged_in')) {
 			$session_data=$this->session->userdata('logged_in');
@@ -353,6 +355,110 @@ class Admin extends CI_Controller {
 		];
 		$this->load->view('admin/template',$data);
 		
+	}
+
+	public function bank(){
+		$list_bank = $this->Bank_model->get_all();
+		$data = [
+			'notif' => $this->notif_about_akun(),
+			'list_bank' => $list_bank,
+			'sidebar' => 'admin/sidebar',
+			'content' => 'admin/list_bank',
+			'footer' => 'admin/footer',
+		];
+		$this->load->view('admin/template',$data);
+	}
+
+	public function proses_bank()
+	{
+		 $id = $this->input->post('id');
+		 $tipe = $this->input->post('tipe');
+		 $nama = $this->input->post('nama');
+		 $norekening = $this->input->post('norekening');
+		 $atasnama = $this->input->post('atasnama');
+
+		 if($tipe == "baru"){
+			$data = array(
+				'bank_nama' => $nama,
+				'no_rekening' => $norekening,
+				'atas_nama' => $atasnama,
+			);
+		 	if($this->Bank_model->insert($data)){
+		 		$hasil = "Tambah Rekening Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Tambah Rekening Gagal";
+		 	}
+		 }
+		 else if($tipe == "ambil"){
+		 	$hasil = $this->Bank_model->getById($id);
+		 }
+		 else if($tipe == "hapus"){
+		 	
+		 	if($this->Bank_model->hapus_ajax($id)){
+		 		$hasil = "Hapus Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Hapus Gagal";
+		 	}
+		 }
+		 else if($tipe == "update"){
+		 	$data = array(
+				 'bank_nama' => $nama,
+				 'no_rekening' => $norekening,
+				 'atas_nama' => $atasnama,
+		 	);
+		 	if($this->Bank_model->update_ajax($id,$data)){
+		 		$hasil = "Update Berhasil";
+		 	}
+		 	else{
+		 		$hasil = "Update Gagal";
+		 	}
+		 }
+
+		 echo json_encode($hasil);
+	}
+
+	public function beli(){
+		$list_beli = $this->Pembelian_model->getforadmin();
+		$data = [
+			'notif' => $this->notif_about_akun(),
+			'list_beli' => $list_beli,
+			'sidebar' => 'admin/sidebar',
+			'content' => 'admin/list_beli',
+			'footer' => 'admin/footer',
+		];
+		$this->load->view('admin/template',$data);
+	}
+
+	public function proses_beli()
+	{
+		 $id = $this->input->post('id');
+		 $tipe = $this->input->post('tipe');
+		 $status = $this->input->post('status');
+
+		 if($tipe == "profil"){
+		 	$hasil = $this->Profile_model->getforadmin($id);
+		 }
+		 else if($tipe == "status"){
+			$hasil = $this->Pembelian_model->getbyid($id);
+		}
+		else if($tipe == "gantistatus"){
+			$data = array(
+				'status_pembelian' => $status
+			);
+			if($this->Pembelian_model->gantistatus($id, $data)){
+				$hasil = "Berhasil Update Status";
+			}
+			else{
+				$hasil = "Gagal Update Status";
+			}
+		}
+		else if($tipe == "tujuan"){
+			$hasil = $this->Pembelian_model->getbyid($id);
+		}
+
+		 echo json_encode($hasil);
 	}
 
 }

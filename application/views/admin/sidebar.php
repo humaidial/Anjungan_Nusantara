@@ -279,6 +279,36 @@
                 </ul>
               </li>
 
+              <li class="site-menu-item has-sub">
+                <a href="javascript:void(0)">
+                        <!--menu beri ikon -->
+                        <i aria-hidden="true"></i>
+                        <span class="site-menu-title">Manajemen Penjualan</span>
+                                <span class="site-menu-arrow"></span>
+                    </a>
+                <ul class="site-menu-sub">
+                  <li class="site-menu-item">
+                    <a class="animsition-link" href="<?php echo base_url()?>Admin/bank">
+                      <span class="site-menu-title">Daftar Bank</span>
+                    </a>
+                  </li>
+                </ul>
+                 <ul class="site-menu-sub">
+                  <li class="site-menu-item">
+                    <a class="animsition-link" href="<?php echo base_url()?>Admin/beli">
+                      <span class="site-menu-title">Daftar Pesanan</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="site-menu-sub">
+                  <li class="site-menu-item">
+                    <a class="animsition-link" href="<?php echo base_url()?>Admin/grafik">
+                      <span class="site-menu-title">Daftar Grafik Penjualan</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
 
             </ul>
           </div>

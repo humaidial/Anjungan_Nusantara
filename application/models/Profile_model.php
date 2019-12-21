@@ -14,6 +14,11 @@ class Profile_model extends CI_Model {
 		return false;
 	}
 
+	public function getforadmin($id){
+		$query =  $this->db->query("SELECT * FROM profile where profile_id='$id'");
+		return $query->result();
+	}
+
 	public function get_next_id()
 	{
 		$query =  $this->db->query("SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'db_anjungan_nusantara' AND TABLE_NAME = 'login'");

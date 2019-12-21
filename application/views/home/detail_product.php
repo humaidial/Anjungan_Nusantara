@@ -345,7 +345,6 @@
 	</header>
 
 	<!-- Single Product -->
-
 	<div class="single_product">
 		<div class="container">
 			<div class="row">
@@ -353,6 +352,7 @@
 				<!-- Images -->
 				<div class="col-lg-2 order-lg-1 order-2">
 					<ul class="image_list">
+					
 						<?php foreach($detail as $key) { if($key->list_gambar != $detail[0]->produk_foto_depan) {?>
 						<li data-image="images/banner_product2.jpg"><img src="<?php echo base_url("assets/foto/foto_produk/$key->list_gambar")?>" alt=""></li>
 						<?php }} ?>
@@ -361,14 +361,17 @@
 
 				<!-- Selected Image -->
 				<div class="col-lg-5 order-lg-2 order-1">
-					<div class="image_selected"><img src="<?php echo base_url('assets/foto/foto_produk/'.$detail[0]->produk_foto_depan)?>" alt=""></div>
+					<div class="image_selected"><img id="fotofotoproduk" src="<?php echo base_url('assets/foto/foto_produk/'.$detail[0]->produk_foto_depan)?>" alt=""></div>
 				</div>
 
 				<!-- Description -->
 				<div class="col-lg-5 order-3">
+				
 					<div class="product_description">
+					
+							
 						<div class="product_category"><?php echo $detail[0]->subkategori_nama ?></div>
-						<div class="product_name"><?php echo $detail[0]->produk_nama ?></div>
+						<div class="product_name" id="namabarang"><?php echo $detail[0]->produk_nama ?></div>
 						<input id="idbarang" type="text" value="<?php echo $detail[0]->produk_id ?>" style="display:none">
 						<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
 						<div class="product_text"><p><?php echo $detail[0]->produk_deskripsi ?></p></div>
@@ -403,12 +406,11 @@
 
 								</div>
 
-								<div class="product_price">Rp <?php echo $detail[0]->produk_harga ?></div>
+								<div class="product_price" id="hargabarang">Rp <?php echo $detail[0]->produk_harga ?></div>
 								<div class="button_container">
 									<button type="button" class="button cart_button" id="cekkeranjang">Tambahkan Keranjang</button>
 									<div class="product_fav"><i class="fas fa-heart"></i></div>
 								</div>
-								
 							</form>
 						</div>
 					</div>
@@ -607,10 +609,26 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     			window.location.href= "<?php echo base_url()?>Login";
 			}
 			else{
-				var idbarang = $('#idbarang').val();
-				var jumlahbarang = $('#quantity_input').val();
-				// set barang ke session
-				// window.location.href= "<?php echo base_url()?>Welcome/keranjang";
+				var id = $('#idbarang').val();
+				var qty = $('#quantity_input').val();
+				var nama = $('#namabarang').html();
+				var harga = $('#hargabarang').html();
+				var realharga = harga.split(" ");
+				var fotoproduk = $('#fotofotoproduk').attr('src');
+
+				// console.log(id, qty, nama, realharga[1], fotoproduk);
+				$.ajax({
+				url : "<?php echo base_url();?>Keranjang/tambah",
+				method : "POST",
+				data: {id: id, qty : qty, nama : nama, harga : realharga[1], fotoproduk : fotoproduk},
+				async : false,
+				dataType : 'json',
+				success: function(data){
+				if(data.length > 0){ 
+					window.alert('Produk berhasil ditambahkan ke keranjang.');
+					window.location = id;
+				}}});
+				
 			}
 		}); 
 		});
