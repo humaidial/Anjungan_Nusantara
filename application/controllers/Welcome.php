@@ -70,9 +70,14 @@ class Welcome extends CI_Controller {
 	}
 
 	public function detail_produk($id)
-	{	$detail = $this->Produk_model->get_detail_produk($id);
+	{	
+		$kategori = $this->Kategori_model->get_all();
+		$subkategori = $this->Kategori_model->get_kategori_dan_sub();
+		$detail = $this->Produk_model->get_detail_produk($id);
 		$data = array(
-			'detail' => $detail
+			'detail' => $detail,
+			'kategori' => $kategori,
+			'subkategori' => $subkategori
 		);
 		$this->load->view('home/detail_product', $data);
 	}
