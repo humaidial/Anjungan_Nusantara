@@ -29,7 +29,17 @@ class Welcome extends CI_Controller {
 		$produk_rating = $this->Produk_model->get_produk_by_rating();
 		$kategori_populer = $this->Kategori_model->kategori_populer();
 		$terjual_terbanyak = $this->Produk_model->get_produk_jual_terbanyak();
+		$produk_penjualan_Terbaik_tiga_kategori = array();
+		$tiga_subkategori_terbaik = $this->Produk_model-> get_kategori_produk_jual_terbanyak();
+		foreach($tiga_subkategori_terbaik  as $key){
+			$data = array();
+			$data = $this->Produk_model->produk_array($key->subkategori_id);
+			array_push($produk_penjualan_Terbaik_tiga_kategori,$data);
+		}
+		
 		$data = array(
+			'tiga_subkategori_terbaik' => $tiga_subkategori_terbaik,
+			'produk_terbanyak_tiga_kategori' => $produk_penjualan_Terbaik_tiga_kategori,
 			'kategori' => $kategori,
 			'subkategori' => $subkategori,
 			'produk' => $produk,
@@ -103,6 +113,21 @@ class Welcome extends CI_Controller {
 		// echo var_dump($data);
 		// echo "</pre>";
 		$this->load->view('home/semua_produk', $data);
+	}
+
+	public function coba()
+	{
+		$produk_penjualan_Terbaik_tiga_kategori = array();
+		$tiga_subkategori_terbaik = $this->Produk_model-> get_kategori_produk_jual_terbanyak();
+		foreach($tiga_subkategori_terbaik  as $key){
+			$data = array();
+			$data = $this->Produk_model->produk_array($key->subkategori_id);
+			array_push($produk_penjualan_Terbaik_tiga_kategori,$data);
+		}
+		echo "<pre>";
+		echo var_dump($produk_penjualan_Terbaik_tiga_kategori[0][0]);
+		echo "</pre>";
+		
 	}
 
 	

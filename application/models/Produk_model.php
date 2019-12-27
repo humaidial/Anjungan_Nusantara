@@ -139,6 +139,17 @@ class Produk_model extends CI_Model {
         $query =  $this->db->query("SELECT p.produk_id,p.produk_nama, p.produk_harga,p.produk_stock,p.produk_foto_depan,p.produk_deskripsi,p.produk_subkategori_id,p.produk_usaha_id,p.produk_status, subka.subkategori_nama FROM produk as p   inner join subkategori as subka on subka.subkategori_id = p.produk_subkategori_id where subka.subkategori_id=$id AND p.produk_status='Disetujui'");
         return $query->result();
 	}
+
+	public function get_kategori_produk_jual_terbanyak()
+	{
+        $query =  $this->db->query("SELECT COUNT(p.produk_id) as jumlah, s.subkategori_nama, s.subkategori_id FROM produk as p inner join subkategori as s on s.subkategori_id = p.produk_subkategori_id GROUP BY produk_subkategori_id ORDER BY jumlah DESC LIMIT 3");
+        return $query->result();
+	}
+
+	public function produk_array($id){
+		$query = $this->db->query("SELECT p.produk_id,p.produk_nama, p.produk_harga,p.produk_stock,p.produk_foto_depan,p.produk_deskripsi,p.produk_subkategori_id,p.produk_usaha_id,p.produk_status, subka.subkategori_nama FROM produk as p inner join subkategori as subka on subka.subkategori_id = p.produk_subkategori_id where subka.subkategori_id = '$id'");
+		return $query->result();
+	}
 	 
 }
 

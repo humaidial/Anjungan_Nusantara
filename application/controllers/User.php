@@ -20,9 +20,13 @@ class User extends CI_Controller {
         $this->load->view('Pembeli/dashboard', $data);
     }
 
-    // public function upload($id){
-
-    // }
+    public function upload($id){
+        $pembelian = $this->Pembeli_model->get_detail_pesanan($id);
+        $data = array(
+            'detail_pembelian' => $pembelian
+        );
+        $this->load->view('Pembeli/upload', $data);
+    }
 
 }
 
